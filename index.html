@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arbre Généalogique — Famille Tanguy</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
+
+:root {
+  --bg: #140f08;
+  --parchment: #f2e8d5;
+  --parchment-dim: #e8d9be;
+  --ink: #1a1209;
+  --sepia-dark: #3d2b1f;
+  --sepia-mid: #7a5c3e;
+  --sepia-light: #c4a882;
+  --sepia-xlight: #dfc9a8;
+  --gold: #b8860b;
+  --gold-light: #d4a843;
+  --gold-pale: #f0d480;
+  --node-m: #1b2b3a;
+  --node-f: #2e1c28;
+  --node-root: #192a19;
+  --panel-w: 400px;
+  --edit-accent: #5a8a5a;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  background-image: radial-gradient(ellipse 80% 60% at 20% 40%, rgba(80,50,15,.12) 0%, transparent 70%),
+                    radial-gradient(ellipse 60% 80% at 80% 70%, rgba(60,35,10,.08) 0%, transparent 70%);
+  font-family: 'EB Garamond', Georgia, serif;
+  color: var(--ink);
+  height: 100vh; overflow: hidden;
+  display: flex; flex-direction: column;
+}
+
+/* ── Header ── */
+header {
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  padding: 10px 20px 8px;
+  background: linear-gradient(to bottom, rgba(10,6,2,.9), transparent);
+  position: relative; z-index: 20;
+}
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.45rem; font-weight: 400;
+  color: var(--gold-light);
+  letter-spacing: .14em; text-transform: uppercase;
+}
+header p {
+  font-family: 'Crimson Text', serif; font-style: italic;
+  color: var(--sepia-light); font-size: .8rem;
+  margin-top: 1px; letter-spacing: .05em; text-align: center;
+}
+
+/* ── Tree canvas ── */
+#tree-container { flex: 1; overflow: hidden; cursor: grab; position: relative; }
+#tree-container:active { cursor: grabbing; }
+svg { width: 100%; height: 100%; }
+
+.link { fill: none; stroke: var(--sepia-mid); stroke-width: 1.4px; stroke-opacity: .38; }
+.gen-line { stroke: rgba(196,168,130,.07); stroke-width: 1px; stroke-dasharray: 3 8; }
+.gen-label { font-family: 'Crimson Text', serif; font-style: italic; fill: rgba(196,168,130,.2); font-size: 10px; letter-spacing: .1em; }
+
+.node { cursor: pointer; }
+.node rect { stroke-width: 1.5px; transition: filter .18s, stroke .18s; }
+.node.male   rect { fill: var(--node-m); stroke: #4a6070; }
+.node.female rect { fill: var(--node-f); stroke: #6a4060; }
+.node.root   rect { fill: var(--node-root); stroke: var(--gold); stroke-width: 2px; }
+.node:hover  rect { filter: brightness(1.5); stroke: var(--gold-light) !important; }
+.node.active rect { stroke: var(--gold) !important; stroke-width: 2px; filter: brightness(1.35); }
+
+.node .lname { fill: var(--sepia-xlight); font-family: 'Playfair Display', serif; font-size: 9.5px; text-anchor: middle; pointer-events: none; }
+.node .fname { fill: rgba(242,232,213,.65); font-family: 'Crimson Text', serif; font-style: italic; font-size: 8.5px; text-anchor: middle; pointer-events: none; }
+.node .years { fill: var(--sepia-light); font-family: 'Crimson Text', serif; font-style: italic; font-size: 8px; text-anchor: middle; pointer-events: none; }
+
+.collapse-btn { cursor: pointer; }
+.collapse-btn circle { fill: #1e150a; stroke: var(--sepia-mid); stroke-width: 1.2px; }
+.collapse-btn:hover circle { fill: var(--sepia-dark); }
+.collapse-btn text { fill: var(--sepia-light); font-size: 10px; text-anchor: middle; dominant-baseline: central; pointer-events: none; }
+
+/* ── Side panel shell ── */
+#panel {
+  position: fixed; top: 0; right: calc(-1 * var(--panel-w) - 2px);
+  width: var(--panel-w); height: 100vh;
+  background: var(--parchment);
+  border-left: 1px solid rgba(122,92,62,.5);
+  box-shadow: -12px 0 50px rgba(0,0,0,.55);
+  transition: right .38s cubic-bezier(.4,0,.2,1);
+  z-index: 200; display: flex; flex-direction: column; overflow: hidden;
+}
+#panel.open { right: 0; }
+
+/* ── Panel top bar ── */
+#panel-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 14px 8px;
+  background: var(--sepia-dark);
+  flex-shrink: 0;
+}
+#panel-bar-title {
+  font-family: 'Playfair Display', serif; font-size: .78rem;
+  color: var(--sepia-xlight); letter-spacing: .1em; text-transform: uppercase;
+}
+.bar-btns { display: flex; gap: 8px; }
+.bar-btn {
+  background: none; border: 1px solid rgba(196,168,130,.35);
+  color: var(--sepia-light); font-family: 'Crimson Text', serif;
+  font-size: .78rem; padding: 3px 10px; border-radius: 3px; cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.bar-btn:hover { background: rgba(196,168,130,.15); color: var(--parchment); }
+.bar-btn.edit-active { background: var(--edit-accent); border-color: var(--edit-accent); color: #fff; }
+#close-btn { background: none; border: none; color: var(--sepia-mid); font-size: 18px; cursor: pointer; line-height: 1; padding: 2px 4px; }
+#close-btn:hover { color: var(--parchment); }
+
+/* ── Panel body: two modes ── */
+#panel-body { flex: 1; overflow-y: auto; }
+
+/* VIEW mode */
+#view-mode { padding: 0 0 30px; }
+
+.photo-area {
+  width: 100%; height: 180px;
+  background: linear-gradient(135deg, var(--sepia-dark), var(--bg));
+  display: flex; align-items: center; justify-content: center;
+  position: relative; flex-shrink: 0; overflow: hidden;
+}
+.photo-area img { width:100%; height:100%; object-fit:cover; filter:sepia(20%) brightness(.92); }
+.no-photo-glyph { font-size: 72px; opacity: .1; color: var(--sepia-light); line-height:1; }
+
+.view-header { padding: 16px 22px 0; border-bottom: 1px solid rgba(122,92,62,.2); padding-bottom: 14px; }
+.v-role { font-family:'Crimson Text',serif; font-style:italic; font-size:11px; color:var(--sepia-mid); letter-spacing:.08em; text-transform:uppercase; margin-bottom:3px; }
+.v-name { font-family:'Playfair Display',serif; font-size:1.5rem; color:var(--sepia-dark); line-height:1.15; margin-bottom:3px; }
+.v-dates { font-family:'Crimson Text',serif; font-style:italic; color:var(--sepia-mid); font-size:1rem; }
+
+.view-meta { padding: 14px 22px 0; display:grid; grid-template-columns:auto 1fr; gap:3px 12px; border-bottom:1px solid rgba(122,92,62,.15); padding-bottom:14px; }
+.ml { font-family:'Crimson Text',serif; font-style:italic; font-size:.8rem; color:var(--sepia-mid); white-space:nowrap; padding-top:2px; }
+.mv { font-family:'EB Garamond',serif; font-size:.9rem; color:var(--sepia-dark); line-height:1.4; }
+
+.bio-title { margin:14px 22px 8px; font-family:'Playfair Display',serif; font-size:.72rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); }
+.bio-body { padding:0 22px 0; font-family:'Crimson Text',serif; font-size:.98rem; color:var(--sepia-dark); line-height:1.75; text-align:justify; }
+.bio-body p { margin-bottom:.7em; }
+.bio-body p:last-child { margin-bottom:0; }
+
+/* EDIT mode */
+#edit-mode { padding: 16px 18px 30px; display: none; }
+#edit-mode.visible { display: block; }
+
+.ef-group { margin-bottom: 14px; }
+.ef-label { font-family:'Crimson Text',serif; font-style:italic; font-size:.8rem; color:var(--sepia-mid); margin-bottom:4px; display:block; }
+.ef-row { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.ef-input {
+  width:100%; padding:6px 10px;
+  background:var(--parchment-dim); border:1px solid rgba(122,92,62,.35);
+  border-radius:3px; font-family:'EB Garamond',serif; font-size:.9rem;
+  color:var(--sepia-dark); outline:none;
+  transition: border-color .15s, box-shadow .15s;
+}
+.ef-input:focus { border-color: var(--edit-accent); box-shadow: 0 0 0 2px rgba(90,138,90,.15); }
+.ef-textarea { resize:vertical; min-height:120px; line-height:1.5; }
+
+.edit-photo-preview {
+  width:100%; height:90px; border-radius:4px; overflow:hidden;
+  background: var(--sepia-dark); display:flex; align-items:center; justify-content:center;
+  margin-top:6px; border:1px solid rgba(122,92,62,.3);
+}
+.edit-photo-preview img { width:100%; height:100%; object-fit:cover; }
+.edit-photo-preview .no-img { color:rgba(196,168,130,.4); font-size:11px; font-style:italic; }
+
+.edit-actions { margin-top:20px; display:flex; gap:10px; }
+.ef-btn {
+  flex:1; padding:9px 0;
+  font-family:'Crimson Text',serif; font-size:.95rem; cursor:pointer;
+  border-radius:4px; border:none; transition:background .15s;
+}
+.ef-btn-save { background:var(--edit-accent); color:#fff; }
+.ef-btn-save:hover { background:#4a7a4a; }
+.ef-btn-cancel { background:rgba(122,92,62,.2); color:var(--sepia-dark); border:1px solid rgba(122,92,62,.3); }
+.ef-btn-cancel:hover { background:rgba(122,92,62,.35); }
+
+.edit-sep { border:none; border-top:1px solid rgba(122,92,62,.2); margin:20px 0 16px; }
+
+/* Export bar */
+#export-bar {
+  flex-shrink:0; padding:10px 14px;
+  background: rgba(184,134,11,.08);
+  border-top:1px solid rgba(184,134,11,.2);
+  display:flex; align-items:center; justify-content:space-between;
+  gap:10px;
+}
+#export-bar p { font-family:'Crimson Text',serif; font-style:italic; font-size:.78rem; color:var(--sepia-mid); line-height:1.4; }
+#export-btn {
+  flex-shrink:0; padding:7px 16px;
+  background:var(--gold); color:#1a1209;
+  font-family:'Playfair Display',serif; font-size:.8rem; letter-spacing:.06em;
+  border:none; border-radius:3px; cursor:pointer; white-space:nowrap;
+  transition:background .15s;
+}
+#export-btn:hover { background:var(--gold-light); }
+
+/* Legend */
+#legend {
+  position:fixed; bottom:14px; left:14px;
+  background:rgba(20,15,8,.88); color:var(--sepia-light);
+  font-family:'Crimson Text',serif; font-style:italic;
+  font-size:.75rem; padding:7px 13px; border-radius:5px;
+  border:1px solid rgba(196,168,130,.15); pointer-events:none; line-height:1.65;
+}
+
+/* Unsaved dot */
+.unsaved-dot {
+  display:inline-block; width:7px; height:7px; border-radius:50%;
+  background:var(--gold-pale); margin-left:6px; vertical-align:middle;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Arbre Généalogique · Famille Tanguy</h1>
+    <p>Ascendants de Jean Gustave Marie Tanguy &middot; Kerpert, Côtes-du-Nord</p>
+  </div>
+</header>
+
+<div id="tree-container"><svg id="tree-svg"></svg></div>
+
+<!-- ── PANEL ── -->
+<div id="panel">
+  <div id="panel-bar">
+    <span id="panel-bar-title">Fiche</span>
+    <div class="bar-btns">
+      <button class="bar-btn" id="edit-toggle-btn" onclick="toggleEdit()">✎ Modifier</button>
+      <button id="close-btn" onclick="closePanel()">✕</button>
+    </div>
+  </div>
+
+  <div id="panel-body">
+    <!-- VIEW MODE -->
+    <div id="view-mode">
+      <div class="photo-area" id="v-photo"><div class="no-photo-glyph">◈</div></div>
+      <div class="view-header">
+        <div class="v-role" id="v-role"></div>
+        <div class="v-name" id="v-name"></div>
+        <div class="v-dates" id="v-dates"></div>
+      </div>
+      <div class="view-meta" id="v-meta"></div>
+      <div class="bio-title" id="bio-title" style="display:none">Notes archivistiques</div>
+      <div class="bio-body" id="v-bio"></div>
+    </div>
+
+    <!-- EDIT MODE -->
+    <div id="edit-mode">
+      <div class="ef-group">
+        <label class="ef-label">Prénom(s)</label>
+        <input class="ef-input" id="e-given" type="text" placeholder="ex. Jean Gustave Marie">
+      </div>
+      <div class="ef-group">
+        <label class="ef-label">Nom de famille</label>
+        <input class="ef-input" id="e-surname" type="text" placeholder="ex. TANGUY">
+      </div>
+      <div class="ef-group">
+        <label class="ef-label">Dates &amp; lieux</label>
+        <div class="ef-row">
+          <div>
+            <label class="ef-label" style="font-size:.72rem">Naissance (année)</label>
+            <input class="ef-input" id="e-born" type="number" placeholder="1875">
+          </div>
+          <div>
+            <label class="ef-label" style="font-size:.72rem">Décès (année)</label>
+            <input class="ef-input" id="e-died" type="number" placeholder="1939">
+          </div>
+        </div>
+        <div class="ef-row" style="margin-top:6px">
+          <div>
+            <label class="ef-label" style="font-size:.72rem">Lieu de naissance</label>
+            <input class="ef-input" id="e-bplace" type="text" placeholder="Kerpert">
+          </div>
+          <div>
+            <label class="ef-label" style="font-size:.72rem">Lieu de décès</label>
+            <input class="ef-input" id="e-dplace" type="text" placeholder="Kerpert">
+          </div>
+        </div>
+      </div>
+      <div class="ef-group">
+        <label class="ef-label">Profession</label>
+        <input class="ef-input" id="e-profession" type="text" placeholder="ex. Cultivateur, Laboureur…">
+      </div>
+      <hr class="edit-sep">
+      <div class="ef-group">
+        <label class="ef-label">Photo (URL ou chemin relatif)</label>
+        <input class="ef-input" id="e-photo" type="text" placeholder="photos/nom.jpg  ou  https://…">
+        <div class="edit-photo-preview" id="e-photo-preview">
+          <span class="no-img">Aperçu</span>
+        </div>
+      </div>
+      <hr class="edit-sep">
+      <div class="ef-group">
+        <label class="ef-label">Biographie / Notes <span style="opacity:.6;font-size:.72rem">(HTML simple accepté : &lt;p&gt;, &lt;em&gt;, &lt;strong&gt;)</span></label>
+        <textarea class="ef-input ef-textarea" id="e-bio" placeholder="Texte libre…"></textarea>
+      </div>
+      <div class="edit-actions">
+        <button class="ef-btn ef-btn-save" onclick="saveEdit()">Enregistrer</button>
+        <button class="ef-btn ef-btn-cancel" onclick="cancelEdit()">Annuler</button>
+      </div>
+    </div>
+  </div><!-- /panel-body -->
+
+  <div id="export-bar">
+    <p id="export-hint">Modifiez les fiches, puis exportez le JSON pour mettre à jour l'arbre.</p>
+    <button id="export-btn" onclick="exportJSON()">⬇ Exporter JSON</button>
+  </div>
+</div><!-- /panel -->
+
+<div id="legend">Molette : zoom &nbsp;·&nbsp; Glisser : naviguer &nbsp;·&nbsp; Clic : fiche &nbsp;·&nbsp; ● : replier/déplier</div>
+
+<script>
+// ─── DATA ───────────────────────────────────────────────────────────────
+let treeData = null;
+
+// Load data from external file
+async function loadData() {
+  try {
+    const res = await fetch('data.json');
+    if (!res.ok) throw new Error('Fichier data.json introuvable');
+    treeData = await res.json();
+    buildTree();
+  } catch(err) {
+    // Fallback: show error message
+    document.body.innerHTML += `<div style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
+      background:#f2e8d5;padding:30px 40px;border-radius:8px;font-family:Georgia,serif;
+      color:#3d2b1f;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,.5)">
+      <h2 style="margin-bottom:12px">Données introuvables</h2>
+      <p>Le fichier <code>data.json</code> est absent du dossier.<br>
+      Vérifiez que vous avez bien déposé tous les fichiers.</p>
+      <p style="margin-top:16px;font-size:.85rem;color:#7a5c3e">${err.message}</p>
+    </div>`;
+    console.error(err);
+  }
+}
+loadData();
+
+let hasUnsaved = false;
+let currentNode = null; // currently open data node
+let editMode = false;
+
+// ─── TREE LAYOUT ─────────────────────────────────────────────────────────
+const NODE_W = 116, NODE_H = 50, GEN_H = 116;
+const svg = d3.select('#tree-svg');
+const g   = svg.append('g');
+
+const zoom = d3.zoom().scaleExtent([0.1, 3]).on('zoom', e => g.attr('transform', e.transform));
+svg.call(zoom);
+svg.on('click', () => closePanel());
+
+const GEN_LABELS = ['Sujet','Parents','Grands-parents',
+  'Arrière-grands-parents','A.A.G.P.','A.A.A.G.P.',
+  'Génération 7','Génération 8'];
+
+function buildTree() {
+  const root = d3.hierarchy(treeData,
+    d => (d._hidden ? null : (d.children && d.children.length ? d.children : null)));
+
+  d3.tree().nodeSize([NODE_W + 22, GEN_H])
+           .separation((a,b) => a.parent === b.parent ? 1 : 1.45)(root);
+
+  let maxDepth = 0;
+  root.each(d => { if (d.depth > maxDepth) maxDepth = d.depth; });
+
+  g.selectAll('*').remove();
+
+  // Gen lines
+  for (let dep = 0; dep <= maxDepth; dep++) {
+    const s = root.descendants().find(d => d.depth === dep);
+    if (!s) continue;
+    g.append('line').attr('class','gen-line')
+      .attr('x1',-5000).attr('x2',5000).attr('y1',s.y).attr('y2',s.y);
+    g.append('text').attr('class','gen-label')
+      .attr('x',-90).attr('y',s.y - 5)
+      .text(GEN_LABELS[dep] || `Gén. ${dep+1}`);
+  }
+
+  // Links
+  g.selectAll('.link').data(root.links()).enter().append('path').attr('class','link')
+    .attr('d', d => {
+      const sx=d.source.x, sy=d.source.y+NODE_H, tx=d.target.x, ty=d.target.y;
+      const my = sy + (ty-sy)*0.5;
+      return `M${sx},${sy} C${sx},${my} ${tx},${my} ${tx},${ty}`;
+    });
+
+  // Nodes
+  const ne = g.selectAll('.node').data(root.descendants()).enter()
+    .append('g')
+    .attr('class', d => `node ${d.data.gender==='F'?'female':'male'}${d.depth===0?' root':''}`)
+    .attr('transform', d => `translate(${d.x - NODE_W/2}, ${d.y})`);
+
+  ne.append('rect').attr('width',NODE_W).attr('height',NODE_H).attr('rx',4).attr('ry',4)
+    .on('click', (ev, d) => {
+      ev.stopPropagation();
+      openPanel(d.data);
+      g.selectAll('.node').classed('active', false);
+      d3.select(ev.currentTarget.parentNode).classed('active', true);
+    });
+
+  ne.each(function(d) {
+    const grp = d3.select(this);
+    const sur  = d.data.surname || '';
+    const giv  = (d.data.given || '').split(' ')[0];
+    const y0   = NODE_H * 0.32;
+    grp.append('text').attr('class','lname').attr('x',NODE_W/2).attr('y',y0).text(sur);
+    grp.append('text').attr('class','fname').attr('x',NODE_W/2).attr('y',y0+14).text(giv);
+    grp.append('text').attr('class','years').attr('x',NODE_W/2).attr('y',NODE_H-7)
+      .text(`${d.data.born||'?'} — ${d.data.died||'?'}`);
+  });
+
+  // Collapse buttons
+  ne.each(function(d) {
+    const has = (d.data.children && d.data.children.length) ||
+                (d.data._hidden  && d.data._hidden.length);
+    if (!has) return;
+    const btn = d3.select(this).append('g').attr('class','collapse-btn')
+      .attr('transform',`translate(${NODE_W/2},${NODE_H+10})`)
+      .on('click', (ev, d) => {
+        ev.stopPropagation();
+        if (d.data.children && d.data.children.length) {
+          d.data._hidden = d.data.children; d.data.children = [];
+        } else if (d.data._hidden) {
+          d.data.children = d.data._hidden; d.data._hidden = null;
+        }
+        buildTree();
+      });
+    btn.append('circle').attr('r',8);
+    btn.append('text').text(
+      (d.data._hidden && d.data._hidden.length) ? '+' : '−');
+  });
+
+  // Center on root
+  const W = window.innerWidth, H = window.innerHeight - 60;
+  svg.call(zoom.transform, d3.zoomIdentity.translate(W/2, 50).scale(0.72));
+}
+
+// buildTree() is called after data loads
+
+// ─── PANEL: VIEW ─────────────────────────────────────────────────────────
+function openPanel(d) {
+  if (editMode) cancelEdit();
+  currentNode = d;
+
+  // photo
+  const pArea = document.getElementById('v-photo');
+  pArea.innerHTML = '';
+  if (d.photo) {
+    const img = document.createElement('img');
+    img.src = d.photo; img.alt = d.given;
+    pArea.appendChild(img);
+  } else {
+    pArea.innerHTML = `<div class="no-photo-glyph">${d.gender==='F'?'◯':'◻'}</div>`;
+  }
+
+  document.getElementById('v-role').textContent = d.gender==='F' ? 'Ancêtre · Dame' : 'Ancêtre · Sieur';
+  document.getElementById('v-name').textContent  = `${d.given||''} ${d.surname||''}`.trim();
+  document.getElementById('v-dates').textContent = `${d.born||'?'} — ${d.died||'?'}`;
+
+  // meta
+  let meta = '';
+  if (d.born || d.lieu_naissance) meta += `<div class="ml">Naissance</div><div class="mv">${d.born||'?'}${d.lieu_naissance?' · '+d.lieu_naissance:''}</div>`;
+  if (d.died || d.lieu_deces)     meta += `<div class="ml">Décès</div><div class="mv">${d.died||'?'}${d.lieu_deces?' · '+d.lieu_deces:''}</div>`;
+  if (d.profession)               meta += `<div class="ml">Profession</div><div class="mv">${d.profession}</div>`;
+  document.getElementById('v-meta').innerHTML = meta;
+
+  const bioEl = document.getElementById('v-bio');
+  const bioTitle = document.getElementById('bio-title');
+  if (d.bio) { bioEl.innerHTML = d.bio; bioTitle.style.display='block'; }
+  else       { bioEl.innerHTML = ''; bioTitle.style.display='none'; }
+
+  document.getElementById('panel-bar-title').textContent = (d.surname||'').toUpperCase();
+  document.getElementById('panel').classList.add('open');
+}
+
+// ─── PANEL: EDIT ─────────────────────────────────────────────────────────
+function toggleEdit() {
+  if (!currentNode) return;
+  editMode ? cancelEdit() : startEdit();
+}
+
+function startEdit() {
+  if (!currentNode) return;
+  editMode = true;
+  const d = currentNode;
+
+  document.getElementById('e-given').value      = d.given      || '';
+  document.getElementById('e-surname').value    = d.surname    || '';
+  document.getElementById('e-born').value       = d.born       || '';
+  document.getElementById('e-died').value       = d.died       || '';
+  document.getElementById('e-bplace').value     = d.lieu_naissance || '';
+  document.getElementById('e-dplace').value     = d.lieu_deces || '';
+  document.getElementById('e-profession').value = d.profession || '';
+  document.getElementById('e-photo').value      = d.photo      || '';
+  document.getElementById('e-bio').value        = d.bio        || '';
+
+  updatePhotoPreview(d.photo);
+
+  document.getElementById('view-mode').style.display = 'none';
+  document.getElementById('edit-mode').classList.add('visible');
+  const btn = document.getElementById('edit-toggle-btn');
+  btn.textContent = '✕ Annuler'; btn.classList.add('edit-active');
+}
+
+document.getElementById('e-photo').addEventListener('input', e => updatePhotoPreview(e.target.value));
+
+function updatePhotoPreview(url) {
+  const prev = document.getElementById('e-photo-preview');
+  if (url) {
+    prev.innerHTML = `<img src="${url}" alt="aperçu" onerror="this.style.display='none'">`;
+  } else {
+    prev.innerHTML = '<span class="no-img">Aperçu</span>';
+  }
+}
+
+function saveEdit() {
+  if (!currentNode) return;
+  const d = currentNode;
+
+  const newGiven   = document.getElementById('e-given').value.trim();
+  const newSurname = document.getElementById('e-surname').value.trim();
+  d.given      = newGiven;
+  d.surname    = newSurname;
+  d.name       = `${newGiven.split(' ')[0]}\n${newSurname}`;
+  d.born       = parseInt(document.getElementById('e-born').value) || null;
+  d.died       = parseInt(document.getElementById('e-died').value) || null;
+  d.lieu_naissance = document.getElementById('e-bplace').value.trim();
+  d.lieu_deces     = document.getElementById('e-dplace').value.trim();
+  d.profession = document.getElementById('e-profession').value.trim();
+  d.photo      = document.getElementById('e-photo').value.trim() || null;
+  d.bio        = document.getElementById('e-bio').value.trim();
+
+  markUnsaved();
+  cancelEdit();
+  openPanel(d);
+  buildTree();
+}
+
+function cancelEdit() {
+  editMode = false;
+  document.getElementById('view-mode').style.display = '';
+  document.getElementById('edit-mode').classList.remove('visible');
+  const btn = document.getElementById('edit-toggle-btn');
+  btn.textContent = '✎ Modifier'; btn.classList.remove('edit-active');
+}
+
+function closePanel() {
+  if (editMode) cancelEdit();
+  document.getElementById('panel').classList.remove('open');
+  currentNode = null;
+  g.selectAll('.node').classed('active', false);
+}
+
+// ─── UNSAVED & EXPORT ────────────────────────────────────────────────────
+function markUnsaved() {
+  if (hasUnsaved) return;
+  hasUnsaved = true;
+  const hint = document.getElementById('export-hint');
+  hint.innerHTML = `Des modifications ont été apportées <span class="unsaved-dot"></span>`;
+}
+
+function exportJSON() {
+  const json = JSON.stringify(treeData, null, 2);
+  const blob = new Blob([json], {type: 'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'data_tanguy.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+
+  hasUnsaved = false;
+  document.getElementById('export-hint').textContent =
+    'JSON exporté — remplacez data_tanguy.json dans votre dépôt.';
+}
+
+// ─── IMPORT JSON ─────────────────────────────────────────────────────────
+// Allow dropping a JSON file onto the tree to reload data
+document.addEventListener('dragover', e => e.preventDefault());
+document.addEventListener('drop', e => {
+  e.preventDefault();
+  const file = e.dataTransfer.files[0];
+  if (!file || !file.name.endsWith('.json')) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    try {
+      treeData = JSON.parse(ev.target.result);
+      closePanel();
+      buildTree();
+      document.getElementById('export-hint').textContent =
+        'Données importées depuis ' + file.name;
+    } catch(err) {
+      alert('Fichier JSON invalide : ' + err.message);
+    }
+  };
+  reader.readAsText(file);
+});
+</script>
+</body>
+</html>
