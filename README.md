@@ -24,7 +24,7 @@ arbre-tanguy/
 
 ## ✏️ Modifier une fiche (biographie, dates, profession…)
 
-1. Ouvrir l'arbre sur `https://VOTRE-PSEUDO.github.io/arbre-tanguy`
+1. Ouvrir l'arbre sur `https://ronant99-lgtm.github.io/arbre-tanguy`
 2. Cliquer sur un ancêtre → **✎ Modifier**
 3. Remplir les champs, cliquer **Enregistrer**
 4. Répéter pour d'autres fiches si besoin
@@ -109,7 +109,7 @@ Depuis la page du dépôt, cliquer **uploading an existing file** et déposer :
 
 ### 4. Partager
 
-Envoyer l'URL `https://VOTRE-PSEUDO.github.io/arbre-tanguy` à la famille.
+Envoyer l'URL `https://ronant99-lgtm.github.io/arbre-tanguy` à la famille.
 
 ---
 
