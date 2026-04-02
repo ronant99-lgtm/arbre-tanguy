@@ -4,7 +4,7 @@ Arbre interactif des ascendants de Jean Gustave Marie Tanguy, hébergé sur GitH
 
 ## 🌐 Accès
 
-**URL publique :** `https://VOTRE-PSEUDO.github.io/arbre-tanguy`
+**URL publique :** `https://ronant99-lgtm.github.io/arbre-tanguy`
 
 ---
 
