@@ -2,7 +2,7 @@
 """Convertit l'export Gramps (GEDCOM 5.5.1) en data.json pour l'arbre interactif.
 
 Usage :
-    python3 scripts/ged2json.py                      # valeurs par défaut
+    python3 scripts/ged2json.py                      # tous les arbres déclarés dans arbres.json
     python3 scripts/ged2json.py --ged gedcom/Tanguy.ged --root I0000 \
         --complements complements.json --out data.json
 
@@ -148,9 +148,50 @@ def parse_date(value):
     return {"texte": texte, "court": court, "annee": annee}
 
 
+PAYS = {"FRA": "France", "DEU": "Allemagne", "BEL": "Belgique", "GBR": "Royaume-Uni",
+        "CHE": "Suisse", "LUX": "Luxembourg", "NLD": "Pays-Bas", "USA": "États-Unis"}
+
+
 def short_place(plac):
-    """'Kerpert, 22092, France' -> 'Kerpert'."""
-    return (plac or "").split(",")[0].strip()
+    """'Kerpert, 22092, France' -> 'Kerpert' ; 'Le Mans 72181, France' -> 'Le Mans'."""
+    p = (plac or "").split(",")[0].strip()
+    p = re.sub(r"\s+\d{5}$", "", p)
+    return PAYS.get(p, p)
+
+
+# ─── Confidentialité ────────────────────────────────────────────────────
+EMAIL_RE = re.compile(r"[\w.+-]+@@?[\w-]+(?:\.[\w-]+)+")
+PHONE_RE = re.compile(r"(?<!\d)(?:\+33\s?|0)[1-9](?:[\s.-]?\d\d){4}(?!\d)")
+CONTACT_RE = re.compile(r"[^.;/]*\binterlocuteur\b[^/]*", re.I)
+
+
+def nettoyer(texte):
+    """Retire courriels, téléphones et phrases de contact (personnes vivantes)."""
+    t = (texte or "").replace("@@", "@")
+    t = CONTACT_RE.sub(" [contact retiré]", t)
+    t = EMAIL_RE.sub("[courriel retiré]", t)
+    t = PHONE_RE.sub("[téléphone retiré]", t)
+    return t
+
+
+def annee_naissance(indi):
+    for tag in ("BIRT", "BAPM", "CHR"):
+        ev = indi.first(tag)
+        d = ev.first("DATE") if ev else None
+        if d:
+            info = parse_date(d.value)
+            if info and info["annee"]:
+                return info["annee"]
+    return None
+
+
+def est_vivant(indi, annee_limite):
+    """Pas de décès connu et naissance connue postérieure à la limite.
+    (Les personnes sans date sont filtrées en amont, par extraire_ascendants.py.)"""
+    if indi.first("DEAT") or indi.first("BURI"):
+        return False
+    a = annee_naissance(indi)
+    return a is not None and a >= annee_limite
 
 
 # ─── Notes ──────────────────────────────────────────────────────────────
@@ -170,27 +211,45 @@ def note_html(texts):
             line = line.strip()
             if line.startswith("/"):
                 line = line[1:].strip()
+            line = nettoyer(line).strip()
             if line:
                 paras.append(f"<p>{html.escape(line, quote=False)}</p>")
     return "".join(paras)
 
 
 # ─── Construction ───────────────────────────────────────────────────────
-def build(records, root_id, complements):
+def build(records, root_id, complements, annee_vivant=None):
     indis = {r.xref: r for r in records if r.tag == "INDI"}
     fams = {r.xref: r for r in records if r.tag == "FAM"}
     notes = {r.xref: r for r in records if r.tag == "NOTE"}
+    sources = {r.xref: r for r in records if r.tag == "SOUR"}
+    if annee_vivant is None:
+        annee_vivant = dt.date.today().year - 100
+
+    def vivant(xref):
+        return xref in indis and est_vivant(indis[xref], annee_vivant)
 
     def pid(xref):
         return xref.strip("@")
 
     def event(indi, tag):
         ev = indi.first(tag)
+        alt = {"BIRT": ("BAPM", "CHR"), "DEAT": ("BURI",)}.get(tag, ())
+        prefix = ""
+        if not ev or not ev.first("DATE"):
+            for t in alt:
+                e2 = indi.first(t)
+                if e2 and e2.first("DATE"):
+                    ev, prefix = e2, {"BAPM": "baptême ", "CHR": "baptême ", "BURI": "inhumation "}[t]
+                    break
         if not ev:
             return None, "", []
         d = ev.first("DATE")
         evnotes = [note_text(n, notes) for n in ev.all("NOTE")]
-        return (parse_date(d.value) if d else None,
+        info = parse_date(d.value) if d else None
+        if info and prefix:
+            info = dict(info, texte=prefix + info["texte"])
+        return (info,
                 short_place(ev.first("PLAC").value) if ev.first("PLAC") else "",
                 evnotes)
 
@@ -198,14 +257,19 @@ def build(records, root_id, complements):
         n = indi.first("NAME")
         given = surname = ""
         if n:
-            g, s = n.first("GIVN"), n.first("SURN")
+            g, s, px = n.first("GIVN"), n.first("SURN"), n.first("SPFX")
             given = g.value if g else (n.value or "").split("/")[0].strip()
             surname = s.value if s else (re.findall(r"/([^/]*)/", n.value or "") or [""])[0]
-        return (given or "").strip(), (surname or "").strip()
+            if px and px.value and s:
+                surname = f"{px.value} {surname}"
+        given = re.sub(r"\s*,\s*", " ", given or "")  # Gramps : « Pierre, Marcel » -> « Pierre Marcel »
+        return given.strip(), (surname or "").strip()
 
     def label(xref):
         indi = indis.get(xref)
         if not indi:
+            return ""
+        if vivant(xref):
             return ""
         g, s = name_parts(indi)
         b, _, _ = event(indi, "BIRT")
@@ -276,6 +340,8 @@ def build(records, root_id, complements):
             ftexts = [note_text(n, notes) for n in fam.all("NOTE")]
             if marr:
                 ftexts += [note_text(n, notes) for n in marr.all("NOTE")]
+            if other and vivant(other.value):
+                continue
             unions.append({
                 "conjoint": label(other.value) if other else "",
                 "date": md["texte"] if md else "",
@@ -289,8 +355,21 @@ def build(records, root_id, complements):
         fam = parent_family(xref)
         if fam:
             sibs = [label(c.value) for c in fam.all("CHIL") if c.value != xref]
-            if sibs:
-                p["fratrie"] = sibs
+            if any(s for s in sibs):
+                p["fratrie"] = [s for s in sibs if s]
+
+        # Sources citées (titre — auteur)
+        srcs = []
+        for c in indi.all("SOUR"):
+            src = sources.get((c.value or "").strip())
+            if not src:
+                continue
+            t, a = src.first("TITL"), src.first("AUTH")
+            lib = " — ".join(x.text().strip() for x in (t, a) if x and x.text().strip())
+            if lib and lib not in srcs:
+                srcs.append(nettoyer(lib))
+        if srcs:
+            p["sources"] = srcs
 
         if seen.get(xref, 0) > 1:
             p["implexe"] = seen[xref]
@@ -361,45 +440,59 @@ def check(tree):
     return sorted(set(alerts))
 
 
+def generer(ged, root, complements_path, out, strict=False):
+    """Génère un fichier JSON d'arbre ; retourne le nombre d'alertes."""
+    records = parse_gedcom(ged)
+    comp_path = Path(complements_path) if complements_path else None
+    complements = json.loads(comp_path.read_text(encoding="utf-8")) if comp_path and comp_path.exists() else {}
+    complements = {k: v for k, v in complements.items() if not k.startswith("_")}
+
+    root = f"@{root.strip('@')}@"
+    if root not in {r.xref for r in records if r.tag == "INDI"}:
+        sys.exit(f"Personne {root} introuvable dans {ged}")
+
+    tree = build(records, root, complements)
+    Path(out).write_text(json.dumps(tree, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+    n, stack = 0, [tree]
+    while stack:
+        x = stack.pop()
+        n += 1
+        stack.extend(x["children"])
+    print(f"{out} : {n} fiches générées depuis {ged}")
+
+    alerts = check(tree)
+    if alerts:
+        print(f"{len(alerts)} point(s) à vérifier :")
+        for a in alerts:
+            print(f"  - {a}")
+    print()
+    return len(alerts)
+
+
 def main(argv=None):
     here = Path(__file__).resolve().parent.parent
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--ged", default=str(here / "gedcom" / "Tanguy.ged"))
+    ap.add_argument("--arbres", default=str(here / "arbres.json"),
+                    help="liste des arbres du site (utilisée si --ged n'est pas donné)")
+    ap.add_argument("--ged", help="un seul GEDCOM à convertir (sinon : tous les arbres de arbres.json)")
     ap.add_argument("--root", default="I0000", help="identifiant Gramps du sujet (sans @)")
-    ap.add_argument("--complements", default=str(here / "complements.json"))
+    ap.add_argument("--complements", default=None)
     ap.add_argument("--out", default=str(here / "data.json"))
     ap.add_argument("--strict", action="store_true",
                     help="échoue si des incohérences sont détectées")
     args = ap.parse_args(argv)
 
-    records = parse_gedcom(args.ged)
-    comp_path = Path(args.complements)
-    complements = json.loads(comp_path.read_text(encoding="utf-8")) if comp_path.exists() else {}
-    complements = {k: v for k, v in complements.items() if not k.startswith("_")}
+    if args.ged:
+        jobs = [(args.ged, args.root, args.complements, args.out)]
+    else:
+        arbres = json.loads(Path(args.arbres).read_text(encoding="utf-8"))
+        jobs = [(here / a["gedcom"], a["racine"], here / a["complements"] if a.get("complements") else None,
+                 here / a["data"]) for a in arbres]
 
-    root = f"@{args.root.strip('@')}@"
-    if root not in {r.xref for r in records if r.tag == "INDI"}:
-        sys.exit(f"Personne {root} introuvable dans {args.ged}")
-
-    tree = build(records, root, complements)
-    out = json.dumps(tree, ensure_ascii=False, indent=2) + "\n"
-    Path(args.out).write_text(out, encoding="utf-8")
-
-    n = 0
-    stack = [tree]
-    while stack:
-        x = stack.pop()
-        n += 1
-        stack.extend(x["children"])
-    print(f"{args.out} : {n} fiches générées depuis {args.ged}")
-
-    alerts = check(tree)
-    if alerts:
-        print(f"\n{len(alerts)} point(s) à vérifier :")
-        for a in alerts:
-            print(f"  - {a}")
-        if args.strict:
-            sys.exit(1)
+    total = sum(generer(str(g), r, c, str(o)) for g, r, c, o in jobs)
+    if total and args.strict:
+        sys.exit(1)
 
 
 if __name__ == "__main__":

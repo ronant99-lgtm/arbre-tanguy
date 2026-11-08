@@ -1,13 +1,14 @@
 name: Générer l'arbre depuis Gramps
 
-# Régénère data.json dès que le GEDCOM, les compléments ou le script changent.
+# Régénère les data*.json dès qu'un GEDCOM, les compléments, la liste des arbres ou les scripts changent.
 on:
   push:
     branches: [main]
     paths:
       - "gedcom/**"
-      - "complements.json"
-      - "scripts/ged2json.py"
+      - "complements*.json"
+      - "arbres.json"
+      - "scripts/**"
   workflow_dispatch:
 
 permissions:
@@ -23,7 +24,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Convertir le GEDCOM en data.json
+      - name: Convertir les GEDCOM (arbres.json)
         run: python3 scripts/ged2json.py | tee rapport.txt
 
       - name: Résumé
@@ -33,14 +34,14 @@ jobs:
           cat rapport.txt >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Enregistrer data.json s'il a changé
+      - name: Enregistrer les données si elles ont changé
         run: |
-          if git diff --quiet -- data.json; then
-            echo "data.json inchangé"
+          if git diff --quiet -- 'data*.json'; then
+            echo "Données inchangées"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data.json
-          git commit -m "Régénère data.json depuis le GEDCOM"
+          git add data*.json
+          git commit -m "Régénère les données de l'arbre depuis le GEDCOM"
           git push

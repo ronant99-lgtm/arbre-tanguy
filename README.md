@@ -1,8 +1,11 @@
-# Arbre généalogique — Famille Tanguy
+# Arbre généalogique — Familles Tanguy et Beauchesne
 
-Arbre interactif des ascendants de Jean Gustave Marie Tanguy, hébergé sur GitHub Pages.
+Arbres interactifs hébergés sur GitHub Pages :
 
-**URL publique :** https://ronant99-lgtm.github.io/arbre-tanguy
+- **Famille Tanguy** — ascendants de Jean Gustave Marie Tanguy :
+  https://ronant99-lgtm.github.io/arbre-tanguy/#tanguy
+- **Famille Beauchesne** — ascendants de Françoise Beauchesne :
+  https://ronant99-lgtm.github.io/arbre-tanguy/#beauchesne
 
 ---
 
@@ -10,13 +13,16 @@ Arbre interactif des ascendants de Jean Gustave Marie Tanguy, hébergé sur GitH
 
 ```
 arbre-tanguy/
+├── arbres.json                ← liste des arbres du site (titre, GEDCOM, personne de départ…)
 ├── gedcom/Tanguy.ged          ← SOURCE DE RÉFÉRENCE : export GEDCOM de Gramps
-├── complements.json           ← photos, professions, textes ajoutés via le site
-├── data.json                  ← GÉNÉRÉ automatiquement (ne pas modifier à la main)
+├── gedcom/Beauchesne.ged      ← extrait PUBLIC de la base Beauchesne (voir plus bas)
+├── complements*.json          ← photos, professions, textes ajoutés via le site (un par arbre)
+├── data.json, data_beauchesne.json ← GÉNÉRÉS automatiquement (ne pas modifier à la main)
 ├── index.html                 ← l'arbre interactif
 ├── photos/                    ← portraits et images (à créer au besoin)
-├── scripts/ged2json.py        ← conversion GEDCOM → data.json + contrôles de cohérence
-└── .github/workflows/         ← régénération automatique de data.json
+├── scripts/ged2json.py        ← conversion GEDCOM → data*.json + contrôles de cohérence
+├── scripts/extraire_ascendants.py ← base complète privée → extrait publiable
+└── .github/workflows/         ← régénération automatique des données
 ```
 
 Le principe : **on ne saisit les données qu'une seule fois, dans Gramps.**
@@ -49,11 +55,36 @@ publication) : [docs/guide-gramps.md](docs/guide-gramps.md)
 
 ---
 
+## 🌳 Arbre Beauchesne : base privée, extrait public
+
+La base Beauchesne complète (`Bauchesne.ged`, ~2 000 personnes, dont des personnes vivantes,
+des adresses et des courriels) est conservée dans le dépôt **privé** `genealogie-sources`.
+Le site n'en publie qu'un **extrait** : `gedcom/Beauchesne.ged`, produit par
+
+```bash
+python3 scripts/extraire_ascendants.py ../genealogie-sources/Bauchesne.ged I0022 gedcom/Beauchesne.ged
+```
+
+Cet extrait contient l'ascendance de Françoise Beauchesne (I0022) avec notes et sources, plus
+les frères, sœurs et conjoints **décédés** (fiche réduite). Il retire les personnes possiblement
+vivantes, les résidences et adresses, et dans les textes les courriels, téléphones et contacts.
+
+Pour mettre à jour l'arbre Beauchesne :
+1. exporter la base complète depuis Gramps (GEDCOM) et la déposer dans `genealogie-sources` ;
+2. relancer la commande ci-dessus (ou demander à Claude de le faire) et déposer le nouvel
+   `gedcom/Beauchesne.ged` dans ce dépôt : le site se met à jour seul.
+
+> À corriger dans la base Gramps Beauchesne : naissance de Jean Gustave Marie TANGUY
+> le **31 octobre 1946** (la base indique 6 octobre 1945 ; l'extrait public est déjà corrigé).
+
+---
+
 ## 🖼️ Ajouter une photo, une profession ou un texte (depuis le site)
 
 1. Ouvrir l'arbre, cliquer sur un ancêtre → **✎ Modifier**
 2. Renseigner la photo, la profession et/ou des compléments biographiques → **Enregistrer**
-3. Cliquer **⬇ Exporter** → télécharge `complements.json`
+3. Cliquer **⬇ Exporter** → télécharge `complements.json` (arbre Tanguy) ou
+   `complements_beauchesne.json` (arbre Beauchesne)
 4. Déposer ce fichier à la racine du dépôt GitHub (remplace l'ancien)
 5. L'arbre se met à jour automatiquement en 1 à 2 minutes
 
@@ -82,7 +113,7 @@ Les noms, dates, lieux, unions et notes d'archives ne se modifient **que dans Gr
 ## 🛠️ Générer data.json à la main (facultatif)
 
 ```bash
-python3 scripts/ged2json.py            # écrit data.json et affiche les points à vérifier
+python3 scripts/ged2json.py            # régénère tous les arbres de arbres.json + points à vérifier
 python3 scripts/ged2json.py --root I0001 --out test.json   # autre personne de départ
 ```
 
@@ -92,7 +123,8 @@ Aucune installation nécessaire au-delà de Python 3.
 
 ## 🔒 Confidentialité
 
-Le dépôt et le site sont **publics**. N'y mettre **que des personnes décédées** :
+Le dépôt et le site sont **publics**. N'y mettre **que des personnes décédées** (les bases
+complètes restent dans le dépôt privé `genealogie-sources`) :
 pas de personnes vivantes, ni de coordonnées (téléphones, adresses, courriels)
 de correspondants. Les notes de recherche personnelles restent dans Google Drive.
 
