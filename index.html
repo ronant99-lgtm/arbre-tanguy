@@ -187,6 +187,21 @@ svg { width: 100%; height: 100%; }
 
 .edit-sep { border:none; border-top:1px solid rgba(122,92,62,.2); margin:20px 0 16px; }
 
+.ef-info { font-family:'Crimson Text',serif; font-style:italic; font-size:.85rem; color:var(--sepia-mid); line-height:1.45; margin-bottom:16px; padding:8px 10px; background:rgba(122,92,62,.08); border-left:2px solid var(--sepia-light); }
+.ef-info code, #export-bar code { font-size:.75rem; }
+
+.sec-title { margin:16px 22px 6px; font-family:'Playfair Display',serif; font-size:.72rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); }
+.sec-body { padding:0 22px; font-family:'Crimson Text',serif; font-size:.95rem; color:var(--sepia-dark); line-height:1.55; }
+.sec-body ul { list-style:none; }
+.sec-body li { margin-bottom:2px; }
+.union-head { font-family:'EB Garamond',serif; font-size:.95rem; }
+details.union-notes { margin:4px 0 10px; }
+details.union-notes summary { cursor:pointer; font-style:italic; font-size:.85rem; color:var(--sepia-mid); }
+details.union-notes p { margin:.3em 0; font-size:.9rem; line-height:1.5; }
+.implexe-badge { margin:12px 22px 0; padding:8px 10px; font-family:'Crimson Text',serif; font-size:.88rem; line-height:1.45; color:var(--sepia-dark); background:rgba(184,134,11,.12); border:1px dashed var(--gold); border-radius:3px; }
+.node.implexe rect { stroke: var(--gold) !important; stroke-dasharray: 4 3; }
+.node .implexe-mark { fill: var(--gold-light); font-size: 10px; text-anchor: end; pointer-events: none; }
+
 /* Export bar */
 #export-bar {
   flex-shrink:0; padding:10px 14px;
@@ -254,43 +269,18 @@ svg { width: 100%; height: 100%; }
         <div class="v-dates" id="v-dates"></div>
       </div>
       <div class="view-meta" id="v-meta"></div>
+      <div id="v-implexe"></div>
+      <div id="v-unions"></div>
+      <div id="v-fratrie"></div>
       <div class="bio-title" id="bio-title" style="display:none">Notes archivistiques</div>
       <div class="bio-body" id="v-bio"></div>
     </div>
 
     <!-- EDIT MODE -->
     <div id="edit-mode">
-      <div class="ef-group">
-        <label class="ef-label">Prénom(s)</label>
-        <input class="ef-input" id="e-given" type="text" placeholder="ex. Jean Gustave Marie">
-      </div>
-      <div class="ef-group">
-        <label class="ef-label">Nom de famille</label>
-        <input class="ef-input" id="e-surname" type="text" placeholder="ex. TANGUY">
-      </div>
-      <div class="ef-group">
-        <label class="ef-label">Dates &amp; lieux</label>
-        <div class="ef-row">
-          <div>
-            <label class="ef-label" style="font-size:.72rem">Naissance (année)</label>
-            <input class="ef-input" id="e-born" type="number" placeholder="1875">
-          </div>
-          <div>
-            <label class="ef-label" style="font-size:.72rem">Décès (année)</label>
-            <input class="ef-input" id="e-died" type="number" placeholder="1939">
-          </div>
-        </div>
-        <div class="ef-row" style="margin-top:6px">
-          <div>
-            <label class="ef-label" style="font-size:.72rem">Lieu de naissance</label>
-            <input class="ef-input" id="e-bplace" type="text" placeholder="Kerpert">
-          </div>
-          <div>
-            <label class="ef-label" style="font-size:.72rem">Lieu de décès</label>
-            <input class="ef-input" id="e-dplace" type="text" placeholder="Kerpert">
-          </div>
-        </div>
-      </div>
+      <p class="ef-info">Noms, dates, lieux, unions et notes d'archives viennent du fichier Gramps
+        (<code>gedcom/Tanguy.ged</code>) : corrigez-les dans Gramps. Ici, vous pouvez ajouter
+        une photo, une profession et des compléments de texte.</p>
       <div class="ef-group">
         <label class="ef-label">Profession</label>
         <input class="ef-input" id="e-profession" type="text" placeholder="ex. Cultivateur, Laboureur…">
@@ -305,8 +295,8 @@ svg { width: 100%; height: 100%; }
       </div>
       <hr class="edit-sep">
       <div class="ef-group">
-        <label class="ef-label">Biographie / Notes <span style="opacity:.6;font-size:.72rem">(HTML simple accepté : &lt;p&gt;, &lt;em&gt;, &lt;strong&gt;)</span></label>
-        <textarea class="ef-input ef-textarea" id="e-bio" placeholder="Texte libre…"></textarea>
+        <label class="ef-label">Compléments biographiques <span style="opacity:.6;font-size:.72rem">(souvenirs, témoignages… HTML simple accepté : &lt;p&gt;, &lt;em&gt;, &lt;strong&gt;)</span></label>
+        <textarea class="ef-input ef-textarea" id="e-bio" placeholder="Texte libre, affiché après les notes d'archives…"></textarea>
       </div>
       <div class="edit-actions">
         <button class="ef-btn ef-btn-save" onclick="saveEdit()">Enregistrer</button>
@@ -316,12 +306,12 @@ svg { width: 100%; height: 100%; }
   </div><!-- /panel-body -->
 
   <div id="export-bar">
-    <p id="export-hint">Modifiez les fiches, puis exportez le JSON pour mettre à jour l'arbre.</p>
-    <button id="export-btn" onclick="exportJSON()">⬇ Exporter JSON</button>
+    <p id="export-hint">Ajoutez photos et compléments, puis exportez <code>complements.json</code>.</p>
+    <button id="export-btn" onclick="exportComplements()">⬇ Exporter</button>
   </div>
 </div><!-- /panel -->
 
-<div id="legend">Molette : zoom &nbsp;·&nbsp; Glisser : naviguer &nbsp;·&nbsp; Clic : fiche &nbsp;·&nbsp; ● : replier/déplier</div>
+<div id="legend">Molette : zoom &nbsp;·&nbsp; Glisser : naviguer &nbsp;·&nbsp; Clic : fiche &nbsp;·&nbsp; ● : replier/déplier &nbsp;·&nbsp; ∞ : implexe</div>
 
 <script>
 // ─── DATA ───────────────────────────────────────────────────────────────
@@ -333,6 +323,10 @@ async function loadData() {
     const res = await fetch('data.json');
     if (!res.ok) throw new Error('Fichier data.json introuvable');
     treeData = await res.json();
+    try {
+      const rc = await fetch('complements.json', {cache: 'no-store'});
+      if (rc.ok) complements = await rc.json();
+    } catch(e) { /* facultatif */ }
     buildTree();
   } catch(err) {
     // Fallback: show error message
@@ -350,6 +344,8 @@ async function loadData() {
 loadData();
 
 let hasUnsaved = false;
+let complements = {};   // contenu de complements.json (édité via le site)
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let currentNode = null; // currently open data node
 let editMode = false;
 
@@ -400,7 +396,7 @@ function buildTree() {
   // Nodes
   const ne = g.selectAll('.node').data(root.descendants()).enter()
     .append('g')
-    .attr('class', d => `node ${d.data.gender==='F'?'female':'male'}${d.depth===0?' root':''}`)
+    .attr('class', d => `node ${d.data.gender==='F'?'female':'male'}${d.depth===0?' root':''}${d.data.implexe?' implexe':''}`)
     .attr('transform', d => `translate(${d.x - NODE_W/2}, ${d.y})`);
 
   ne.append('rect').attr('width',NODE_W).attr('height',NODE_H).attr('rx',4).attr('ry',4)
@@ -420,6 +416,9 @@ function buildTree() {
     grp.append('text').attr('class','fname').attr('x',NODE_W/2).attr('y',y0+14).text(giv);
     grp.append('text').attr('class','years').attr('x',NODE_W/2).attr('y',NODE_H-7)
       .text(`${d.data.born||'?'} — ${d.data.died||'?'}`);
+    if (d.data.implexe) grp.append('text').attr('class','implexe-mark')
+      .attr('x',NODE_W-5).attr('y',12).text('∞').append('title')
+      .text(`Implexe : apparaît ${d.data.implexe} fois dans l'arbre`);
   });
 
   // Collapse buttons
@@ -445,7 +444,11 @@ function buildTree() {
 
   // Center on root
   const W = window.innerWidth, H = window.innerHeight - 60;
-  svg.call(zoom.transform, d3.zoomIdentity.translate(W/2, 50).scale(0.72));
+  const xs = root.descendants().map(d => d.x);
+  const span = Math.max(...xs) - Math.min(...xs) + NODE_W + 60;
+  const k = Math.max(0.1, Math.min(0.72, W / span, (H - 40) / ((maxDepth + 1) * GEN_H)));
+  const cx = (Math.max(...xs) + Math.min(...xs)) / 2;
+  svg.call(zoom.transform, d3.zoomIdentity.translate(W/2 - cx*k, 40).scale(k));
 }
 
 // buildTree() is called after data loads
@@ -471,11 +474,26 @@ function openPanel(d) {
   document.getElementById('v-dates').textContent = `${d.born||'?'} — ${d.died||'?'}`;
 
   // meta
+  const bd = d.date_naissance || d.born, dd = d.date_deces || d.died;
   let meta = '';
-  if (d.born || d.lieu_naissance) meta += `<div class="ml">Naissance</div><div class="mv">${d.born||'?'}${d.lieu_naissance?' · '+d.lieu_naissance:''}</div>`;
-  if (d.died || d.lieu_deces)     meta += `<div class="ml">Décès</div><div class="mv">${d.died||'?'}${d.lieu_deces?' · '+d.lieu_deces:''}</div>`;
-  if (d.profession)               meta += `<div class="ml">Profession</div><div class="mv">${d.profession}</div>`;
+  if (bd || d.lieu_naissance) meta += `<div class="ml">Naissance</div><div class="mv">${esc(bd||'?')}${d.lieu_naissance?' · '+esc(d.lieu_naissance):''}</div>`;
+  if (dd || d.lieu_deces)     meta += `<div class="ml">Décès</div><div class="mv">${esc(dd||'?')}${d.lieu_deces?' · '+esc(d.lieu_deces):''}</div>`;
+  if (d.profession)           meta += `<div class="ml">Profession</div><div class="mv">${esc(d.profession)}</div>`;
   document.getElementById('v-meta').innerHTML = meta;
+
+  document.getElementById('v-implexe').innerHTML = d.implexe
+    ? `<div class="implexe-badge">∞ <strong>Implexe</strong> : cet ancêtre apparaît ${d.implexe} fois dans l'arbre (on descend de lui par plusieurs lignées).</div>` : '';
+
+  const unions = d.unions || [];
+  document.getElementById('v-unions').innerHTML = unions.length ? `<div class="sec-title">${unions.length>1?'Unions':'Union'}</div><div class="sec-body">` +
+    unions.map(u => `<div class="union-head">${d.gender==='F'?'Épouse':'Époux'} de <strong>${esc(u.conjoint)}</strong>` +
+      `${u.date?' · '+esc(u.date):''}${u.lieu?' · '+esc(u.lieu):''}</div>` +
+      (u.notes ? `<details class="union-notes"><summary>Acte de mariage (témoins, détails)</summary>${u.notes}</details>` : '')
+    ).join('') + '</div>' : '';
+
+  const fr = d.fratrie || [];
+  document.getElementById('v-fratrie').innerHTML = fr.length
+    ? `<div class="sec-title">Frères et sœurs connus</div><div class="sec-body"><ul>${fr.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>` : '';
 
   const bioEl = document.getElementById('v-bio');
   const bioTitle = document.getElementById('bio-title');
@@ -496,16 +514,11 @@ function startEdit() {
   if (!currentNode) return;
   editMode = true;
   const d = currentNode;
+  const c = complements[d.id] || {};
 
-  document.getElementById('e-given').value      = d.given      || '';
-  document.getElementById('e-surname').value    = d.surname    || '';
-  document.getElementById('e-born').value       = d.born       || '';
-  document.getElementById('e-died').value       = d.died       || '';
-  document.getElementById('e-bplace').value     = d.lieu_naissance || '';
-  document.getElementById('e-dplace').value     = d.lieu_deces || '';
   document.getElementById('e-profession').value = d.profession || '';
   document.getElementById('e-photo').value      = d.photo      || '';
-  document.getElementById('e-bio').value        = d.bio        || '';
+  document.getElementById('e-bio').value        = c.bio_ajout  || '';
 
   updatePhotoPreview(d.photo);
 
@@ -529,25 +542,33 @@ function updatePhotoPreview(url) {
 function saveEdit() {
   if (!currentNode) return;
   const d = currentNode;
+  const c = complements[d.id] = complements[d.id] || {};
+  const oldAjout = c.bio_ajout || '';
 
-  const newGiven   = document.getElementById('e-given').value.trim();
-  const newSurname = document.getElementById('e-surname').value.trim();
-  d.given      = newGiven;
-  d.surname    = newSurname;
-  d.name       = `${newGiven.split(' ')[0]}\n${newSurname}`;
-  d.born       = parseInt(document.getElementById('e-born').value) || null;
-  d.died       = parseInt(document.getElementById('e-died').value) || null;
-  d.lieu_naissance = document.getElementById('e-bplace').value.trim();
-  d.lieu_deces     = document.getElementById('e-dplace').value.trim();
-  d.profession = document.getElementById('e-profession').value.trim();
-  d.photo      = document.getElementById('e-photo').value.trim() || null;
-  d.bio        = document.getElementById('e-bio').value.trim();
+  const prof  = document.getElementById('e-profession').value.trim();
+  const photo = document.getElementById('e-photo').value.trim();
+  const ajout = document.getElementById('e-bio').value.trim();
+
+  // la profession ne va dans les compléments que si elle diffère de Gramps
+  if (prof !== (d.profession || '') || 'profession' in c) c.profession = prof;
+  d.profession = prof;
+  d.photo      = photo || null;  if (photo) c.photo = photo; else delete c.photo;
+  // la bio affichée = notes Gramps + compléments : on remplace l'ancien complément
+  let base = d.bio || '';
+  if (oldAjout && base.endsWith(oldAjout)) base = base.slice(0, -oldAjout.length);
+  d.bio = base + ajout;
+  if (ajout) c.bio_ajout = ajout; else delete c.bio_ajout;
+  if (!Object.keys(c).length) delete complements[d.id];
+
+  forEachNode(treeData, n => { if (n.id === d.id && n !== d) { n.profession = d.profession; n.photo = d.photo; n.bio = d.bio; } });
 
   markUnsaved();
   cancelEdit();
   openPanel(d);
   buildTree();
 }
+
+function forEachNode(n, fn) { fn(n); (n.children || []).concat(n._hidden || []).forEach(x => forEachNode(x, fn)); }
 
 function cancelEdit() {
   editMode = false;
@@ -572,18 +593,18 @@ function markUnsaved() {
   hint.innerHTML = `Des modifications ont été apportées <span class="unsaved-dot"></span>`;
 }
 
-function exportJSON() {
-  const json = JSON.stringify(treeData, null, 2);
+function exportComplements() {
+  const json = JSON.stringify(complements, null, 2) + '\n';
   const blob = new Blob([json], {type: 'application/json'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'data_tanguy.json';
-  a.click();
-  URL.revokeObjectURL(a.href);
+  a.download = 'complements.json';
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
 
   hasUnsaved = false;
-  document.getElementById('export-hint').textContent =
-    'JSON exporté — remplacez data_tanguy.json dans votre dépôt.';
+  document.getElementById('export-hint').innerHTML =
+    'Exporté : déposez <code>complements.json</code> dans le dépôt GitHub (l\'arbre se met à jour seul).';
 }
 
 // ─── IMPORT JSON ─────────────────────────────────────────────────────────
@@ -596,7 +617,19 @@ document.addEventListener('drop', e => {
   const reader = new FileReader();
   reader.onload = ev => {
     try {
-      treeData = JSON.parse(ev.target.result);
+      const obj = JSON.parse(ev.target.result);
+      if (obj && obj.id && Array.isArray(obj.children)) {
+        treeData = obj;                       // un data.json complet
+      } else {                                // un complements.json
+        Object.assign(complements, obj);
+        forEachNode(treeData, n => {
+          const c = obj[n.id]; if (!c) return;
+          if ('profession' in c) n.profession = c.profession;
+          if ('photo' in c) n.photo = c.photo;
+          if (c.bio_ajout && !(n.bio || '').endsWith(c.bio_ajout)) n.bio = (n.bio || '') + c.bio_ajout;
+        });
+        markUnsaved();
+      }
       closePanel();
       buildTree();
       document.getElementById('export-hint').textContent =

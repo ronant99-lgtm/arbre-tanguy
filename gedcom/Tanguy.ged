@@ -45,6 +45,7 @@
 2 PEDI birth
 1 FAMS @F0000@
 1 NOTE @N0000@
+1 OCCU Cultivateur
 1 CHAN
 2 DATE 16 AUG 2024
 3 TIME 12:33:31
@@ -97,6 +98,7 @@
 2 PEDI birth
 1 FAMS @F0001@
 1 NOTE @N0001@
+1 OCCU Cultivateur
 1 CHAN
 2 DATE 26 AUG 2024
 3 TIME 13:20:58
@@ -115,6 +117,7 @@
 2 PEDI birth
 1 FAMS @F0001@
 1 NOTE @N0002@
+1 OCCU Ménagère
 1 CHAN
 2 DATE 26 AUG 2024
 3 TIME 13:35:41
@@ -133,6 +136,7 @@
 2 PEDI birth
 1 FAMS @F0002@
 1 NOTE @N0004@
+1 OCCU Laboureur
 1 CHAN
 2 DATE 16 AUG 2024
 3 TIME 16:13:44
@@ -151,6 +155,7 @@
 2 PEDI birth
 1 FAMS @F0002@
 1 NOTE @N0005@
+1 OCCU Ménagère
 1 CHAN
 2 DATE 17 AUG 2024
 3 TIME 12:44:38
@@ -169,6 +174,7 @@
 2 PEDI birth
 1 FAMS @F0003@
 1 NOTE @N0006@
+1 OCCU Laboureur, cultivateur
 1 CHAN
 2 DATE 18 AUG 2024
 3 TIME 08:01:14
@@ -187,6 +193,7 @@
 2 PEDI birth
 1 FAMS @F0003@
 1 NOTE @N0014@
+1 OCCU Ménagère
 1 CHAN
 2 DATE 25 AUG 2024
 3 TIME 08:43:21
@@ -203,6 +210,7 @@
 2 PLAC Kerpert, 22092, France
 1 FAMS @F0004@
 1 NOTE @N0008@
+1 OCCU Laboureur
 1 CHAN
 2 DATE 16 AUG 2024
 3 TIME 13:55:21
@@ -219,6 +227,7 @@
 2 PLAC Kerpert, 22092, France
 1 FAMS @F0004@
 1 NOTE @N0009@
+1 OCCU Ménagère, cultivatrice
 1 CHAN
 2 DATE 16 AUG 2024
 3 TIME 14:10:39
@@ -235,6 +244,7 @@
 2 PLAC Kerpert, 22092, France
 1 FAMS @F0005@
 1 NOTE @N0010@
+1 OCCU Cultivateur, laboureur
 1 CHAN
 2 DATE 16 AUG 2024
 3 TIME 16:43:05
@@ -251,6 +261,7 @@
 2 PLAC Kerpert, 22092, France
 1 FAMS @F0005@
 1 NOTE @N0011@
+1 OCCU Ménagère
 1 CHAN
 2 DATE 25 AUG 2024
 3 TIME 13:15:32
@@ -267,6 +278,7 @@
 2 PLAC St Gilles Pligeaux, 22294, France
 1 FAMS @F0006@
 1 NOTE @N0016@
+1 OCCU Laboureur, cultivateur
 1 CHAN
 2 DATE 25 AUG 2024
 3 TIME 08:28:29
@@ -283,6 +295,7 @@
 2 PLAC St Gilles Pligeaux, 22294, France
 1 FAMS @F0006@
 1 NOTE @N0017@
+1 OCCU Ménagère
 1 CHAN
 2 DATE 25 AUG 2024
 3 TIME 08:25:05
@@ -299,6 +312,7 @@
 2 PLAC Kerpert, 22092, France
 1 FAMS @F0007@
 1 NOTE @N0020@
+1 OCCU Cultivateur
 1 CHAN
 2 DATE 25 AUG 2024
 3 TIME 08:06:40
@@ -315,6 +329,7 @@
 2 PLAC Kerpert, 22092, France
 1 FAMS @F0007@
 1 NOTE @N0019@
+1 OCCU Ménagère
 1 CHAN
 2 DATE 17 AUG 2024
 3 TIME 17:08:34
@@ -333,6 +348,7 @@
 2 PEDI birth
 1 FAMS @F0008@
 1 NOTE @N0024@
+1 OCCU Cultivateur
 1 CHAN
 2 DATE 18 AUG 2024
 3 TIME 16:00:57
@@ -351,6 +367,7 @@
 2 PEDI birth
 1 FAMS @F0008@
 1 NOTE @N0025@
+1 OCCU Ménagère
 1 CHAN
 2 DATE 26 AUG 2024
 3 TIME 14:02:29
@@ -368,6 +385,7 @@
 2 PEDI birth
 1 FAMS @F0009@
 1 NOTE @N0027@
+1 OCCU Laboureur, puis rentier
 1 CHAN
 2 DATE 20 AUG 2024
 3 TIME 12:01:57
@@ -386,6 +404,7 @@
 2 PEDI birth
 1 FAMS @F0009@
 1 NOTE @N0028@
+1 OCCU Ménagère, puis rentière
 1 CHAN
 2 DATE 20 AUG 2024
 3 TIME 07:36:52
@@ -404,6 +423,7 @@
 2 PEDI birth
 1 FAMS @F0010@
 1 NOTE @N0030@
+1 OCCU Laboureur
 1 CHAN
 2 DATE 19 AUG 2024
 3 TIME 16:45:49
@@ -422,6 +442,7 @@
 2 PEDI birth
 1 FAMS @F0010@
 1 NOTE @N0031@
+1 OCCU Ménagère
 1 CHAN
 2 DATE 19 AUG 2024
 3 TIME 08:41:34
@@ -438,6 +459,7 @@
 2 PLAC Canihuel, 22029, France
 1 FAMS @F0011@
 1 NOTE @N0033@
+1 OCCU Laboureur, cultivateur
 1 CHAN
 2 DATE 19 AUG 2024
 3 TIME 08:24:59
@@ -455,6 +477,7 @@
 2 PLAC Canihuel, 22029, France
 1 FAMS @F0011@
 1 NOTE @N0035@
+1 OCCU Ménagère
 1 CHAN
 2 DATE 19 AUG 2024
 3 TIME 12:07:11
@@ -471,6 +494,7 @@
 2 PLAC Lanrivain, 22115, France
 1 FAMS @F0012@
 1 NOTE @N0037@
+1 OCCU Laboureur
 1 CHAN
 2 DATE 19 AUG 2024
 3 TIME 14:26:29
@@ -487,6 +511,7 @@
 2 PLAC Lanrivain, 22115, France
 1 FAMS @F0012@
 1 NOTE @N0038@
+1 OCCU Fillandière, puis ménagère
 1 CHAN
 2 DATE 25 AUG 2024
 3 TIME 13:36:38
@@ -503,6 +528,7 @@
 2 PLAC Kerpert, 22092, France
 1 FAMS @F0013@
 1 NOTE @N0040@
+1 OCCU Propriétaire cultivateur
 1 CHAN
 2 DATE 19 AUG 2024
 3 TIME 20:07:38
@@ -519,6 +545,7 @@
 2 PLAC Kerpert, 22092, France
 1 FAMS @F0013@
 1 NOTE @N0041@
+1 OCCU Ménagère
 1 CHAN
 2 DATE 20 AUG 2024
 3 TIME 08:10:03
@@ -535,6 +562,7 @@
 2 PLAC St Nicolas du Pelem, 22321, France
 1 FAMS @F0014@
 1 NOTE @N0043@
+1 OCCU Laboureur, cultivateur
 1 CHAN
 2 DATE 20 AUG 2024
 3 TIME 12:32:37
@@ -551,6 +579,7 @@
 2 PLAC St Nicolas du Pelem, 22321, France
 1 FAMS @F0014@
 1 NOTE @N0044@
+1 OCCU Ménagère
 1 CHAN
 2 DATE 20 AUG 2024
 3 TIME 12:37:42
@@ -700,7 +729,8 @@
 1 HUSB @I0028@
 1 WIFE @I0029@
 1 MARR
-2 DATE 12 JAN 1839
+2 DATE 12 JAN 1829
+2 NOTE Date corrigée de 1839 en 1829 : Anne THORAVAL est décédée en 1835 et leur fille Anne est née en 1833 ; l'acte numérisé s'intitule AM_Lautout-Thoraval_1829. Jour et mois à vérifier sur l'acte.
 2 PLAC Kerpert, 22092, France
 2 NOTE @N0042@
 1 CHIL @I0021@
