@@ -1,0 +1,20 @@
+[
+  {
+    "id": "tanguy",
+    "titre": "Famille Tanguy",
+    "sous_titre": "Ascendants de Jean Gustave Marie Tanguy · Kerpert, Côtes-du-Nord",
+    "gedcom": "gedcom/Tanguy.ged",
+    "racine": "I0000",
+    "data": "data.json",
+    "complements": "complements.json"
+  },
+  {
+    "id": "beauchesne",
+    "titre": "Famille Beauchesne",
+    "sous_titre": "Ascendants de Françoise Beauchesne · Le Mans, Perche, Lorraine, Rhénanie",
+    "gedcom": "gedcom/Beauchesne.ged",
+    "racine": "I0022",
+    "data": "data_beauchesne.json",
+    "complements": "complements_beauchesne.json"
+  }
+]

@@ -59,6 +59,14 @@ header p {
   margin-top: 1px; letter-spacing: .05em; text-align: center;
 }
 
+#choix-arbre { display:flex; gap:6px; justify-content:center; margin-top:6px; flex-wrap:wrap; }
+#choix-arbre button {
+  background:none; border:1px solid rgba(196,168,130,.3); color:var(--sepia-light);
+  font-family:'Crimson Text',serif; font-size:.8rem; padding:2px 12px; border-radius:12px; cursor:pointer;
+}
+#choix-arbre button:hover { border-color:var(--gold-light); color:var(--parchment); }
+#choix-arbre button.actif { background:var(--gold); border-color:var(--gold); color:#1a1209; }
+
 /* ── Tree canvas ── */
 #tree-container { flex: 1; overflow: hidden; cursor: grab; position: relative; }
 #tree-container:active { cursor: grabbing; }
@@ -242,8 +250,9 @@ details.union-notes p { margin:.3em 0; font-size:.9rem; line-height:1.5; }
 
 <header>
   <div>
-    <h1>Arbre Généalogique · Famille Tanguy</h1>
-    <p>Ascendants de Jean Gustave Marie Tanguy &middot; Kerpert, Côtes-du-Nord</p>
+    <h1 id="titre">Arbre Généalogique · Famille Tanguy</h1>
+    <p id="sous-titre">Ascendants de Jean Gustave Marie Tanguy &middot; Kerpert, Côtes-du-Nord</p>
+    <nav id="choix-arbre" aria-label="Choisir l'arbre"></nav>
   </div>
 </header>
 
@@ -272,6 +281,7 @@ details.union-notes p { margin:.3em 0; font-size:.9rem; line-height:1.5; }
       <div id="v-implexe"></div>
       <div id="v-unions"></div>
       <div id="v-fratrie"></div>
+      <div id="v-sources"></div>
       <div class="bio-title" id="bio-title" style="display:none">Notes archivistiques</div>
       <div class="bio-body" id="v-bio"></div>
     </div>
@@ -318,30 +328,65 @@ details.union-notes p { margin:.3em 0; font-size:.9rem; line-height:1.5; }
 let treeData = null;
 
 // Load data from external file
+let arbres = [];          // arbres.json : liste des arbres du site
+let arbre = null;         // arbre affiché
+
 async function loadData() {
   try {
-    const res = await fetch('data.json');
-    if (!res.ok) throw new Error('Fichier data.json introuvable');
-    treeData = await res.json();
     try {
-      const rc = await fetch('complements.json', {cache: 'no-store'});
-      if (rc.ok) complements = await rc.json();
+      const ra = await fetch('arbres.json', {cache: 'no-store'});
+      if (ra.ok) arbres = await ra.json();
     } catch(e) { /* facultatif */ }
-    buildTree();
+    if (!arbres.length) arbres = [{id:'tanguy', titre:'Famille Tanguy', data:'data.json', complements:'complements.json'}];
+
+    const nav = document.getElementById('choix-arbre');
+    nav.innerHTML = arbres.length > 1
+      ? arbres.map(a => `<button data-id="${esc(a.id)}">${esc(a.titre)}</button>`).join('') : '';
+    nav.querySelectorAll('button').forEach(b => b.addEventListener('click', () => { location.hash = b.dataset.id; }));
+
+    await afficherArbre(location.hash.slice(1));
   } catch(err) {
-    // Fallback: show error message
     document.body.innerHTML += `<div style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
       background:#f2e8d5;padding:30px 40px;border-radius:8px;font-family:Georgia,serif;
       color:#3d2b1f;text-align:center;box-shadow:0 8px 40px rgba(0,0,0,.5)">
       <h2 style="margin-bottom:12px">Données introuvables</h2>
-      <p>Le fichier <code>data.json</code> est absent du dossier.<br>
+      <p>Le fichier de données de l'arbre est absent du dossier.<br>
       Vérifiez que vous avez bien déposé tous les fichiers.</p>
-      <p style="margin-top:16px;font-size:.85rem;color:#7a5c3e">${err.message}</p>
+      <p style="margin-top:16px;font-size:.85rem;color:#7a5c3e">${esc(err.message)}</p>
     </div>`;
     console.error(err);
   }
 }
-loadData();
+
+async function afficherArbre(id) {
+  const choix = arbres.find(a => a.id === id) || arbres[0];
+  if (arbre && choix.id === arbre.id) return;
+  if (hasUnsaved && !confirm('Des modifications n\'ont pas été exportées. Changer d\'arbre quand même ?')) {
+    history.replaceState(null, '', '#' + arbre.id);
+    return;
+  }
+  const res = await fetch(choix.data, {cache: 'no-store'});
+  if (!res.ok) throw new Error(`Fichier ${choix.data} introuvable`);
+  treeData = await res.json();
+  complements = {};
+  if (choix.complements) {
+    try {
+      const rc = await fetch(choix.complements, {cache: 'no-store'});
+      if (rc.ok) complements = await rc.json();
+    } catch(e) { /* facultatif */ }
+  }
+  arbre = choix;
+  hasUnsaved = false;
+  document.getElementById('titre').textContent = `Arbre Généalogique · ${choix.titre}`;
+  document.getElementById('sous-titre').textContent = choix.sous_titre || '';
+  document.title = `Arbre Généalogique — ${choix.titre}`;
+  document.getElementById('export-hint').innerHTML =
+    `Ajoutez photos et compléments, puis exportez <code>${esc(choix.complements || 'complements.json')}</code>.`;
+  document.querySelectorAll('#choix-arbre button').forEach(b => b.classList.toggle('actif', b.dataset.id === choix.id));
+  closePanel();
+  buildTree();
+}
+window.addEventListener('hashchange', () => afficherArbre(location.hash.slice(1)).catch(console.error));
 
 let hasUnsaved = false;
 let complements = {};   // contenu de complements.json (édité via le site)
@@ -447,7 +492,7 @@ function buildTree() {
   const xs = root.descendants().map(d => d.x);
   const span = Math.max(...xs) - Math.min(...xs) + NODE_W + 60;
   const k = Math.max(0.45, Math.min(0.72, W / span, (H - 40) / ((maxDepth + 1) * GEN_H)));
-  const cx = (Math.max(...xs) + Math.min(...xs)) / 2;
+  const cx = root.x;   // centré sur la personne de départ
   svg.call(zoom.transform, d3.zoomIdentity.translate(W/2 - cx*k, 40).scale(k));
 }
 
@@ -490,6 +535,10 @@ function openPanel(d) {
       `${u.date?' · '+esc(u.date):''}${u.lieu?' · '+esc(u.lieu):''}</div>` +
       (u.notes ? `<details class="union-notes"><summary>Acte de mariage (témoins, détails)</summary>${u.notes}</details>` : '')
     ).join('') + '</div>' : '';
+
+  const src = d.sources || [];
+  document.getElementById('v-sources').innerHTML = src.length
+    ? `<div class="sec-title">Sources</div><div class="sec-body"><ul>${src.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>` : '';
 
   const fr = d.fratrie || [];
   document.getElementById('v-fratrie').innerHTML = fr.length
@@ -598,13 +647,14 @@ function exportComplements() {
   const blob = new Blob([json], {type: 'application/json'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'complements.json';
+  const nomFichier = (arbre && arbre.complements) || 'complements.json';
+  a.download = nomFichier;
   document.body.appendChild(a); a.click(); a.remove();
   setTimeout(() => URL.revokeObjectURL(a.href), 1000);
 
   hasUnsaved = false;
   document.getElementById('export-hint').innerHTML =
-    'Exporté : déposez <code>complements.json</code> dans le dépôt GitHub (l\'arbre se met à jour seul).';
+    `Exporté : déposez <code>${esc(nomFichier)}</code> dans le dépôt GitHub (l'arbre se met à jour seul).`;
 }
 
 // ─── IMPORT JSON ─────────────────────────────────────────────────────────
@@ -640,6 +690,8 @@ document.addEventListener('drop', e => {
   };
   reader.readAsText(file);
 });
+
+loadData();
 </script>
 </body>
 </html>
