@@ -1088,7 +1088,7 @@
                                               "bio": "",
                                               "unions": [
                                                 {
-                                                  "conjoint": "",
+                                                  "conjoint": "conjoint non identifié",
                                                   "date": "",
                                                   "lieu": "",
                                                   "notes": ""
@@ -2838,7 +2838,7 @@
                                                           "bio": "<p>Peter Frowin est né en 1500. Il est décédé en 1580 à Lennep. (source Ahnen Blank)</p>",
                                                           "unions": [
                                                             {
-                                                              "conjoint": "",
+                                                              "conjoint": "conjoint non identifié",
                                                               "date": "",
                                                               "lieu": "",
                                                               "notes": ""
@@ -2865,7 +2865,7 @@
                                                               "bio": "<p>Hermann Frowin est né en 1470 à Lennep. Il est décédé en 1540 à Lennep. (source Ahnen Blank)</p>",
                                                               "unions": [
                                                                 {
-                                                                  "conjoint": "",
+                                                                  "conjoint": "conjoint non identifié",
                                                                   "date": "",
                                                                   "lieu": "",
                                                                   "notes": ""
@@ -3375,7 +3375,7 @@
                           "bio": "<p>installé à St Domingue comme avocat</p><p>probleme si né en 1745 : ses parents pas encore mariés. A l'époque et dans le milieu, cela pourrait faire tâche !</p><p>pas trouvé sur BMS/St Laon de 04/1747 à 11/1748</p><p>ni sur BMS/ST Médard de 01/1745 à 12/1748</p>",
                           "unions": [
                             {
-                              "conjoint": "",
+                              "conjoint": "conjoint non identifié",
                               "date": "",
                               "lieu": "",
                               "notes": ""
@@ -3596,7 +3596,7 @@
                               "notes": "<p>s'il n'y a pas eu union officielle, ce peut être en application du code noir. Luce étant quarteronne, un blanc ne pouvait pas l'épouser; à suivre.</p>"
                             },
                             {
-                              "conjoint": "",
+                              "conjoint": "conjoint non identifié",
                               "date": "",
                               "lieu": "",
                               "notes": ""
@@ -4972,7 +4972,7 @@
                             "Marie Magdeleine GASTEAU (1785 – 1840)",
                             "Marie Françoise Rosalie GATEAU (1789 – 1870)",
                             "Jean Pierre GATEAU (1792 – 1792)",
-                            "Nicolas Julien GATEAU (@@#DFRENCH R@@ 26 BRUM 4 – 1820)"
+                            "Nicolas Julien GATEAU (1795 – 1820)"
                           ],
                           "children": [
                             {
@@ -5790,7 +5790,7 @@
                               "bio": "<p>lors du mariage de sa petite-fille, est propriétaire à Chuinet (?)</p>",
                               "unions": [
                                 {
-                                  "conjoint": "",
+                                  "conjoint": "conjoint non identifié",
                                   "date": "",
                                   "lieu": "",
                                   "notes": ""
@@ -6012,9 +6012,9 @@
                               "name": "Jean\nHERQUEL",
                               "gender": "M",
                               "born": "1720",
-                              "died": "@@#DFRENCH R@@ 3 FRIM 3",
+                              "died": "1794",
                               "date_naissance": "21 mai 1720",
-                              "date_deces": "@@#DFRENCH R@@ 3 FRIM 3",
+                              "date_deces": "23 novembre 1794 (3 frimaire an III)",
                               "lieu_naissance": "Distroff",
                               "lieu_deces": "Dreisbach (Mettlach)",
                               "profession": "",
@@ -6028,7 +6028,7 @@
                                   "notes": ""
                                 },
                                 {
-                                  "conjoint": "Appoline TINTINGER (1732 – @@#DFRENCH R@@ 11 FRIM 3)",
+                                  "conjoint": "Appoline TINTINGER (1732 – 1794)",
                                   "date": "15 juin 1762",
                                   "lieu": "Inglange",
                                   "notes": ""
@@ -6349,9 +6349,9 @@
                               "name": "Appoline\nTINTINGER",
                               "gender": "F",
                               "born": "1732",
-                              "died": "@@#DFRENCH R@@ 11 FRIM 3",
+                              "died": "1794",
                               "date_naissance": "7 décembre 1732",
-                              "date_deces": "@@#DFRENCH R@@ 11 FRIM 3",
+                              "date_deces": "1 décembre 1794 (11 frimaire an III)",
                               "lieu_naissance": "Inglange",
                               "lieu_deces": "Dreisbach (Mettlach)",
                               "profession": "",
@@ -6359,7 +6359,7 @@
                               "bio": "<p>devient Appolonia en Sarre</p><p>la date de son décès laisse supposer que l'endroit était sous administration française.</p>",
                               "unions": [
                                 {
-                                  "conjoint": "Jean HERQUEL (1720 – @@#DFRENCH R@@ 3 FRIM 3)",
+                                  "conjoint": "Jean HERQUEL (1720 – 1794)",
                                   "date": "15 juin 1762",
                                   "lieu": "Inglange",
                                   "notes": ""
@@ -6611,8 +6611,8 @@
                         }
                       ],
                       "fratrie": [
-                        "Christin LŒGEL (@@#DFRENCH R@@ 7 – @@#DFRENCH R@@ 18 VENT 10)",
-                        "Valentin LŒGEL (@@#DFRENCH R@@ 30 MESS 10 – ap. 1867)",
+                        "Christin LŒGEL (an VII – 1802)",
+                        "Valentin LŒGEL (1802 – ap. 1867)",
                         "Madeleine LŒGEL (1811 – ?)"
                       ],
                       "sources": [
@@ -6798,7 +6798,7 @@
                   "bio": "<p>journalière, fille de journalière</p><p>en 1859, domiciliée rue haute à Souilly</p><p>à son décès, sans profession, domiciliée Petite Rue.</p>",
                   "unions": [
                     {
-                      "conjoint": "",
+                      "conjoint": "conjoint non identifié",
                       "date": "",
                       "lieu": "",
                       "notes": ""
@@ -6822,7 +6822,7 @@
                       "bio": "<p>en 1859, journalière domiciliée à Souilly.</p><p>mère célibataire, vit en 1859 avec sa fille, elle aussi mère célibataire.</p><p>sans profession en 1837</p>",
                       "unions": [
                         {
-                          "conjoint": "",
+                          "conjoint": "conjoint non identifié",
                           "date": "",
                           "lieu": "",
                           "notes": ""
@@ -6853,7 +6853,7 @@
                           "unions": [
                             {
                               "conjoint": "Lucie MAZUET (1770 – av. 1881)",
-                              "date": "@@#DFRENCH R@@ 25 PLUV 6",
+                              "date": "13 février 1798 (25 pluviôse an VI)",
                               "lieu": "Souilly",
                               "notes": ""
                             }
@@ -7384,7 +7384,7 @@
                           "unions": [
                             {
                               "conjoint": "Jacques COLSON (1757 – av. 1881)",
-                              "date": "@@#DFRENCH R@@ 25 PLUV 6",
+                              "date": "13 février 1798 (25 pluviôse an VI)",
                               "lieu": "Souilly",
                               "notes": ""
                             }
@@ -7445,7 +7445,7 @@
                   "bio": "<p>sans profession à 30 ans</p><p>domiciliée en 1863 au moulin, à Souilly</p><p>domiciliée à Souilly en 1882</p><p>IGI: une Marie-Anne THENOT est née le 22/06/1834 à Dieue, Meuse, de François et Marie BOUDAILLE. Ils s'étaient mariés le 14.02.1825 à Dieue. Ils eurent au moins trois filles connues d'IGI</p><p>à son décès célibataire, sans profession. habite rue \"marcosse\" à Souilly.</p>",
                   "unions": [
                     {
-                      "conjoint": "",
+                      "conjoint": "conjoint non identifié",
                       "date": "",
                       "lieu": "",
                       "notes": ""
@@ -7507,20 +7507,20 @@
                           "bio": "<p>pourrait avoir épousé le 22 novembre 1791, Dieue-sur-Meuse, Pierre Bigorgne (voir http://gw.geneanet.org/humbletj )</p><p>on suppose pour l'instant qu'elle soit la soeur de Anne Marie, ° 15.06.1763 à Dieue x Lahausse Louis 20.01.1794 à Dieue, fa de Alexandre et Anne Pierron, x le 3.01.1748 à Dieue, Alexandre fs de Nicolas et Marguerite Grosjean (voir fifibreton)</p><p>son dc à Tilly n'a pas été trouvé aux AD 55. IL faudrait selon le CG 55 chercher sur Les Éparges et Raulécourt.</p><p>baptisée le 29</p><p>manouvrière</p><p>sait signer</p><p>Décès : source : Jean Claude Dupin</p>",
                           "unions": [
                             {
-                              "conjoint": "",
+                              "conjoint": "conjoint non identifié",
                               "date": "",
                               "lieu": "",
                               "notes": ""
                             },
                             {
-                              "conjoint": "Pierre BIGORGNE (1740 – @@#DFRENCH R@@ 29 PRAI 8)",
+                              "conjoint": "Pierre BIGORGNE (1740 – 1800)",
                               "date": "22 novembre 1791",
                               "lieu": "Dieue (Dieue-sur-Meuse)",
                               "notes": ""
                             },
                             {
                               "conjoint": "Jacques Joseph GÉRARD (1750 – av. 1826)",
-                              "date": "@@#DFRENCH R@@ 9 PRAI 13",
+                              "date": "29 mai 1805 (9 prairial an XIII)",
                               "lieu": "Dieue (Dieue-sur-Meuse)",
                               "notes": "<p>source Jean Claude Dupin</p>"
                             }
@@ -7810,9 +7810,9 @@
                           "name": "Jean\nBOUDAILLE",
                           "gender": "M",
                           "born": "v. 1732",
-                          "died": "@@#DFRENCH R@@ 11 PLUV 13",
+                          "died": "1805",
                           "date_naissance": "vers 1732",
-                          "date_deces": "@@#DFRENCH R@@ 11 PLUV 13",
+                          "date_deces": "31 janvier 1805 (11 pluviôse an XIII)",
                           "lieu_naissance": "Grimaucourt-en-Woevre",
                           "lieu_deces": "Villers sous Bonchamps (Mont-Villers)",
                           "profession": "",
@@ -7914,7 +7914,7 @@
                           "bio": "<p>réside à Dieue en 1825</p><p>ne sait pas signer</p>",
                           "unions": [
                             {
-                              "conjoint": "Jean Baptiste BOUDAILLE (v. 1732 – @@#DFRENCH R@@ 11 PLUV 13)",
+                              "conjoint": "Jean Baptiste BOUDAILLE (v. 1732 – 1805)",
                               "date": "29 août 1794",
                               "lieu": "Champlon",
                               "notes": ""

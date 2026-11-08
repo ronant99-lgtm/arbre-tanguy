@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """Extrait d'un GEDCOM complet (privé) un GEDCOM publiable : l'ascendance d'une personne.
 
-    python3 scripts/extraire_ascendants.py BASE_COMPLETE.ged I0022 gedcom/Beauchesne.ged
+    python3 scripts/extraire_ascendants.py BASE_COMPLETE.ged I0022 gedcom/Beauchesne.ged \
+        [gedcom/corrections_beauchesne.json]
+
+Le fichier de corrections (facultatif) remplace des valeurs d'événements tant qu'elles
+ne sont pas corrigées dans la base Gramps : {"I0038": {"BIRT": {"DATE": "31 OCT 1946"}}}.
 
 Contenu du fichier produit :
 - la personne de départ et tous ses ascendants, avec leurs événements, notes et sources ;
@@ -15,6 +19,7 @@ Personne « susceptible d'être vivante » : sans décès connu et née il y a m
 100 ans, ou sans date de naissance avec un parent né il y a moins de 130 ans.
 """
 import datetime as dt
+import re
 import sys
 from pathlib import Path
 
@@ -25,9 +30,14 @@ RETIRER = {"RESI", "ADDR", "EMAIL", "PHON", "FAX", "WWW", "OBJE", "CHAN", "_UID"
 GARDER_REDUIT = {"NAME", "SEX", "BIRT", "BAPM", "CHR", "DEAT", "BURI"}
 
 
+CALENDRIER_RE = re.compile(r"(@#D[A-Z ]+@)")  # ex. @#DFRENCH R@ (calendrier républicain)
+
+
 def propre(texte):
-    """Texte nettoyé (courriels, téléphones, contacts), avec les @ ré-échappés pour GEDCOM."""
-    return g.nettoyer(texte).replace("@", "@@")
+    """Texte nettoyé (courriels, téléphones, contacts), avec les @ ré-échappés pour GEDCOM
+    (sauf les marqueurs de calendrier comme @#DFRENCH R@, qui doivent rester simples)."""
+    morceaux = CALENDRIER_RE.split(g.nettoyer(texte))
+    return "".join(m if CALENDRIER_RE.fullmatch(m) else m.replace("@", "@@") for m in morceaux)
 
 
 def note_lines(level, tag, xref, text):
@@ -70,8 +80,39 @@ def serialize(node, keep, out, reduced=False):
             serialize(c, keep, out, reduced)
 
 
-def main(src, root, dest):
+def appliquer_corrections(recs, chemin):
+    import json
+    corr = json.loads(Path(chemin).read_text(encoding="utf-8"))
+    indis = {r.xref: r for r in recs if r.tag == "INDI"}
+    for pid, events in corr.items():
+        if pid.startswith("_"):
+            continue
+        indi = indis.get(f"@{pid}@")
+        if not indi:
+            print(f"Correction ignorée : {pid} introuvable")
+            continue
+        for ev_tag, champs in events.items():
+            if ev_tag.startswith("_"):
+                continue
+            ev = indi.first(ev_tag)
+            if not ev:
+                ev = g.Node(1, None, ev_tag, None)
+                indi.children.append(ev)
+            for tag, val in champs.items():
+                n = ev.first(tag)
+                if n:
+                    if n.value != val:
+                        print(f"Correction {pid} {ev_tag} {tag} : {n.value} -> {val}")
+                    n.value = val
+                else:
+                    ev.children.append(g.Node(2, None, tag, val))
+                    print(f"Correction {pid} {ev_tag} {tag} : (vide) -> {val}")
+
+
+def main(src, root, dest, corrections=None):
     recs = g.parse_gedcom(src)
+    if corrections:
+        appliquer_corrections(recs, corrections)
     I = {r.xref: r for r in recs if r.tag == "INDI"}
     F = {r.xref: r for r in recs if r.tag == "FAM"}
     N = {r.xref: r for r in recs if r.tag == "NOTE"}
@@ -156,6 +197,6 @@ def main(src, root, dest):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
+    if len(sys.argv) not in (4, 5):
         sys.exit(__doc__)
     main(*sys.argv[1:])

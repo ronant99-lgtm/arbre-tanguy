@@ -107,7 +107,7 @@ def parse_date(value):
     """Retourne {'texte': str complet FR, 'court': str pour la vignette, 'annee': int|None}."""
     if not value:
         return None
-    v = value.strip()
+    v = value.strip().replace("@@", "@")
     qual = None
     parts = v.split()
     if parts and parts[0] in QUALIFIERS:
@@ -343,7 +343,7 @@ def build(records, root_id, complements, annee_vivant=None):
             if other and vivant(other.value):
                 continue
             unions.append({
-                "conjoint": label(other.value) if other else "",
+                "conjoint": (label(other.value) if other else "") or "conjoint non identifié",
                 "date": md["texte"] if md else "",
                 "lieu": mplace,
                 "notes": note_html(ftexts),
@@ -365,7 +365,9 @@ def build(records, root_id, complements, annee_vivant=None):
             if not src:
                 continue
             t, a = src.first("TITL"), src.first("AUTH")
-            lib = " — ".join(x.text().strip() for x in (t, a) if x and x.text().strip())
+            parts = [x.text().strip() for x in (t, a) if x and x.text().strip()]
+            parts = [x for x in parts if not re.fullmatch(r"Aucun titre - ID \S+", x)]  # titre vide (Gramps)
+            lib = " — ".join(parts)
             if lib and lib not in srcs:
                 srcs.append(nettoyer(lib))
         if srcs:
