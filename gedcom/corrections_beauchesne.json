@@ -1,0 +1,7 @@
+{
+  "_lisezmoi": "Corrections appliquées à l'extrait public par extraire_ascendants.py, tant qu'elles ne sont pas faites dans la base Gramps Beauchesne. Format : identifiant -> événement -> champ -> valeur GEDCOM.",
+  "I0038": {
+    "_qui": "Jean Gustave Marie TANGUY : naissance confirmée le 31 octobre 1946 (la base indique 6 octobre 1945)",
+    "BIRT": {"DATE": "31 OCT 1946"}
+  }
+}

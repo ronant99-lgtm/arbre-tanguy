@@ -62,7 +62,8 @@ des adresses et des courriels) est conservée dans le dépôt **privé** `geneal
 Le site n'en publie qu'un **extrait** : `gedcom/Beauchesne.ged`, produit par
 
 ```bash
-python3 scripts/extraire_ascendants.py ../genealogie-sources/Bauchesne.ged I0022 gedcom/Beauchesne.ged
+python3 scripts/extraire_ascendants.py ../genealogie-sources/Bauchesne.ged I0022 gedcom/Beauchesne.ged \
+    gedcom/corrections_beauchesne.json
 ```
 
 Cet extrait contient l'ascendance de Françoise Beauchesne (I0022) avec notes et sources, plus
@@ -74,8 +75,12 @@ Pour mettre à jour l'arbre Beauchesne :
 2. relancer la commande ci-dessus (ou demander à Claude de le faire) et déposer le nouvel
    `gedcom/Beauchesne.ged` dans ce dépôt : le site se met à jour seul.
 
-> À corriger dans la base Gramps Beauchesne : naissance de Jean Gustave Marie TANGUY
-> le **31 octobre 1946** (la base indique 6 octobre 1945 ; l'extrait public est déjà corrigé).
+`gedcom/corrections_beauchesne.json` liste les corrections appliquées à chaque extraction tant
+qu'elles ne sont pas faites dans la base Gramps (aujourd'hui : naissance de Jean Gustave Marie
+TANGUY le **31 octobre 1946**, la base indiquant 6 octobre 1945).
+
+> ⚠️ Déposer dans `genealogie-sources` l'export de la **base complète** (celle de l'oncle).
+> Un export fait après import de l'extrait public ne contient que cet extrait.
 
 ---
 
