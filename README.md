@@ -32,6 +32,9 @@ Site « Exporter » ► complements.json ─┘
 
 ## ✏️ Mettre à jour l'arbre depuis Gramps (dates, lieux, personnes, notes)
 
+📘 Guide complet d'utilisation de Gramps pour cet arbre (visualisation, saisie, sources,
+publication) : [docs/guide-gramps.md](docs/guide-gramps.md)
+
 1. Dans Gramps : **Arbre familial → Exporter… → GEDCOM**, enregistrer sous `Tanguy.ged`
 2. Sur GitHub, ouvrir le dossier `gedcom/` → **Add file → Upload files** → déposer `Tanguy.ged` (remplace l'ancien)
 3. Valider (**Commit changes**)
