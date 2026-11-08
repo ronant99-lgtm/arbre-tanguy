@@ -1,0 +1,1629 @@
+0 HEAD
+1 SOUR Gramps
+2 VERS 5.1.6
+2 NAME Gramps
+1 DATE 2 APR 2026
+2 TIME 16:20:50
+1 SUBM @SUBM@
+1 FILE /home/jean/Tanguy.ged
+1 COPR Copyright (c) 2026 .
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+1 LANG French
+0 @SUBM@ SUBM
+1 NAME
+0 @I0000@ INDI
+1 NAME Jean Gustave Marie /TANGUY/
+2 GIVN Jean Gustave Marie
+2 SURN TANGUY
+1 SEX M
+1 BIRT
+2 DATE 31 OCT 1946
+2 PLAC Kerpert, 22092, France
+1 DEAT
+2 DATE 30 AUG 1985
+2 PLAC Nantes, 44100, France
+1 FAMC @F0000@
+2 PEDI birth
+1 CHAN
+2 DATE 15 AUG 2024
+3 TIME 14:00:45
+0 @I0001@ INDI
+1 NAME Guillaume Jean François /TANGUY/
+2 GIVN Guillaume Jean François
+2 SURN TANGUY
+1 SEX M
+1 BIRT
+2 DATE 20 OCT 1905
+2 PLAC Kerpert, 22092, France
+1 DEAT
+2 DATE 24 MAR 1973
+2 PLAC St Brieuc, 22278, France
+1 FAMC @F0001@
+2 PEDI birth
+1 FAMS @F0000@
+1 NOTE @N0000@
+1 OCCU Cultivateur
+1 CHAN
+2 DATE 16 AUG 2024
+3 TIME 12:33:31
+0 @I0002@ INDI
+1 NAME Anne Marie /HENRY/
+2 GIVN Anne Marie
+2 SURN HENRY
+1 SEX F
+1 BIRT
+2 DATE 6 SEP 1909
+2 PLAC Kerpert, 22092, France
+1 DEAT
+2 DATE 26 JAN 1972
+2 PLAC Kerpert, 22092, France
+1 FAMC @F0008@
+2 PEDI birth
+1 FAMS @F0000@
+1 NOTE @N0023@
+1 CHAN
+2 DATE 18 AUG 2024
+3 TIME 08:30:01
+0 @I0003@ INDI
+1 NAME Guillaume Yves Marie /TANGUY/
+2 GIVN Guillaume Yves Marie
+2 SURN TANGUY
+1 SEX M
+1 BIRT
+2 DATE 30 APR 1950
+2 PLAC Kerpert, 22092, France
+1 DEAT
+2 DATE 7 JAN 2013
+2 PLAC Carhaix-Plouger, 29024, France
+1 FAMC @F0000@
+2 PEDI birth
+1 CHAN
+2 DATE 15 AUG 2024
+3 TIME 14:00:45
+0 @I0004@ INDI
+1 NAME Jean François /TANGUY/
+2 GIVN Jean François
+2 SURN TANGUY
+1 SEX M
+1 BIRT
+2 DATE 17 NOV 1875
+2 PLAC Kerpert, 22092, France
+1 DEAT
+2 DATE 15 MAY 1939
+2 PLAC Kerpert, 22092, France
+1 FAMC @F0002@
+2 PEDI birth
+1 FAMS @F0001@
+1 NOTE @N0001@
+1 OCCU Cultivateur
+1 CHAN
+2 DATE 26 AUG 2024
+3 TIME 13:20:58
+0 @I0005@ INDI
+1 NAME Angélique Marie /LE COZLER/
+2 GIVN Angélique Marie
+2 SURN LE COZLER
+1 SEX F
+1 BIRT
+2 DATE 24 FEB 1881
+2 PLAC Kerpert, 22092, France
+1 DEAT
+2 DATE 29 JAN 1954
+2 PLAC Kerpert, 22092, France
+1 FAMC @F0003@
+2 PEDI birth
+1 FAMS @F0001@
+1 NOTE @N0002@
+1 OCCU Ménagère
+1 CHAN
+2 DATE 26 AUG 2024
+3 TIME 13:35:41
+0 @I0006@ INDI
+1 NAME François /TANGUY/
+2 GIVN François
+2 SURN TANGUY
+1 SEX M
+1 BIRT
+2 DATE 25 DEC 1831
+2 PLAC Kerpert, 22092, France
+1 DEAT
+2 DATE 17 JAN 1898
+2 PLAC Kerpert, 22092, France
+1 FAMC @F0004@
+2 PEDI birth
+1 FAMS @F0002@
+1 NOTE @N0004@
+1 OCCU Laboureur
+1 CHAN
+2 DATE 16 AUG 2024
+3 TIME 16:13:44
+0 @I0007@ INDI
+1 NAME Marie Louise /THORAVAL/
+2 GIVN Marie Louise
+2 SURN THORAVAL
+1 SEX F
+1 BIRT
+2 DATE 11 MAR 1846
+2 PLAC Kerpert, 22092, France
+1 DEAT
+2 DATE 14 SEP 1890
+2 PLAC Kerpert, 22092, France
+1 FAMC @F0005@
+2 PEDI birth
+1 FAMS @F0002@
+1 NOTE @N0005@
+1 OCCU Ménagère
+1 CHAN
+2 DATE 17 AUG 2024
+3 TIME 12:44:38
+0 @I0008@ INDI
+1 NAME François /LE COZLER/
+2 GIVN François
+2 SURN LE COZLER
+1 SEX M
+1 BIRT
+2 DATE 29 MAY 1834
+2 PLAC Kerpert, 22092, France
+1 DEAT
+2 DATE 11 NOV 1896
+2 PLAC Kerpert, 22092, France
+1 FAMC @F0007@
+2 PEDI birth
+1 FAMS @F0003@
+1 NOTE @N0006@
+1 OCCU Laboureur, cultivateur
+1 CHAN
+2 DATE 18 AUG 2024
+3 TIME 08:01:14
+0 @I0009@ INDI
+1 NAME Françoise /LE PAPE/
+2 GIVN Françoise
+2 SURN LE PAPE
+1 SEX F
+1 BIRT
+2 DATE 25 MAR 1845
+2 PLAC St Gilles Pligeaux, 22294, France
+1 DEAT
+2 DATE 9 MAR 1915
+2 PLAC Kerpert, 22092, France
+1 FAMC @F0006@
+2 PEDI birth
+1 FAMS @F0003@
+1 NOTE @N0014@
+1 OCCU Ménagère
+1 CHAN
+2 DATE 25 AUG 2024
+3 TIME 08:43:21
+0 @I0010@ INDI
+1 NAME Jean /TANGUY/
+2 GIVN Jean
+2 SURN TANGUY
+1 SEX M
+1 BIRT
+2 DATE @#DFRENCH R@ 4 GERM 5
+2 PLAC Kerpert, 22092, France
+1 DEAT
+2 DATE 22 SEP 1867
+2 PLAC Kerpert, 22092, France
+1 FAMC @F0015@
+2 PEDI birth
+1 FAMS @F0004@
+1 NOTE @N0008@
+1 OCCU Laboureur
+1 CHAN
+2 DATE 16 AUG 2024
+3 TIME 13:55:21
+0 @I0011@ INDI
+1 NAME Marie Louise /ROBERT/
+2 GIVN Marie Louise
+2 SURN ROBERT
+1 SEX F
+1 BIRT
+2 DATE 30 AUG 1792
+2 PLAC St Gilles Pligeaux, 22294, France
+1 DEAT
+2 DATE 17 AUG 1862
+2 PLAC Kerpert, 22092, France
+1 FAMC @F0016@
+2 PEDI birth
+1 FAMS @F0004@
+1 NOTE @N0009@
+1 OCCU Ménagère, cultivatrice
+1 CHAN
+2 DATE 16 AUG 2024
+3 TIME 14:10:39
+0 @I0012@ INDI
+1 NAME Yves /THORAVAL/
+2 GIVN Yves
+2 SURN THORAVAL
+1 SEX M
+1 BIRT
+2 DATE 23 JAN 1810
+2 PLAC Kerpert, 22092, France
+1 DEAT
+2 DATE 4 JAN 1882
+2 PLAC Kerpert, 22092, France
+1 FAMC @F0017@
+2 PEDI birth
+1 FAMS @F0005@
+1 NOTE @N0010@
+1 OCCU Cultivateur, laboureur
+1 CHAN
+2 DATE 16 AUG 2024
+3 TIME 16:43:05
+0 @I0013@ INDI
+1 NAME Marie Yvonne /LEPROVOST/
+2 GIVN Marie Yvonne
+2 SURN LEPROVOST
+1 SEX F
+1 BIRT
+2 DATE 20 NOV 1818
+2 PLAC Peumerit Quintin, 22169, France
+1 DEAT
+2 DATE 20 MAR 1882
+2 PLAC Kerpert, 22092, France
+1 FAMC @F0018@
+2 PEDI birth
+1 FAMS @F0005@
+1 NOTE @N0011@
+1 OCCU Ménagère
+1 CHAN
+2 DATE 25 AUG 2024
+3 TIME 13:15:32
+0 @I0014@ INDI
+1 NAME Jean /LE PAPE/
+2 GIVN Jean
+2 SURN LE PAPE
+1 SEX M
+1 BIRT
+2 DATE 12 AUG 1820
+2 PLAC St Gilles Pligeaux, 22294, France
+1 DEAT
+2 DATE 18 MAY 1897
+2 PLAC St Gilles Pligeaux, 22294, France
+1 FAMC @F0021@
+2 PEDI birth
+1 FAMS @F0006@
+1 NOTE @N0016@
+1 OCCU Laboureur, cultivateur
+1 CHAN
+2 DATE 25 AUG 2024
+3 TIME 08:28:29
+0 @I0015@ INDI
+1 NAME Marie Jeanne /LOZACH/
+2 GIVN Marie Jeanne
+2 SURN LOZACH
+1 SEX F
+1 BIRT
+2 DATE 3 SEP 1822
+2 PLAC St Gilles Pligeaux, 22294, France
+1 DEAT
+2 DATE 24 AUG 1899
+2 PLAC St Gilles Pligeaux, 22294, France
+1 FAMC @F0022@
+2 PEDI birth
+1 FAMS @F0006@
+1 NOTE @N0017@
+1 OCCU Ménagère
+1 CHAN
+2 DATE 25 AUG 2024
+3 TIME 08:25:05
+0 @I0016@ INDI
+1 NAME Guillaume /LE COZLER/
+2 GIVN Guillaume
+2 SURN LE COZLER
+1 SEX M
+1 BIRT
+2 DATE 8 APR 1781
+2 PLAC Kerpert, 22092, France
+1 DEAT
+2 DATE 13 MAR 1851
+2 PLAC Kerpert, 22092, France
+1 FAMC @F0019@
+2 PEDI birth
+1 FAMS @F0007@
+1 NOTE @N0020@
+1 OCCU Cultivateur
+1 CHAN
+2 DATE 25 AUG 2024
+3 TIME 08:06:40
+0 @I0017@ INDI
+1 NAME Marie /GUILLAUME/
+2 GIVN Marie
+2 SURN GUILLAUME
+1 SEX F
+1 BIRT
+2 DATE 6 MAR 1805
+2 PLAC Kerpert, 22092, France
+1 DEAT
+2 DATE 5 MAY 1869
+2 PLAC Kerpert, 22092, France
+1 FAMC @F0020@
+2 PEDI birth
+1 FAMS @F0007@
+1 NOTE @N0019@
+1 OCCU Ménagère
+1 CHAN
+2 DATE 17 AUG 2024
+3 TIME 17:08:34
+0 @I0018@ INDI
+1 NAME Jacques Marie /HENRY/
+2 GIVN Jacques Marie
+2 SURN HENRY
+1 SEX M
+1 BIRT
+2 DATE 20 APR 1853
+2 PLAC St Nicolas du Pelem, 22321, France
+1 DEAT
+2 DATE 22 MAR 1920
+2 PLAC Kerpert, 22092, France
+1 FAMC @F0009@
+2 PEDI birth
+1 FAMS @F0008@
+1 NOTE @N0024@
+1 OCCU Cultivateur
+1 CHAN
+2 DATE 18 AUG 2024
+3 TIME 16:00:57
+0 @I0019@ INDI
+1 NAME Marie Josèphe /POUL/
+2 GIVN Marie Josèphe
+2 SURN POUL
+1 SEX F
+1 BIRT
+2 DATE 18 MAR 1869
+2 PLAC Canihuel
+1 DEAT
+2 DATE 12 JUL 1936
+2 PLAC Kerpert, 22092, France
+1 FAMC @F0010@
+2 PEDI birth
+1 FAMS @F0008@
+1 NOTE @N0025@
+1 OCCU Ménagère
+1 CHAN
+2 DATE 26 AUG 2024
+3 TIME 14:02:29
+0 @I0020@ INDI
+1 NAME Jacques /HENRY/
+2 GIVN Jacques
+2 SURN HENRY
+1 SEX M
+1 BIRT
+2 DATE 20 DEC 1825
+2 PLAC Bothoa, 22401, France
+1 DEAT
+2 DATE AFT 1898
+1 FAMC @F0014@
+2 PEDI birth
+1 FAMS @F0009@
+1 NOTE @N0027@
+1 OCCU Laboureur, puis rentier
+1 CHAN
+2 DATE 20 AUG 2024
+3 TIME 12:01:57
+0 @I0021@ INDI
+1 NAME Anne /LAUTOUT/
+2 GIVN Anne
+2 SURN LAUTOUT
+1 SEX F
+1 BIRT
+2 DATE 19 OCT 1833
+2 PLAC Kerpert, 22092, France
+1 DEAT
+2 DATE 27 MAR 1898
+2 PLAC Kerpert, 22092, France
+1 FAMC @F0013@
+2 PEDI birth
+1 FAMS @F0009@
+1 NOTE @N0028@
+1 OCCU Ménagère, puis rentière
+1 CHAN
+2 DATE 20 AUG 2024
+3 TIME 07:36:52
+0 @I0022@ INDI
+1 NAME Yves /POUL/
+2 GIVN Yves
+2 SURN POUL
+1 SEX M
+1 BIRT
+2 DATE 15 DEC 1830
+2 PLAC Lanrivain, 22115, France
+1 DEAT
+2 DATE 30 JAN 1905
+2 PLAC Lanrivain, 22115, France
+1 FAMC @F0012@
+2 PEDI birth
+1 FAMS @F0010@
+1 NOTE @N0030@
+1 OCCU Laboureur
+1 CHAN
+2 DATE 19 AUG 2024
+3 TIME 16:45:49
+0 @I0023@ INDI
+1 NAME Françoise /STEUNOU/
+2 GIVN Françoise
+2 SURN STEUNOU
+1 SEX F
+1 BIRT
+2 DATE 13 SEP 1833
+2 PLAC Canihuel, 22029, France
+1 DEAT
+2 DATE 8 MAR 1907
+2 PLAC Kerpert, 22092, France
+1 FAMC @F0011@
+2 PEDI birth
+1 FAMS @F0010@
+1 NOTE @N0031@
+1 OCCU Ménagère
+1 CHAN
+2 DATE 19 AUG 2024
+3 TIME 08:41:34
+0 @I0024@ INDI
+1 NAME Yves /STEUNOU/
+2 GIVN Yves
+2 SURN STEUNOU
+1 SEX M
+1 BIRT
+2 DATE 10 APR 1790
+2 PLAC Plesidy, 22189, France
+1 DEAT
+2 DATE 20 FEB 1873
+2 PLAC Canihuel, 22029, France
+1 FAMC @F0028@
+2 PEDI birth
+1 FAMS @F0011@
+1 NOTE @N0033@
+1 OCCU Laboureur, cultivateur
+1 CHAN
+2 DATE 19 AUG 2024
+3 TIME 08:24:59
+0 @I0025@ INDI
+1 NAME Marie Anne (Marianne) /PIN/
+2 GIVN Marie Anne (Marianne)
+2 SURN PIN
+1 SEX F
+1 BIRT
+2 DATE 12 FEB 1795
+2 PLAC Kerpert, 22092, France
+2 NOTE @N0036@
+1 DEAT
+2 DATE 17 JAN 1854
+2 PLAC Canihuel, 22029, France
+1 FAMC @F0029@
+2 PEDI birth
+1 FAMS @F0011@
+1 NOTE @N0035@
+1 OCCU Ménagère
+1 CHAN
+2 DATE 19 AUG 2024
+3 TIME 12:07:11
+0 @I0026@ INDI
+1 NAME Yves Marguerite /POUL/
+2 GIVN Yves Marguerite
+2 SURN POUL
+1 SEX M
+1 BIRT
+2 DATE 13 NOV 1806
+2 PLAC Lanrivain, 22115, France
+1 DEAT
+2 DATE 7 SEP 1871
+2 PLAC Lanrivain, 22115, France
+1 FAMC @F0026@
+2 PEDI birth
+1 FAMS @F0012@
+1 NOTE @N0037@
+1 OCCU Laboureur
+1 CHAN
+2 DATE 19 AUG 2024
+3 TIME 14:26:29
+0 @I0027@ INDI
+1 NAME Marie Joseph /MENGUY/
+2 GIVN Marie Joseph
+2 SURN MENGUY
+1 SEX F
+1 BIRT
+2 DATE @#DFRENCH R@ 29 VENT 2
+2 PLAC Lanrivain, 22115, France
+1 DEAT
+2 DATE 7 MAY 1867
+2 PLAC Lanrivain, 22115, France
+1 FAMC @F0027@
+2 PEDI birth
+1 FAMS @F0012@
+1 NOTE @N0038@
+1 OCCU Fillandière, puis ménagère
+1 CHAN
+2 DATE 25 AUG 2024
+3 TIME 13:36:38
+0 @I0028@ INDI
+1 NAME Jean /LAUTOUT/
+2 GIVN Jean
+2 SURN LAUTOUT
+1 SEX M
+1 BIRT
+2 DATE 27 AUG 1807
+2 PLAC Kerpert, 22092, France
+1 DEAT
+2 DATE 15 MAR 1866
+2 PLAC Kerpert, 22092, France
+1 FAMC @F0025@
+2 PEDI birth
+1 FAMS @F0013@
+1 NOTE @N0040@
+1 OCCU Propriétaire cultivateur
+1 CHAN
+2 DATE 19 AUG 2024
+3 TIME 20:07:38
+0 @I0029@ INDI
+1 NAME Anne /THORAVAL/
+2 GIVN Anne
+2 SURN THORAVAL
+1 SEX F
+1 BIRT
+2 DATE 26 JUL 1808
+2 PLAC Kerpert, 22092, France
+1 DEAT
+2 DATE 15 APR 1835
+2 PLAC Kerpert, 22092, France
+1 FAMC @F0017@
+2 PEDI birth
+1 FAMS @F0013@
+1 NOTE @N0041@
+1 OCCU Ménagère
+1 CHAN
+2 DATE 20 AUG 2024
+3 TIME 08:10:03
+0 @I0030@ INDI
+1 NAME Sylvestre /HENRY/
+2 GIVN Sylvestre
+2 SURN HENRY
+1 SEX M
+1 BIRT
+2 DATE 14 OCT 1787
+2 PLAC Kerpert, 22092, France
+1 DEAT
+2 DATE 16 JUN 1850
+2 PLAC St Nicolas du Pelem, 22321, France
+1 FAMC @F0023@
+2 PEDI birth
+1 FAMS @F0014@
+1 NOTE @N0043@
+1 OCCU Laboureur, cultivateur
+1 CHAN
+2 DATE 20 AUG 2024
+3 TIME 12:32:37
+0 @I0031@ INDI
+1 NAME Marie Joseph /JOUAN/
+2 GIVN Marie Joseph
+2 SURN JOUAN
+1 SEX F
+1 BIRT
+2 DATE @#DFRENCH R@ 14 NIVO 3
+2 PLAC St Gilles Pligeaux, 22294, France
+1 DEAT
+2 DATE 19 MAY 1872
+2 PLAC St Nicolas du Pelem, 22321, France
+1 FAMC @F0024@
+2 PEDI birth
+1 FAMS @F0014@
+1 NOTE @N0044@
+1 OCCU Ménagère
+1 CHAN
+2 DATE 20 AUG 2024
+3 TIME 12:37:42
+0 @I0032@ INDI
+1 NAME François /TANGUY/
+2 GIVN François
+2 SURN TANGUY
+1 SEX M
+1 DEAT
+2 DATE BEF 22 SEP 1867
+1 OCCU Ménager
+1 FAMS @F0015@
+1 NOTE Ménager à Kerpert, présent et consentant au mariage de son fils Jean (1829).
+2 CONT Décédé avant le décès de son fils (1867).
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0033@ INDI
+1 NAME Anne /THORAVAL/
+2 GIVN Anne
+2 SURN THORAVAL
+1 SEX F
+1 DEAT
+2 DATE BEF 6 FEB 1829
+1 FAMS @F0015@
+1 NOTE Décédée avant le mariage de son fils Jean (1829) : « feue Anne Thoraval ».
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0034@ INDI
+1 NAME Jean /ROBERT/
+2 GIVN Jean
+2 SURN ROBERT
+1 SEX M
+1 DEAT
+2 DATE BEF 6 FEB 1829
+1 FAMS @F0016@
+1 NOTE Décédé avant le mariage de sa fille Marie Louise (1829) : « feu Jean ».
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0035@ INDI
+1 NAME Marie Louise /JOUAN/
+2 GIVN Marie Louise
+2 SURN JOUAN
+1 SEX F
+1 DEAT
+2 DATE BEF 17 AUG 1862
+1 OCCU Ménagère
+1 FAMS @F0016@
+1 NOTE Ménagère à St Gilles Pligeaux, présente et consentante au mariage de sa fille (1829).
+2 CONT Décédée avant le décès de sa fille (1862).
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0036@ INDI
+1 NAME Jean /THORAVAL/
+2 GIVN Jean
+2 SURN THORAVAL
+1 SEX M
+1 BIRT
+2 DATE ABT 1785
+1 OCCU Propriétaire cultivateur, arpenteur
+1 FAMS @F0017@
+1 NOTE Âge : 23 ans en 1808 (naissance d'Anne), 24 ans en 1810 (naissance d'Yves), 43 ans en 1829 (mariage d'Anne).
+2 CONT Propriétaire cultivateur et arpenteur au bourg de Kerpert ; déclare le décès de sa fille Anne en 1835 (50 ans).
+2 CONT IMPLEXE : père d'Yves THORAVAL (1810) et d'Anne THORAVAL (1808). Jean Gustave Marie TANGUY descend de ce couple par son père (via Marie Louise THORAVAL) et par sa mère (via Anne LAUTOUT).
+2 CONT À vérifier : au mariage d'Yves (1838), un « Jean THORAVAL, 53 ans, frère du contractant » est cité ; 53 ans correspond à l'âge du père. Erreur de l'acte ou de lecture ?
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0037@ INDI
+1 NAME Marie Anne /THÉPOT/
+2 GIVN Marie Anne
+2 SURN THÉPOT
+1 SEX F
+1 BIRT
+2 DATE ABT 1785
+1 DEAT
+2 DATE BEF 12 JAN 1829
+1 FAMS @F0017@
+1 NOTE Graphies : THÉPOT, THÉPAULT.
+2 CONT Âge : 25 ans en 1808, 23 ans en 1810.
+2 CONT Décédée avant le mariage de sa fille Anne (1829) : « défunte Marie Anne ».
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0038@ INDI
+1 NAME Thomas /LEPROVOST/
+2 GIVN Thomas
+2 SURN LEPROVOST
+1 SEX M
+1 BIRT
+2 DATE ABT 1788
+1 DEAT
+2 DATE BEF 22 OCT 1838
+1 OCCU Cultivateur
+1 FAMS @F0018@
+1 NOTE Trente ans, cultivateur, au Grand Lanouët (Peumerit Quintin) à la naissance de sa fille (1818) ; il signe.
+2 CONT Décédé avant le mariage de sa fille (1838).
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0039@ INDI
+1 NAME Marie Françoise /LE DÛ/
+2 GIVN Marie Françoise
+2 SURN LE DÛ
+1 SEX F
+1 BIRT
+2 DATE ABT 1789
+1 OCCU Cultivatrice
+1 FAMS @F0018@
+1 NOTE 29 ans à la naissance de sa fille (1818).
+2 CONT Cultivatrice à Peumerit Quintin, présente et consentante au mariage de sa fille (1838).
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0040@ INDI
+1 NAME Guillaume /LE COZLER/
+2 GIVN Guillaume
+2 SURN LE COZLER
+1 SEX M
+1 DEAT
+2 DATE BEF 13 MAR 1851
+1 FAMS @F0019@
+1 NOTE Père de Guillaume LE COZLER né en 1781 à Kerlabourat (Kerpert).
+2 CONT Décédé avant le décès de son fils (1851).
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0041@ INDI
+1 NAME Anne /BERNARD/
+2 GIVN Anne
+2 SURN BERNARD
+1 SEX F
+1 DEAT
+2 DATE BEF 13 MAR 1851
+1 FAMS @F0019@
+1 NOTE Mère de Guillaume LE COZLER né en 1781 à Kerlabourat.
+2 CONT Décédée avant le décès de son fils (1851).
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0042@ INDI
+1 NAME Yves /GUILLAUME/
+2 GIVN Yves
+2 SURN GUILLAUME
+1 SEX M
+1 DEAT
+2 DATE BEF 19 JAN 1825
+1 OCCU Cultivateur
+1 FAMS @F0020@
+1 NOTE Cultivateur au lieu-dit Bot Halec (Kerpert) à la naissance de sa fille (an XIII) ; ne signe pas.
+2 CONT Décédé avant le mariage de sa fille (1825).
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0043@ INDI
+1 NAME Marie Anne /THORAVAL/
+2 GIVN Marie Anne
+2 SURN THORAVAL
+1 SEX F
+1 OCCU Cultivatrice
+1 FAMS @F0020@
+1 NOTE Cultivatrice au lieu-dit Bot Halec (Kerpert).
+2 CONT À distinguer a priori de Marie Anne THORAVAL épouse d'Yves LE PAPE (I0045) ; lien éventuel avec les autres THORAVAL de Kerpert à étudier.
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0044@ INDI
+1 NAME Yves /LE PAPE/
+2 GIVN Yves
+2 SURN LE PAPE
+1 SEX M
+1 BIRT
+2 DATE ABT 1782
+1 DEAT
+2 DATE BEF 28 JUN 1843
+1 OCCU Ménager
+1 FAMS @F0021@
+1 NOTE 38 ans, ménager, à La Garenne Chevance (St Gilles Pligeaux) à la naissance de son fils (1820) ; ne signe pas.
+2 CONT Décédé avant le mariage de son fils (1843).
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0045@ INDI
+1 NAME Marie Anne /THORAVAL/
+2 GIVN Marie Anne
+2 SURN THORAVAL
+1 SEX F
+1 BIRT
+2 DATE ABT 1787
+1 DEAT
+2 DATE BEF 18 MAY 1897
+1 OCCU Ménagère
+1 FAMS @F0021@
+1 NOTE 33 ans, ménagère, à la naissance de son fils Jean (1820).
+2 CONT Présente et consentante au mariage de son fils (1843) ; décédée avant le décès de celui-ci (1897).
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0046@ INDI
+1 NAME Jean /LOZACH/
+2 GIVN Jean
+2 SURN LOZACH
+1 SEX M
+1 BIRT
+2 DATE ABT 1795
+1 DEAT
+2 DATE BEF 24 AUG 1899
+1 OCCU Ménager
+1 FAMS @F0022@
+1 NOTE 27 ans, ménager, à la naissance de sa fille (1822) ; il signe.
+2 CONT Présent au mariage de sa fille à St Gilles Pligeaux (1843).
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0047@ INDI
+1 NAME Marie Jeanne /BERNARD/
+2 GIVN Marie Jeanne
+2 SURN BERNARD
+1 SEX F
+1 BIRT
+2 DATE ABT 1802
+1 DEAT
+2 DATE BEF 24 AUG 1899
+1 OCCU Ménagère
+1 FAMS @F0022@
+1 NOTE 20 ans, ménagère, à la naissance de sa fille (1822).
+2 CONT Présente au mariage de sa fille (1843).
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0048@ INDI
+1 NAME Jacques /HENRY/
+2 GIVN Jacques
+2 SURN HENRY
+1 SEX M
+1 DEAT
+2 DATE BEF 16 JUN 1850
+1 FAMS @F0023@
+1 NOTE Présent et consentant au mariage de son fils Sylvestre (1811).
+2 CONT Probablement le « Jacques HENRY, 68 ans, laboureur à Bothoa », témoin à la naissance de son petit-fils Jacques (1825) : il serait alors né vers 1757.
+2 CONT Décédé avant le décès de son fils (1850).
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0049@ INDI
+1 NAME Marie /GUILLOUX/
+2 GIVN Marie
+2 SURN GUILLOUX
+1 SEX F
+1 DEAT
+2 DATE BEF 16 JUN 1850
+1 FAMS @F0023@
+1 NOTE Graphies : GUILLOUX, GUILLOU.
+2 CONT Présente et consentante au mariage de son fils Sylvestre (1811).
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0050@ INDI
+1 NAME Claude /JOUAN/
+2 GIVN Claude
+2 SURN JOUAN
+1 SEX M
+1 DEAT
+2 DATE BEF 12 FEB 1811
+1 OCCU Cultivateur
+1 FAMS @F0024@
+1 NOTE Appelé « Jean Claude » dans l'acte de décès de sa fille.
+2 CONT Cultivateur au village du Petit Quellen (St Gilles Pligeaux) ; déclare la naissance de sa fille en l'an III ; ne sait signer.
+2 CONT Décédé avant le mariage de sa fille (1811).
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0051@ INDI
+1 NAME Jeanne /LE GOFF/
+2 GIVN Jeanne
+2 SURN LE GOFF
+1 SEX F
+1 DEAT
+2 DATE BEF 19 MAY 1872
+1 FAMS @F0024@
+1 NOTE Présente et consentante au mariage de sa fille (1811).
+2 CONT Un Guillaume LE GOFF, 52 ans, « oncle germain » de l'épouse, est témoin en 1811.
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0052@ INDI
+1 NAME Jean /LAUTOUT/
+2 GIVN Jean
+2 SURN LAUTOUT
+1 SEX M
+1 BIRT
+2 DATE ABT 1775
+1 OCCU Propriétaire cultivateur
+1 FAMS @F0025@
+1 NOTE 33 ans en 1807, 52 ans en 1829 (âges discordants).
+2 CONT Propriétaire cultivateur à Kerdrain (Kerpert) ; ne signe pas en 1807.
+2 CONT Vivant au mariage de son fils (1829).
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0053@ INDI
+1 NAME Marguerite /GUILLAUME/
+2 GIVN Marguerite
+2 SURN GUILLAUME
+1 SEX F
+1 DEAT
+2 DATE BEF 12 JAN 1829
+1 OCCU Ménagère
+1 FAMS @F0025@
+1 NOTE Ménagère à Kerdrain.
+2 CONT Décédée avant le premier mariage de son fils (1829).
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0054@ INDI
+1 NAME Dominique /POUL/
+2 GIVN Dominique
+2 SURN POUL
+1 SEX M
+1 BIRT
+2 DATE ABT 1774
+1 DEAT
+2 DATE BEF 7 SEP 1871
+1 OCCU Laboureur
+1 FAMS @F0026@
+1 NOTE 34 ans, laboureur, à Guerrocart (Lanrivain) en 1806 ; 52 ans au mariage de son fils (1828) ; ne sait signer.
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0055@ INDI
+1 NAME Anne /CHEVANCÉ/
+2 GIVN Anne
+2 SURN CHEVANCÉ
+1 SEX F
+1 BIRT
+2 DATE ABT 1776
+1 DEAT
+2 DATE BEF 23 NOV 1828
+1 FAMS @F0026@
+1 NOTE 30 ans à la naissance de son fils (1806).
+2 CONT Décédée avant le mariage de son fils (1828).
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0056@ INDI
+1 NAME Allain /MENGUY/
+2 GIVN Allain
+2 SURN MENGUY
+1 SEX M
+1 DEAT
+2 DATE BEF 23 NOV 1828
+1 OCCU Cultivateur
+1 FAMS @F0027@
+1 NOTE Graphies : MENGUY, MENGUI, MINGUY.
+2 CONT Déclare la naissance de sa fille en l'an II, à Kerhellou (Lanrivain).
+2 CONT Décédé avant le mariage de sa fille (1828).
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0057@ INDI
+1 NAME Jeanne /LE MOING/
+2 GIVN Jeanne
+2 SURN LE MOING
+1 SEX F
+1 DEAT
+2 DATE BEF 23 NOV 1828
+1 FAMS @F0027@
+1 NOTE Graphies : LE MOING, LEMOIGN.
+2 CONT Domiciliée à Kerhellou (Lanrivain).
+2 CONT Décédée avant le mariage de sa fille (1828).
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0058@ INDI
+1 NAME Yves /STEUNOU/
+2 GIVN Yves
+2 SURN STEUNOU
+1 SEX M
+1 DEAT
+2 DATE BEF 21 NOV 1816
+1 FAMS @F0028@
+1 NOTE Graphie STENNOU au baptême de son fils (1790, Plésidy) ; ne sait signer.
+2 CONT Décédé avant le mariage de son fils (1816).
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0059@ INDI
+1 NAME Catherine /CADOUDAL/
+2 GIVN Catherine
+2 SURN CADOUDAL
+1 SEX F
+1 DEAT
+2 DATE BEF 21 NOV 1816
+1 FAMS @F0028@
+1 NOTE Nom à confirmer : CADOUDAL au baptême de son fils (1790), mais « Marie Catherine GAULTIER » dans l'acte de décès de celui-ci (1873).
+2 CONT Une Thérèse CADOUDAL est marraine en 1790.
+2 CONT Décédée avant le mariage de son fils (1816).
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0060@ INDI
+1 NAME Yves /PIN/
+2 GIVN Yves
+2 SURN PIN
+1 SEX M
+1 BIRT
+2 DATE ABT 1742
+1 DEAT
+2 DATE BEF 17 JAN 1854
+1 OCCU Cultivateur
+1 FAMS @F0029@
+1 NOTE 74 ans, cultivateur, présent et témoin au mariage de sa fille (1816) ; ne sait signer.
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @I0061@ INDI
+1 NAME Marie Anne /LE COZLER/
+2 GIVN Marie Anne
+2 SURN LE COZLER
+1 SEX F
+1 DEAT
+2 DATE BEF 17 JAN 1854
+1 FAMS @F0029@
+1 NOTE Présente et consentante au mariage de sa fille (1816).
+2 CONT Lien possible avec les LE COZLER de Kerlabourat (branche d'Angélique LE COZLER) : à étudier.
+2 CONT Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.
+0 @F0000@ FAM
+1 HUSB @I0001@
+1 WIFE @I0002@
+1 MARR
+2 DATE 17 NOV 1945
+2 PLAC Kerpert, 22092, France
+1 CHIL @I0000@
+1 CHIL @I0003@
+1 CHAN
+2 DATE 15 AUG 2024
+3 TIME 14:00:45
+0 @F0001@ FAM
+1 HUSB @I0004@
+1 WIFE @I0005@
+1 MARR
+2 DATE 2 FEB 1900
+2 PLAC Kerpert, 22092, France
+1 CHIL @I0001@
+1 NOTE @N0003@
+1 CHAN
+2 DATE 16 AUG 2024
+3 TIME 12:33:31
+0 @F0002@ FAM
+1 HUSB @I0006@
+1 WIFE @I0007@
+1 MARR
+2 DATE 16 FEB 1870
+2 PLAC Kerpert, 22092, France
+1 CHIL @I0004@
+1 CHAN
+2 DATE 16 AUG 2024
+3 TIME 13:15:51
+0 @F0003@ FAM
+1 HUSB @I0008@
+1 WIFE @I0009@
+1 MARR
+2 DATE 24 NOV 1879
+2 PLAC St Gilles Pligeaux, 22294, France
+2 NOTE @N0015@
+1 CHIL @I0005@
+1 CHAN
+2 DATE 17 AUG 2024
+3 TIME 14:07:01
+0 @F0004@ FAM
+1 HUSB @I0010@
+1 WIFE @I0011@
+1 MARR
+2 DATE 6 FEB 1829
+2 PLAC St Gilles Pligeaux, 22294, France
+2 NOTE @N0012@
+1 CHIL @I0006@
+1 CHAN
+2 DATE 16 AUG 2024
+3 TIME 14:28:13
+0 @F0005@ FAM
+1 HUSB @I0012@
+1 WIFE @I0013@
+1 MARR
+2 DATE 22 OCT 1838
+2 PLAC Peumerit Quintin, 22169, France
+1 CHIL @I0007@
+1 NOTE @N0013@
+1 CHAN
+2 DATE 17 AUG 2024
+3 TIME 12:44:38
+0 @F0006@ FAM
+1 HUSB @I0014@
+1 WIFE @I0015@
+1 MARR
+2 DATE 28 JUN 1843
+2 PLAC St Gilles Pligeaux, 22294, France
+2 NOTE @N0018@
+1 CHIL @I0009@
+1 CHAN
+2 DATE 17 AUG 2024
+3 TIME 16:06:59
+0 @F0007@ FAM
+1 HUSB @I0016@
+1 WIFE @I0017@
+1 MARR
+2 DATE 19 JAN 1825
+2 PLAC Kerpert, 22092, France
+2 NOTE @N0022@
+1 CHIL @I0008@
+1 CHAN
+2 DATE 18 AUG 2024
+3 TIME 08:01:14
+0 @F0008@ FAM
+1 HUSB @I0018@
+1 WIFE @I0019@
+1 MARR
+2 DATE 16 SEP 1892
+2 PLAC St Nicolas du Pelem, 22321, France
+2 NOTE @N0026@
+1 CHIL @I0002@
+1 CHAN
+2 DATE 18 AUG 2024
+3 TIME 08:30:01
+0 @F0009@ FAM
+1 HUSB @I0020@
+1 WIFE @I0021@
+1 MARR
+2 DATE 23 JAN 1850
+2 PLAC Kerpert, 22092, France
+2 NOTE @N0029@
+1 CHIL @I0018@
+1 CHAN
+2 DATE 18 AUG 2024
+3 TIME 16:00:57
+0 @F0010@ FAM
+1 HUSB @I0022@
+1 WIFE @I0023@
+1 MARR
+2 DATE 24 OCT 1855
+2 PLAC Canihuel, 22029, France
+2 NOTE @N0032@
+1 CHIL @I0019@
+1 CHAN
+2 DATE 18 AUG 2024
+3 TIME 17:42:28
+0 @F0011@ FAM
+1 HUSB @I0024@
+1 WIFE @I0025@
+1 MARR
+2 DATE 21 NOV 1816
+2 PLAC Kerpert, 22092, France
+2 NOTE @N0034@
+1 CHIL @I0023@
+1 CHAN
+2 DATE 19 AUG 2024
+3 TIME 08:41:34
+0 @F0012@ FAM
+1 HUSB @I0026@
+1 WIFE @I0027@
+1 MARR
+2 DATE 23 NOV 1828
+2 PLAC Lanrivain, 22115, France
+2 NOTE @N0039@
+1 CHIL @I0022@
+1 CHAN
+2 DATE 19 AUG 2024
+3 TIME 16:45:49
+0 @F0013@ FAM
+1 HUSB @I0028@
+1 WIFE @I0029@
+1 MARR
+2 DATE 12 JAN 1829
+2 NOTE Date corrigée de 1839 en 1829 : Anne THORAVAL est décédée en 1835 et leur fille Anne est née en 1833 ; l'acte numérisé s'intitule AM_Lautout-Thoraval_1829. Jour et mois à vérifier sur l'acte.
+2 PLAC Kerpert, 22092, France
+2 NOTE @N0042@
+1 CHIL @I0021@
+1 CHAN
+2 DATE 20 AUG 2024
+3 TIME 07:36:52
+0 @F0014@ FAM
+1 HUSB @I0030@
+1 WIFE @I0031@
+1 MARR
+2 DATE 12 FEB 1811
+2 PLAC St Gilles Pligeaux, 22294, France
+2 NOTE @N0045@
+1 CHIL @I0020@
+1 CHAN
+2 DATE 20 AUG 2024
+3 TIME 12:01:57
+0 @F0015@ FAM
+1 HUSB @I0032@
+1 WIFE @I0033@
+1 CHIL @I0010@
+0 @F0016@ FAM
+1 HUSB @I0034@
+1 WIFE @I0035@
+1 CHIL @I0011@
+0 @F0017@ FAM
+1 HUSB @I0036@
+1 WIFE @I0037@
+1 CHIL @I0029@
+1 CHIL @I0012@
+0 @F0018@ FAM
+1 HUSB @I0038@
+1 WIFE @I0039@
+1 CHIL @I0013@
+0 @F0019@ FAM
+1 HUSB @I0040@
+1 WIFE @I0041@
+1 CHIL @I0016@
+0 @F0020@ FAM
+1 HUSB @I0042@
+1 WIFE @I0043@
+1 CHIL @I0017@
+0 @F0021@ FAM
+1 HUSB @I0044@
+1 WIFE @I0045@
+1 CHIL @I0014@
+0 @F0022@ FAM
+1 HUSB @I0046@
+1 WIFE @I0047@
+1 CHIL @I0015@
+0 @F0023@ FAM
+1 HUSB @I0048@
+1 WIFE @I0049@
+1 CHIL @I0030@
+0 @F0024@ FAM
+1 HUSB @I0050@
+1 WIFE @I0051@
+1 CHIL @I0031@
+0 @F0025@ FAM
+1 HUSB @I0052@
+1 WIFE @I0053@
+1 CHIL @I0028@
+0 @F0026@ FAM
+1 HUSB @I0054@
+1 WIFE @I0055@
+1 CHIL @I0026@
+0 @F0027@ FAM
+1 HUSB @I0056@
+1 WIFE @I0057@
+1 CHIL @I0027@
+0 @F0028@ FAM
+1 HUSB @I0058@
+1 WIFE @I0059@
+1 CHIL @I0024@
+0 @F0029@ FAM
+1 HUSB @I0060@
+1 WIFE @I0061@
+1 CHIL @I0025@
+0 @N0000@ NOTE /enfant légitime
+1 CONT /né à deux heures du matin, déclaré par son père, âgé de 29 ans, cultiva
+1 CONC teur
+1 CONT /sa mère est ménagère,
+1 CONT /les parents sont domiciliés à Magorou, en Kerpert
+1 CONT /son père sait signer
+1 CONT /l'acte porte mention de son mariage et de son décès
+0 @N0001@ NOTE /à son mariage, domicilié à Kerpert, cultivateur, 24 ans, 
+1 CONT /âgé de 29 ans à la naissance de Guillaume, tjs cultivateur, au lieu-di
+1 CONC t Magorou
+1 CONT /sait signer
+1 CONT /DC : source  table de succession et absences, Corlay, volume 2, 1932-19
+1 CONC 37 (?), vue 203
+1 CONT /cultivateur, 63 ans, né et dcd à Kerpert, le 15 mai 1939, époux de Le C
+1 CONC ozler Marie Angélique
+0 @N0002@ NOTE /fille légitime de François, 45 ans, laboureur, (ne sait signer) e
+1 CONC t de Françoise LE  PAPE, ménagère, demeurant à Kerlabouret, en la commun
+1 CONC e de Kerpert
+1 CONT /ménagère, 
+1 CONT /domiciliée à Kerpert lors de son mariage
+1 CONT /domiciliée avec son époux au lieu-dit Magorou lors de la naissance de G
+1 CONC uillaume
+1 CONT /âgée de 24 ans à cette naissance
+1 CONT /DC source table des successions et absences Corlay 1951-1961, vue n° 38
+1 CONT /73 ans, sans profession, veuve de Tanguy Jean François, donation partag
+1 CONC e (suite illisible)
+0 @N0003@ NOTE /les parents du mariés sont décédés
+1 CONT /le père de la mariée est decédé
+1 CONT /la mère de la mariée, 54 ans, ménagère à Kerpert, est présente et conse
+1 CONC ntante
+1 CONT /le marié sait signer
+1 CONT /la mariée sait signer
+1 CONT /la mère de la mariée ne signe pas
+1 CONT /témoins :
+1 CONT - Guillaume LE PROVOST, ami, sacristain, signe,
+1 CONT - Thomas TANGUY, 21 ans, cultivateur, frère du marié, signe,
+1 CONT - Guillaume LE COZLER, 71 ans, cultivateur, oncle de la mariée, ne sign
+1 CONC e pas,
+1 CONT - Guillaume RIVOALLAN,26 ans, cultivateur, ami des LE COZLER, ne signe p
+1 CONC as
+0 @N0004@ NOTE /né à huit heures du matin, déclaration faite par son père,
+1 CONT /laboureur à son mariage, domicilié à Kerpert
+1 CONT /décédé avant 02/1900 au mariage de Jean François.
+1 CONT /dcd au village de Magorou
+1 CONT /déclaration faite par son fils Jean François
+0 @N0005@ NOTE /née le 11, acte du 12, enfant légitime
+1 CONT /déclaration par le père, 35 ans, cultivateur
+1 CONT /ménagère à son mariage
+1 CONT /décédée avant 02/1900, pour le mariage de Jean François
+1 CONT /dcd au village de Magorou, à 44 ans, sur la déclaration de son époux
+1 CONT /ses propres parents sont dcd
+0 @N0006@ NOTE /enfant légitime, naissance enregistrée le 8 juin 1834
+1 CONT /fils de Guillaume le Cozler, 52 ans, cultivateur, demeurant à kerlabour
+1 CONC et et de Marie Anne GUILLAUME,
+1 CONT 29 ans, même adresse
+1 CONT /son père est âgé de 52 ans, cultivateur demeurant à Kerlabouret
+1 CONT /sa signature est très enfantine
+1 CONT /sa mère, 29 ans, est ménagère à Kerlabouret
+1 CONT /dcd avant 02/1900
+1 CONT /est laboureur à son second mariage
+1 CONT /à son dc, cultivateur, domicilié à Kerlabouret/veuf en premières noce
+1 CONC s de Marie Rose Gorrègues
+1 CONT /fils de Guillaume Le Cozler et de Marie Anne Guillaume, dcdés
+1 CONT /a un frère Guillaume, 68 ans, qui a déclaré son dc
+0 @N0007@ NOTE 
+1 CONT     
+0 @N0008@ NOTE /trente et un an à son mariage, laboureur et ménager (garçon), fil
+1 CONC s majeur de feue Anne Thoraval et de François Tanguy menager de Kerpert
+1 CONC , présent et consentant au mariage de son fils.
+1 CONT /ne signe pas
+1 CONT /trente trois ans à la naissance de François, cultivateur, effectue la d
+1 CONC éclaration
+1 CONT /domicilié au Magorou en Kerpert
+1 CONT /dcd avant le mariage de François, en 1870
+1 CONT /l'acte de dc dit : dcd à 71 ans, veuf de ML Robert. mais au dc de celle
+1 CONC -ci, en 1862, il déclare 70 ans (?). Fils de François Tanguy et de Ann
+1 CONC e Thoraval, tous les deux dcd.
+0 @N0009@ NOTE /son acte de mariage dit 36 ans et donne sa date de naissance, fill
+1 CONC e de feu Jean et de Marie Louise Jouan, ménagère de St Gilles Pligeaux
+1 CONC , présente et consentante
+1 CONT /ne signe pas
+1 CONT /trente six ans à la naissance de François, cultivatrice, domiciliée com
+1 CONC me son époux au village de Magorou
+1 CONT /dcd au mariage de Francois, en 1870
+1 CONT /son acte de dc dit : née à St Gilles Pligeaux, ménagère, âgée de 70 ans
+1 CONC , fille de Jean ROBERT et de Marie Louise JOUAN, épouse de jean TANGUY
+1 CONC , laboureur, demeurant au Magorou en Kerpert. Ses parents sont dcd.
+0 @N0010@ NOTE /fils légitime de Jean Thoraval, 24 ans, cultivateur, et de Marie A
+1 CONC nne Thépault, 23 ans , ménagère, demeurant au Toutfol (?) sur Kerpert
+1 CONT /son acte de matiage indique qu'il serait né le 4 du même mois, qu'il es
+1 CONC t cultivateur (garçon)
+1 CONT /sa mère est dcd au moment de son mariage
+1 CONT /35 ans à la naissance de sa fille, cultivateur, demeurant au bourg de K
+1 CONC erpert
+1 CONT /sait signer
+1 CONT /laboureur au mariage de sa fille, demeurant à Kerpert, présent et conse
+1 CONC ntant,
+1 CONT /à son dc, laboureur, demeurant au Pont Cast(?)
+1 CONT /a un fils Thomas, témoin au dc
+0 @N0011@ NOTE /fille légitime de Thomas LEPROVOST, trente ans, cultivateur et d
+1 CONC e Marie Françoise LE DÜ, 29 ans, cultivatrice, dememeurant au Grand detr
+1 CONC ouët (?). La déclaration a été faite par Thomas LEPROVOST, qui signe
+1 CONT /à son mariage est laboureur (fille) et demeure à Peumerit Quintin, so
+1 CONC n père est dcd, sa mère, Marie Françoise LE DÜ,  est cultivatrice à Peum
+1 CONC erit Quintin, présente et consentante,
+1 CONT /à la naissance de sa fille 27 ans ménagère, demeurant au bourg de Kerpe
+1 CONC rt
+1 CONT /au mariage de sa fille, ménagère, demeurant à Kerpert, présente et cons
+1 CONC entante
+1 CONT /à son dc, ménagère, domiciliée au Pont Cast (?)
+0 @N0012@ NOTE /témoins :
+1 CONT - Yves CONTRIEUX, 31 ans, marchand, à St Gilles Pligeaux, ami de l'époux
+1 CONC ,
+1 CONT - Charles DEVEDEZ, 48 ans, laboureur, à St Gilles Pligeaux, ami de l'épo
+1 CONC ux,
+1 CONT - Gilles LE DUY, 37 ans, marchand à St Gilles Pligeaux, ami de l'épouse,
+1 CONT - Yves LE GALL, 58 ans, débitant de boissons, à St Gilles Pligeaux, am
+1 CONC i de l'épouse
+1 CONT - 
+0 @N0013@ NOTE /témoins :
+1 CONT - Jean THORAVAL, 53 ans cultivateur à Kerpert, frère de l'époux,
+1 CONT - Yves HAMON, 28 ans, menuisier demeurant à Kerpert, ami du contractant,
+1 CONT - Jean Marie LE GUENNIC, 28 ans, domestique laboureur à Peumerit Quintin
+1 CONC , voisin de la contractante,
+1 CONT - Guillaume LE PROVOST, 43 ans, laboureur demeurant au Grand Lanouët, vo
+1 CONC isin de la contractante
+0 @N0014@ NOTE /fille légitime de Jean LE PAPE, laboureur, et de Marie Jeanne LOZA
+1 CONC CH, ménagère, demeurants (illisible) à St Gilles Pligeaux
+1 CONT /ménagère à St Gilles Pligeaux à son mariage
+1 CONT /et veuve de Jean Perennez
+1 CONT /ses parents sont présents et consentent au mariage
+1 CONT /29 ans à la naissance de son fils François
+1 CONT /54 ans au mariage de François, d'où née vers 1846
+1 CONT /ménagère, demeurant à Kerpert
+1 CONT /dcd à Kerpert, au domicile de son gendre, lieu-dit Magorou, veuve en pr
+1 CONC emières noces de Jean Perennez et en secondes noces de François Le Cozle
+1 CONC r
+1 CONT 
+0 @N0015@ NOTE /témoins ;
+1 CONT - Guillaume Le Cozler, frère du marié, 50 ans,
+1 CONT - Jean Corbic, 58 ans, forgeron à St Gilles, oncle de l'épouse
+1 CONT - Charles Le Guilloux, 26 ans, St Gilles, facteur rural, ami des époux,
+1 CONT - Jacques Thoraval, 40 ans, laboureur à Canihuet, beau-frère de l'époux
+1 CONT L'époux et les deux premiers témoins ne signent pas
+0 @N0016@ NOTE /enfant légitime, né à La Garenne Chevance, de Yves Le Pape, 38 ans
+1 CONC , ménager, et de Marie Anne Thoraval, 33 ans, ménagère
+1 CONT /à son mariage, laboureur à St Gilles, son père Yves est dcd, sa mère pr
+1 CONC ésente et consentante
+1 CONT /père a déclaré l'enfant, ne signe pas
+1 CONT /24 ans à la naissance de sa fille, d'où né vers 1821. Où ?
+1 CONT /DC 76 ans, cuktivateur, fils légitime de feu Yves Le Pape et de feue Ma
+1 CONC rie Anne Thoraval, et époux de Jeanne Lozach
+1 CONT /déclaration par Jean Marie Lozach, cultivateur, 36 ans, fils, demeuran
+1 CONC t à St Gilles et Propser Ange Marie Le Roux, 48 ans, menuisier, demeuran
+1 CONC t à St Gilles
+0 @N0017@ NOTE /fille légitime de Jean Lozach, 27 ans, ménager, et de Marie Jeann
+1 CONC e BERNARD, 20 ans , ménagère
+1 CONT /déclarée par le père, qui signe
+1 CONT /ménagère à St Gilles, à son mariage, ses deux parents demeurant à St Gi
+1 CONC lles présents et consentants
+1 CONT /22 ans à la naissance de sa fille, d'où née vers 1823
+1 CONT /DC 76 ans, ménagère, domiciliée à St Gilles Pligeaux, fille légitime d
+1 CONC e feuJean Lozach et de feue Marie Jeanne Bernard, veuve de Jean Le Pape
+1 CONC , déclaré par son gendre, Prosper Ange Marie Le Roux, menuisier, 50  ans
+1 CONC , demeurant à St Gilles
+0 @N0018@ NOTE /témoins :
+1 CONT - Jean Marie Le Fur, 59 ans, de St Gilles, débitant de tabac, ami de l'é
+1 CONC poux
+1 CONT - Yves Lozach, cabaretier, 42 ans, de St Gilles, ami de l'époux,
+1 CONT - Guillaume Le Provost, 42 ans, de Kerpert, ami de l'épouse,
+1 CONT - Alain Derrien, laboureur, 60 ans de Canihuel, ami de l'épouse
+1 CONT Jean Le Pape, Jean Lozach, Le Fur, Le Provost signent
+0 @N0019@ NOTE /Marie Anne serait un prénom d'usage, le prénom des actes serait Ma
+1 CONC rie. Ce que confirment l'AN et l'AM.
+1 CONT /son AN a été difficile à trouver : fait. Elle est née le quinzième jou
+1 CONC r de Ventôse An XIII
+1 CONT /serait née au lieu-dit Le Bothalec
+1 CONT /difficile de lire les actes de années 13 et 14 de la période révolution
+1 CONC naire
+1 CONT /elle est la fille légitime de Yves GUILLAUME et de Marie Anne THORAVAL
+1 CONC , ils sont cultivateurs tous les deux et résident au lieu-dit Bot halec/
+1 CONT /son père ne signe pas
+1 CONT /à son mariage, est déclarée être née le 6 mars 1805, fille mineure de f
+1 CONC eu Yves GUILLAUME et de Marie Anne THORAVAL
+1 CONT /dcd à 64 ans, ménagère, au lieu-dit Kerlabouret, née à Kerpert, fille d
+1 CONC e Yves GUILLAUME et de Marie-Anne Thoraval, veuve de Guillaume Le Cozler
+1 CONC , déclarée par son fils François
+0 @N0020@ NOTE /né à Kerlabourat en Kerpert de Guillaume LE COZLER et de Anne BERN
+1 CONC ARD
+1 CONT /à son mariage avec Marie Anne GUILLAUME, est veuf de Anne PERRET
+1 CONT /cultivateur
+1 CONT /DC à l'âge de 71 ans, domicilié à Kerlabourat en Kerpert, fils des feu
+1 CONC x Guillaume Le Cozler et Anne Bernard, veuf en premières noces de Anne P
+1 CONC ERRET et époux de Marie Anne GUILLAUME
+1 CONT /déclaré par son fils Guillaume, 22 ans, laboureur, demeurant à Kerlabou
+1 CONC rat
+0 @N0021@ NOTE 
+1 CONT     
+0 @N0022@ NOTE /témoins :
+1 CONT - Charles Le Cheviller, 29 ans, meunier, cousin de l'épouse, de Kerpert,
+1 CONT - François Blouin, 34 ans, cultivateur, de Kerpert, témoin,
+1 CONT - Yves Thoraval, 29 ans, cultivateur, de Kerpert, cousin de l'épouse, 
+1 CONT - Guillaume Raoult, 31 ans, cultivateur, de Kerpert, témoin.
+1 CONT Tous signent sauf la jeune épouse.
+1 CONT L'officier d'état-civil souligne discrètement la différence d'âge entr
+1 CONC e les conjoints.
+0 @N0023@ NOTE /enfant légitime de Jacques Marie HENRY, 56 ans, cultivateur et d
+1 CONC e Marie Joseph POUL 40 ans,demeurants à Bot ar Guen, en Kerpert. C'est s
+1 CONC on père qui a déclaré la naissance. Il signe.
+1 CONT /Anne Marie a au moins 7 frères et soeurs
+0 @N0024@ NOTE /fils légitime de Jacques HENRY, 27 ans, cultivateur, et de Anne LA
+1 CONC UTOUT, 19 ans, ménagère, demeurant à Kegrist-lau (ou lan), en St Nicolas
+1 CONC . Déclaration faite par le père, qui signe.
+1 CONT /à son mariage, 39 ans, cultivateur, demeurant à St Nicolas, fils de Jac
+1 CONC ques HENRY, 66 ans, cultivateur et de Anne LAUTOUT, 58 ans, ménagère, do
+1 CONC miciliés à St Nicolas, lesquels, par acte de Me HUCHET du G... en date d
+1 CONC u 12 août dernier,  ont été respectueusement sommés de consentir au di
+1 CONC t mariage
+1 CONT /à son dc, ses parents sont dcd, tjs cultivateur, domicilié le Bourg e
+1 CONC n Kerpert. Son épouse tjs vivante. Son patronyme est POUL.
+0 @N0025@ NOTE /sur son acte de naissance, le patronyme est POULE, acte de mariag
+1 CONC e idem
+1 CONT /enfant légitime de Yves POULE, 38 ans, laboureur, et de Françoise STENO
+1 CONC U, 35 ans, ménagère. Ils demeurent à Linesquen en Canihuel. C'est le pèr
+1 CONC e qui déclare, et qui signe, POULE.
+1 CONT /à son mariage, 23 ans, ménagère à St Nicolas, fille majeure de Yves POU
+1 CONC LE, 61 ans et de Françoise STEUNOU, laboureurs, domciliés en St Nicolas
+1 CONC , présents et consentants
+1 CONT /DC Tables des successions et absences Corlay 1932-1937, vue n° 160
+1 CONT /indiquée comme LE POUL Marie Joseph, 67 ans, sp, dcd à Kerpert, veuve d
+1 CONC e He(n)ry Jacques Assurance L'Union
+1 CONT 
+0 @N0026@ NOTE /témoins :
+1 CONT - Pierre LE TALLEC,62 ans, boucher, ami des époux,
+1 CONT - Jean Marie ROBIN, 51 ans, cordonnier, ami des époux,
+1 CONT - Louis, LE CAM, 35 ans laboureur, ami des époux,
+1 CONT - Jean Marie LE CAM, 38 ans, laboureur, ami des époux,
+1 CONT tous domiciliés à St Nicolas.
+1 CONT Ont signé l'époux, le père de l'épouse et les témoins LE CAM Louis, et L
+1 CONC E TALLEC
+0 @N0027@ NOTE /fils légitime de Sylvestre HENRY, 37 ans, laboureur, et de Marie J
+1 CONC osèphe JOUAN, 31 ans, ménagère, domiciliés Kgriste lan (?). Déclaratio
+1 CONC n faite par le père, le GP est vraisemblablement le témoin : Jacques HEN
+1 CONC RY, 68 ans, laboureur demeurant à Bothoa.
+1 CONT /Bothoa est un village et une ancienne paroisse issue de celle primitiv
+1 CONC e de Pligeaux de l’évêché de Cornouaille. Le village devient une commun
+1 CONC e française à la Révolution jusqu’à son absorption par Saint-Nicolas-du-
+1 CONC Pélem en 1836
+1 CONT /ce qui peut expliquer qu'à son mariage il soit indiqué que Jacques soi
+1 CONC t natif de St Nicolas, et non de Bothoa
+1 CONT /à son mariage, Jacques, 25 ans, "laboureur jeune garçon", fils de Sylve
+1 CONC stre et M.J. JOUAN, propriétaires à St Nicolas, père présent et consenta
+1 CONC nt.
+1 CONT /au dc de son épouse, tjs vivant, demeurant à Kerpert
+1 CONT /pas trouvé son dc sur les tables décennales de KERPERT ni de St Nicola
+1 CONC s 1893-1922
+1 CONT /il faudrait chercher sur les tables de succession
+0 @N0028@ NOTE /fille légitime de Jean LAUTOUT, 25 ans, propriétaire cultivateur e
+1 CONC t de Anne THORAVAL, 24 ans, ménagère, domiciliés à Kerdrain en KERPERT
+1 CONC . Le père a fait la déclaration et signe.
+1 CONT /à son mariage, 16 ans, ménagère demeurant à Kerpert, fille de Jean LAUT
+1 CONC OUT propriétaire à Kerpert et de Anne THORAVAL, dcd. Père présent et con
+1 CONC sentant.
+1 CONT /DC, 64 ans, rentière, parents dcd, époux rentier domicilié à Kerpert.
+0 @N0029@ NOTE /témoins :
+1 CONT - Sylvestre HENRY, 64 ans, laboureur, de St Nicolas, père de l'époux, 
+1 CONT - Jean LAUTOUT, 42 ans, laboureur, de Kerpert, père de lépouse,
+1 CONT - Pierre LE DUAULT, 44 ans, laboureur, de Kerpert, voisin de l'époux,
+1 CONT - Bertrand LE CHEVILLER, 29 ans, meunier, de Kerpert, témoin
+1 CONT Tous signent, sauf Sylvestre HENRY.
+0 @N0030@ NOTE /fils légitime d'Yves POUL (sans E), 24 ans, laboureur, et de Mari
+1 CONC e Josèphe (MENGUY ?), 36 ans, ménagère, domiciliés à Khellon en Canihuel
+1 CONT /à son mariage, 24 ans, de Lanrivain, garçon laboureur, fs de Yves POU
+1 CONC L (sans E) et de Marie Josèphe MINGUY, père et mère présents et consenta
+1 CONC nts
+1 CONT /à son dc devient LE POUL
+0 @N0031@ NOTE /fille légitime de Yves STEUNOU, 44 ans, cultivateur, et Marianne P
+1 CONC IN, ménagère, demeurant à Limosquen d'en haut. déclaration faite par l
+1 CONC e père, qui signe.
+1 CONT /à son mariage, 22 ans, de Canihuel, fille ménagère, fa de Yves STEUNO
+1 CONC U et de feu Marie Anne PIN. Père présent et consentant.
+1 CONT /DC à Kerpert, 73 ans, ancienne ménagère, fa de Yves STEUNOU et de Mari
+1 CONC e Anne PIN, veuve de  Yves POUL, domiciliée au bourg de Kerpert
+0 @N0032@ NOTE /témoins :
+1 CONT - Joseph LE DOUSSON, 27 ans, laboureur, de Lanrivain, ami des contractan
+1 CONC ts,
+1 CONT - Julien LE BRETON, 31 ans, menuisier, de Canihuel, beau-frère de la con
+1 CONC tractante, 
+1 CONT - Julien TREGUIER, 30 ans, porteur, ami des contractants,
+1 CONT - Julien MICHEL, 56 ans, journalier, de Canihuel, ami des contractants
+1 CONT Signent, le jeune marié, son beau-père et LE BRETON. 
+0 @N0033@ NOTE /fils légitime de Yves STENNOU et de Catherine CADOUDAL son épous
+1 CONC e du village de ? en Plésidy né le 10 avril 1790 a été solennellement ba
+1 CONC ptisé le même jour... parrain Yves LE BALLEC et marraine Thérèse CADOUDA
+1 CONC L. Le père ne sait signer, ni la marraine. Le parrain dit le savoir mai
+1 CONC s son paraphe est étrange.
+1 CONT /à son mariage, 26 ans, laboureur, demeurant au vieux bourg de Quintin
+1 CONC . Sesparents sont dcd.
+1 CONT /DC fils de feus Yves STEUNOU et de Marie Catherine Gaultier, veuf de Ma
+1 CONC rie Anne Pin. Le nom du père, le nom de l'épouse correspondent. Pb sur l
+1 CONC e nom de la mère. Gaultier et non Cadoudal. Marie ajouté au prénom de Ca
+1 CONC therine. Le nom de Cadoudal aurait-il été difficile à porter ?
+1 CONT /dcd à Boischateau en Canihuel, selon acte de dc de son épouse.
+0 @N0034@ NOTE /témoins :
+1 CONT - Yves PIN, 74 ans, cultivateur, père de l'épouse,
+1 CONT - François LE POMELLEC, 35 ans, tisserand en toile grosse, de Kerpert, a
+1 CONC ppelé pour témoin,
+1 CONT - Yves LE BOUCHER, 30 ans, débitant de beurre, de Kerpert, appelé pour t
+1 CONC émoin,
+1 CONT - Guillaume TOUBOULIC, 50 ans, débitant de cidre, présent dans la maiso
+1 CONC n commune
+1 CONT Le père et Touboulic ont déclaré ne savoir signer. 
+0 @N0035@ NOTE /à son mariage, vingt ans, née le douze février mil sept cent quatr
+1 CONC e vingt quinze à Kerpert, file de Yves et de Marie Anne Le Cozler, tou
+1 CONC s les deux présent et consentants
+1 CONT /mais bizarrement l'extrait de naissance de la jeune épouse a été délivr
+1 CONC é par le maire de St Gilles Pligeaux (?)
+1 CONT /DC, âgée de 58 ans,  ménagère, domiciliée à Canihuel. ses parents son
+1 CONC t dcd et elle est veuve. Son mari dcd à Boischateau en Canihuel. déclar
+1 CONC é par son fils et son gendre
+0 @N0036@ NOTE /selon son acte de mariage, bien l'acte indique que ce soit la mair
+1 CONC ie de St Gille Pligeaux qui ait transmis la copie de l'acte de naissance
+0 @N0037@ NOTE /fils légitime de Diminique POUL âgé de 34 ans et dame CHEVANCÉ âgé
+1 CONC e de 30 ans laboureurs demeurant à Guerrocart. Déclaré par le père et pa
+1 CONC r l'oncle. Ne savent signer.
+1 CONT /à son mariage, 22 ans, laboureur, demeurant à Lanrivain, fs de Dominiqu
+1 CONC e POUL présent qui consent au mariage, mère dcd.
+1 CONT /dc le 7 septembre 1871, laboureur, fils de feu POUL Dominique et de CHE
+1 CONC VANCE Anne, veuf de MENGUY Marie. déclaré par son fils Guillaume
+0 @N0038@ NOTE /variations du patronyme : Menguy, Mengui, Minguy, Mingui
+1 CONT /la naissance de Marie Joseph a été déclarée le 2 germinal an II alors q
+1 CONC u'elle date du 29 ventôse. Déclaration du père, Allain MENGUI, cultivatr
+1 CONC ice (?) qui est entouré de deux témoins. MJ est une enfant légitime, s
+1 CONC a mère est Jeanne LE MOING, domiciliée à Kerhellou
+1 CONT /à son mariage âgée de 32 ans, fillandière demeurant à Lanrivain, fill
+1 CONC e majeure de feu Allain MINGUY et de feue Jeanne LE MOING.
+1 CONT /DC âgée de 75 ans, ménagère, au lieu dit Guerrocart, fille de feu Mingu
+1 CONC y Alain et de feue LEMOIGN Jeanne, épouse de le POUL Yves, sur la déclar
+1 CONC ation de le Poul Yves, 61 ans, cultivateur, mari. Ne sait signer.
+0 @N0039@ NOTE /témoins :
+1 CONT - Dominique POUL, 52 ans, laboureur, de Lanrivain, père du contractant,
+1 CONT - Yves MINGUY, 36 ans laboureur, de Lanrivin, frère de la contractante,
+1 CONT - Thomas GUILLON, 48 ans, laboureur, de Lanrivain, ami du contractant,
+1 CONT - René THOMAS, 25 ans, tailleur, de Lanrivain, ami de la contractante? 
+0 @N0040@ NOTE /Fils légitime de Jean LAUTOUT, 33 ans, cultivateur et de Marguerit
+1 CONC e GUILLAUME, menagère, demeurant à Kerdrain. déclaré par son père. ne si
+1 CONC gne pas.
+1 CONT /à son premier mariage, 21 ans, propriétaire cultivateur, demeurant à Ke
+1 CONC rpert, fils de Jean LAUTOUT, propriétaire cultivateur à Kerpert et de fe
+1 CONC ue Marguerite GUILLAUME, dcd à Kerpert. Père présent et consent.
+1 CONT /DC à Kerdrain, 58 ans, cultivateur, fils de Jean et de Marquerite GUILL
+1 CONC AUME, dcd, veuf en premières noces de Anne THORAVAL, et époux en seconde
+1 CONC s noces de Marie Anne GUILLAUME, ménagère
+0 @N0041@ NOTE /fille légitime de Jean THORAVAL, 23 ans, cultivateur, et de Mari
+1 CONC e Anne THÉPOT, 25 ans, ménagère, demeurant à ? en Kerpert
+1 CONT /à son mariage, vingt ans, ménagère, demeurant à St Gilles, fille de Jea
+1 CONC n THORAVAL, propriétaire cultivateur et de défunte Marie Anne THORAVAL
+1 CONC , dcd à Kerpert. Père présent et consentant.
+1 CONT /défunte Marie Anne THORAVAL est logiquement le nom d'épouse de sa mère.
+1 CONT /DC à 26 ans, ménagère, domiciliée à Kerdrain en Kerpert, fille de Jea
+1 CONC n et de Anne Marie THÉPOT, épouse de Jean LAUTOUT.
+1 CONT /déclaré par Jean THORAVAL, 50 ans, demeurnt au bourg, et par son mari
+1 CONC , Jean LAUTOUT, demeurant à Kerdrain
+0 @N0042@ NOTE /témoins :
+1 CONT - Jean THORAVAL, 43 ans, propriétaire, cultivateur, arpenteur, au bour
+1 CONC g de Kerpert, père de l'épouse,
+1 CONT - Jean LAUTOUT, 52 ans, propriétaire cultivateur, demeurant Kerdrain e
+1 CONC n Kerpert, père de l'époux,
+1 CONT - Guillaume COURRIOU, 52 ans, laboureur, de Kerpert, témoin,
+1 CONT - Guillaume SERRANDOUR, 56 ans, laboureur domestique, appelé témoin.
+1 CONT Seuls le mariè et le père de la mariée signent.
+0 @N0043@ NOTE /fils légitime de Jacques et Marie GUILLOUX, mari et femme, n
+1 CONC é à ? .... a été solennellement baptisé le jour suivant. Parrain Sylvest
+1 CONC re GUILLOUX, marraine, Jeanne BOUTHIET, qui sait signer.
+1 CONT /le nom comprend un y à la naissance, le perd au mariage, le retrouve a
+1 CONC u mariage de son fils
+1 CONT /mariage, 22 ans, ménager, demeurant à Kerpert, fils légitime de Jacque
+1 CONC s et Marie GUILLOU, présnets et consentants
+1 CONT /acte de dc du 17 juin 1850 à Kerpert (acte du 17, déclassé en fin de re
+1 CONC gistre), 64 ans, cultivateur, domicilié à St Nicolas, fils de feux Jacqu
+1 CONC es HENRY et de Marie GUILLOUX, époux de Marie Joseph JOUAN. En fait ce
+1 CONC t acte a été construit sur la base d'un extrait de l'acte réalisé par l
+1 CONC a mairie de St Nicolas. Il est donc dcd à St Nicolas
+1 CONT /en fait il existe bien un acte de DC à St Nicolas
+0 @N0044@ NOTE /"naissance an troisième de la république, quatorzième nivôs... s'e
+1 CONC st présenté Claude JOUAN père demeurant au village du Petit Quellen en c
+1 CONC ette commune assisté de Pierre THORAVAL et de Marguerite LE GRONTEC témo
+1 CONC ins, âgé de vingt un ans  accomplis demeurant séparément le dit THORAVA
+1 CONC L au village du Petit Quellen la dite LE GRONTEC au lieu de Ker Pernec (
+1 CONC ?) en cette commune cultivateur et fillandière de profession lequel a dé
+1 CONC claré que le 14 nivos de la présente année est né au village du Petit Qu
+1 CONC ellen en cette commune à trois heures du soir un enfant femêle auquel i
+1 CONC l a été donné le prénom de Marie Joseph et le nom de JOUAN du mariage d
+1 CONC e Claude JOUAN et de Jeannne LE GOFF cultivateur de cette commune.
+1 CONT Fait en la maison commune de Mont Pligeaux sur la présentation qui nou
+1 CONC s a été faite de l'enfant. Sous notre seing et celui de la dite LE GRONT
+1 CONC EC, les autres ont déclaré ne savoir signé. Les dates jour et an que dev
+1 CONC ant." (transcription de l'original avec un minimum de modifications)
+1 CONT /mariage : 16 ans, ménagère, née le 14 Nivôse an III, à St Gilles, demeu
+1 CONC rant à St Gilles, fille légitime de feu Claude JOUAN et de Jeanne LE GOF
+1 CONC F, présente et consentante
+1 CONT /DC à K gristan Lan en St Nicolas, 78 ans, ménagère, fille de feux Jea
+1 CONC n Claude JOUAN et Jeannne LE GOFF, veuve de Sylvestre HENRY.
+1 CONT /déclaré par son fils Jacques, 47 ans, demeurant St Nicolas, laboureur
+1 CONT /les tables de succession et d'absence (bureau de l'enregistrement de S
+1 CONC t Nicolas 1871-1880) indiquent ménagère, 78 ans, née à St Gilles, dc
+1 CONC d à St Nicolas, Veuve HENRY 
+0 @N0045@ NOTE /témoins :
+1 CONT - Jacques HENRY, 30 ans, cultivateur, demeurant à Bothoa, cousin de l'ép
+1 CONC oux,
+1 CONT - Gilles HENRY, 23 ans, cultivateur, demeurant à Plezidy, cousin de l'ép
+1 CONC oux,
+1 CONT - Pierre LOZACH, 60 ans, cultivateur, demeurant à Canihuel, oncle germai
+1 CONC n de l'épouse,
+1 CONT - Guillaume LE GOFF, 52 ans, ménager, demeurant à Magouro (?), oncle ger
+1 CONC maine de l'épouse.
+1 CONT Personnne ne sait signer.
+0 TRLR

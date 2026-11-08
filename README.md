@@ -2,9 +2,7 @@
 
 Arbre interactif des ascendants de Jean Gustave Marie Tanguy, hébergé sur GitHub Pages.
 
-## 🌐 Accès
-
-**URL publique :** `https://ronant99-lgtm.github.io/arbre-tanguy`
+**URL publique :** https://ronant99-lgtm.github.io/arbre-tanguy
 
 ---
 
@@ -12,112 +10,93 @@ Arbre interactif des ascendants de Jean Gustave Marie Tanguy, hébergé sur GitH
 
 ```
 arbre-tanguy/
-├── index.html          ← l'arbre interactif (ne pas modifier)
-├── data.json           ← les données de la famille (à éditer)
-├── photos/             ← les portraits et images
-│   ├── exemple.jpg
-│   └── ...
-└── README.md           ← ce fichier
+├── gedcom/Tanguy.ged          ← SOURCE DE RÉFÉRENCE : export GEDCOM de Gramps
+├── complements.json           ← photos, professions, textes ajoutés via le site
+├── data.json                  ← GÉNÉRÉ automatiquement (ne pas modifier à la main)
+├── index.html                 ← l'arbre interactif
+├── photos/                    ← portraits et images (à créer au besoin)
+├── scripts/ged2json.py        ← conversion GEDCOM → data.json + contrôles de cohérence
+└── .github/workflows/         ← régénération automatique de data.json
+```
+
+Le principe : **on ne saisit les données qu'une seule fois, dans Gramps.**
+Le site se reconstruit tout seul à partir du fichier GEDCOM.
+
+```
+Gramps ──export──► gedcom/Tanguy.ged ─┐
+                                      ├──► (GitHub Actions) ──► data.json ──► site
+Site « Exporter » ► complements.json ─┘
 ```
 
 ---
 
-## ✏️ Modifier une fiche (biographie, dates, profession…)
+## ✏️ Mettre à jour l'arbre depuis Gramps (dates, lieux, personnes, notes)
 
-1. Ouvrir l'arbre sur `https://ronant99-lgtm.github.io/arbre-tanguy`
-2. Cliquer sur un ancêtre → **✎ Modifier**
-3. Remplir les champs, cliquer **Enregistrer**
-4. Répéter pour d'autres fiches si besoin
-5. Cliquer **⬇ Exporter JSON** → télécharge `data_tanguy.json`
-6. Renommer ce fichier en `data.json`
-7. Le déposer dans ce dépôt GitHub (remplace l'ancien)
-8. Attendre ~30 secondes → l'arbre est mis à jour pour tout le monde
+1. Dans Gramps : **Arbre familial → Exporter… → GEDCOM**, enregistrer sous `Tanguy.ged`
+2. Sur GitHub, ouvrir le dossier `gedcom/` → **Add file → Upload files** → déposer `Tanguy.ged` (remplace l'ancien)
+3. Valider (**Commit changes**)
+4. Patienter 1 à 2 minutes : l'action « Générer l'arbre depuis Gramps » régénère `data.json`,
+   puis le site se met à jour. Son résumé (onglet **Actions**) liste aussi les **points à vérifier**
+   (dates incohérentes, mariage après un décès, etc.).
 
----
-
-## 🖼️ Ajouter une photo
-
-### Option A — URL externe (la plus simple)
-
-Héberger la photo sur n'importe quel service (Google Photos, Imgur, etc.)
-et coller le lien direct dans le champ **Photo** de l'éditeur.
-
-Exemple : `https://i.imgur.com/abc123.jpg`
-
-### Option B — Photo dans le dépôt (recommandé pour la pérennité)
-
-1. Préparer la photo : format JPG ou PNG, idéalement **400×500 px**, moins de **300 Ko**
-2. La nommer de façon claire : `jean_tanguy_1875.jpg`
-3. La déposer dans le dossier `photos/` de ce dépôt
-4. Dans l'éditeur, renseigner le chemin : `photos/jean_tanguy_1875.jpg`
-5. Exporter et redéposer `data.json` comme décrit ci-dessus
-
-> **Conseil qualité photo :** une image en noir et blanc avec un léger traitement sépia
-> s'intègre particulièrement bien dans l'interface.
+> ⚠️ **Avant de continuer à travailler dans Gramps**, importez-y la version du GEDCOM présente
+> dans ce dépôt (**Arbre familial → Importer…**, dans un nouvel arbre) : elle contient des
+> corrections et la génération 6 ajoutées directement dans le fichier. Sinon, votre prochain
+> export les effacerait.
 
 ---
 
-## 🔄 Ajouter ou modifier des ancêtres (avancé)
+## 🖼️ Ajouter une photo, une profession ou un texte (depuis le site)
 
-Le fichier `data.json` peut aussi être édité directement dans un éditeur de texte
-(VS Code, Notepad++…). La structure est la suivante :
+1. Ouvrir l'arbre, cliquer sur un ancêtre → **✎ Modifier**
+2. Renseigner la photo, la profession et/ou des compléments biographiques → **Enregistrer**
+3. Cliquer **⬇ Exporter** → télécharge `complements.json`
+4. Déposer ce fichier à la racine du dépôt GitHub (remplace l'ancien)
+5. L'arbre se met à jour automatiquement en 1 à 2 minutes
 
-```json
-{
-  "id": "identifiant-unique",
-  "given": "Jean Gustave Marie",
-  "surname": "TANGUY",
-  "born": 1946,
-  "died": 1985,
-  "gender": "M",
-  "lieu_naissance": "Kerpert",
-  "lieu_deces": "Nantes",
-  "profession": "Cultivateur",
-  "photo": "photos/jean_tanguy.jpg",
-  "bio": "<p>Texte biographique libre.</p>",
-  "children": [ ... ]
-}
+Les noms, dates, lieux, unions et notes d'archives ne se modifient **que dans Gramps**.
+
+### Photos
+
+- **Dans le dépôt (recommandé)** : JPG ou PNG, ~400×500 px, < 300 Ko, nommée clairement
+  (`jean_tanguy_1875.jpg`), déposée dans `photos/` ; renseigner `photos/jean_tanguy_1875.jpg`.
+- **URL externe** : coller un lien direct vers l'image.
+
+---
+
+## 🧩 Ce qu'affiche chaque fiche
+
+- dates complètes (y compris calendrier républicain converti : « 24 mars 1797 (4 germinal an V) »)
+  et dates approximatives (« vers 1785 », « avant 1829 », « après 1898 ») ;
+- profession, lieux de naissance et de décès ;
+- union(s) : conjoint, date et lieu du mariage, détail de l'acte (témoins…) ;
+- frères et sœurs connus dans Gramps ;
+- **implexe (∞)** : ancêtre présent plusieurs fois dans l'arbre ;
+- notes d'archives (depuis Gramps) suivies des compléments ajoutés via le site.
+
+---
+
+## 🛠️ Générer data.json à la main (facultatif)
+
+```bash
+python3 scripts/ged2json.py            # écrit data.json et affiche les points à vérifier
+python3 scripts/ged2json.py --root I0001 --out test.json   # autre personne de départ
 ```
 
-Les `children` sont les **ancêtres directs** (père et mère), pas les descendants.
+Aucune installation nécessaire au-delà de Python 3.
 
 ---
 
-## 🚀 Mise en place initiale (une seule fois)
+## 🔒 Confidentialité
 
-### 1. Créer le dépôt GitHub
-
-- Aller sur [github.com/new](https://github.com/new)
-- Nom du dépôt : `arbre-tanguy`
-- Cocher **Public** (obligatoire pour GitHub Pages gratuit)
-- Cliquer **Create repository**
-
-### 2. Déposer les fichiers
-
-Depuis la page du dépôt, cliquer **uploading an existing file** et déposer :
-- `index.html`
-- `data.json`
-- Le dossier `photos/` (avec ses fichiers)
-
-### 3. Activer GitHub Pages
-
-- Aller dans **Settings** → **Pages**
-- Source : **Deploy from a branch**
-- Branch : **main**, dossier **/ (root)**
-- Cliquer **Save**
-- L'URL apparaît en haut de la page en quelques minutes
-
-### 4. Partager
-
-Envoyer l'URL `https://ronant99-lgtm.github.io/arbre-tanguy` à la famille.
+Le dépôt et le site sont **publics**. N'y mettre **que des personnes décédées** :
+pas de personnes vivantes, ni de coordonnées (téléphones, adresses, courriels)
+de correspondants. Les notes de recherche personnelles restent dans Google Drive.
 
 ---
 
 ## 👥 Contribuer en famille
 
-Chacun peut proposer des corrections ou ajouts en envoyant un email avec :
-- Le nom de l'ancêtre concerné
-- La modification souhaitée
-- Une photo éventuelle (en pièce jointe)
-
-La personne qui gère le dépôt intègre les modifications via l'éditeur.
+Chacun peut proposer des corrections ou ajouts en envoyant un email avec le nom de l'ancêtre
+concerné, la modification souhaitée et une photo éventuelle. La personne qui gère le dépôt
+les intègre dans Gramps (données) ou via le site (photos, souvenirs).
