@@ -112,7 +112,58 @@
                       "notes": "<p>témoins :</p><p>- Yves CONTRIEUX, 31 ans, marchand, à St Gilles Pligeaux, ami de l'époux,</p><p>- Charles DEVEDEZ, 48 ans, laboureur, à St Gilles Pligeaux, ami de l'époux,</p><p>- Gilles LE DUY, 37 ans, marchand à St Gilles Pligeaux, ami de l'épouse,</p><p>- Yves LE GALL, 58 ans, débitant de boissons, à St Gilles Pligeaux, ami de l'épouse</p><p>-</p>"
                     }
                   ],
-                  "children": []
+                  "children": [
+                    {
+                      "id": "I0032",
+                      "given": "François",
+                      "surname": "TANGUY",
+                      "name": "François\nTANGUY",
+                      "gender": "M",
+                      "born": null,
+                      "died": "av. 1867",
+                      "date_naissance": "",
+                      "date_deces": "avant 22 septembre 1867",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "Ménager",
+                      "photo": null,
+                      "bio": "<p>Ménager à Kerpert, présent et consentant au mariage de son fils Jean (1829).</p><p>Décédé avant le décès de son fils (1867).</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Anne THORAVAL (? – av. 1829)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "I0033",
+                      "given": "Anne",
+                      "surname": "THORAVAL",
+                      "name": "Anne\nTHORAVAL",
+                      "gender": "F",
+                      "born": null,
+                      "died": "av. 1829",
+                      "date_naissance": "",
+                      "date_deces": "avant 6 février 1829",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "",
+                      "photo": null,
+                      "bio": "<p>Décédée avant le mariage de son fils Jean (1829) : « feue Anne Thoraval ».</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "François TANGUY (? – av. 1867)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "I0011",
@@ -137,7 +188,58 @@
                       "notes": "<p>témoins :</p><p>- Yves CONTRIEUX, 31 ans, marchand, à St Gilles Pligeaux, ami de l'époux,</p><p>- Charles DEVEDEZ, 48 ans, laboureur, à St Gilles Pligeaux, ami de l'époux,</p><p>- Gilles LE DUY, 37 ans, marchand à St Gilles Pligeaux, ami de l'épouse,</p><p>- Yves LE GALL, 58 ans, débitant de boissons, à St Gilles Pligeaux, ami de l'épouse</p><p>-</p>"
                     }
                   ],
-                  "children": []
+                  "children": [
+                    {
+                      "id": "I0034",
+                      "given": "Jean",
+                      "surname": "ROBERT",
+                      "name": "Jean\nROBERT",
+                      "gender": "M",
+                      "born": null,
+                      "died": "av. 1829",
+                      "date_naissance": "",
+                      "date_deces": "avant 6 février 1829",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "",
+                      "photo": null,
+                      "bio": "<p>Décédé avant le mariage de sa fille Marie Louise (1829) : « feu Jean ».</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Marie Louise JOUAN (? – av. 1862)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "I0035",
+                      "given": "Marie Louise",
+                      "surname": "JOUAN",
+                      "name": "Marie\nJOUAN",
+                      "gender": "F",
+                      "born": null,
+                      "died": "av. 1862",
+                      "date_naissance": "",
+                      "date_deces": "avant 17 août 1862",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "Ménagère",
+                      "photo": null,
+                      "bio": "<p>Ménagère à St Gilles Pligeaux, présente et consentante au mariage de sa fille (1829).</p><p>Décédée avant le décès de sa fille (1862).</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Jean ROBERT (? – av. 1829)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -188,7 +290,63 @@
                       "notes": "<p>témoins :</p><p>- Jean THORAVAL, 53 ans cultivateur à Kerpert, frère de l'époux,</p><p>- Yves HAMON, 28 ans, menuisier demeurant à Kerpert, ami du contractant,</p><p>- Jean Marie LE GUENNIC, 28 ans, domestique laboureur à Peumerit Quintin, voisin de la contractante,</p><p>- Guillaume LE PROVOST, 43 ans, laboureur demeurant au Grand Lanouët, voisin de la contractante</p>"
                     }
                   ],
-                  "children": []
+                  "fratrie": [
+                    "Anne THORAVAL (1808 – 1835)"
+                  ],
+                  "children": [
+                    {
+                      "id": "I0036",
+                      "given": "Jean",
+                      "surname": "THORAVAL",
+                      "name": "Jean\nTHORAVAL",
+                      "gender": "M",
+                      "born": "v. 1785",
+                      "died": null,
+                      "date_naissance": "vers 1785",
+                      "date_deces": "",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "Propriétaire cultivateur, arpenteur",
+                      "photo": null,
+                      "bio": "<p>Âge : 23 ans en 1808 (naissance d'Anne), 24 ans en 1810 (naissance d'Yves), 43 ans en 1829 (mariage d'Anne).</p><p>Propriétaire cultivateur et arpenteur au bourg de Kerpert ; déclare le décès de sa fille Anne en 1835 (50 ans).</p><p>IMPLEXE : père d'Yves THORAVAL (1810) et d'Anne THORAVAL (1808). Jean Gustave Marie TANGUY descend de ce couple par son père (via Marie Louise THORAVAL) et par sa mère (via Anne LAUTOUT).</p><p>À vérifier : au mariage d'Yves (1838), un « Jean THORAVAL, 53 ans, frère du contractant » est cité ; 53 ans correspond à l'âge du père. Erreur de l'acte ou de lecture ?</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Marie Anne THÉPOT (v. 1785 – av. 1829)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "implexe": 2,
+                      "children": []
+                    },
+                    {
+                      "id": "I0037",
+                      "given": "Marie Anne",
+                      "surname": "THÉPOT",
+                      "name": "Marie\nTHÉPOT",
+                      "gender": "F",
+                      "born": "v. 1785",
+                      "died": "av. 1829",
+                      "date_naissance": "vers 1785",
+                      "date_deces": "avant 12 janvier 1829",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "",
+                      "photo": null,
+                      "bio": "<p>Graphies : THÉPOT, THÉPAULT.</p><p>Âge : 25 ans en 1808, 23 ans en 1810.</p><p>Décédée avant le mariage de sa fille Anne (1829) : « défunte Marie Anne ».</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Jean THORAVAL (v. 1785 – ?)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "implexe": 2,
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "I0013",
@@ -213,7 +371,58 @@
                       "notes": "<p>témoins :</p><p>- Jean THORAVAL, 53 ans cultivateur à Kerpert, frère de l'époux,</p><p>- Yves HAMON, 28 ans, menuisier demeurant à Kerpert, ami du contractant,</p><p>- Jean Marie LE GUENNIC, 28 ans, domestique laboureur à Peumerit Quintin, voisin de la contractante,</p><p>- Guillaume LE PROVOST, 43 ans, laboureur demeurant au Grand Lanouët, voisin de la contractante</p>"
                     }
                   ],
-                  "children": []
+                  "children": [
+                    {
+                      "id": "I0038",
+                      "given": "Thomas",
+                      "surname": "LEPROVOST",
+                      "name": "Thomas\nLEPROVOST",
+                      "gender": "M",
+                      "born": "v. 1788",
+                      "died": "av. 1838",
+                      "date_naissance": "vers 1788",
+                      "date_deces": "avant 22 octobre 1838",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "Cultivateur",
+                      "photo": null,
+                      "bio": "<p>Trente ans, cultivateur, au Grand Lanouët (Peumerit Quintin) à la naissance de sa fille (1818) ; il signe.</p><p>Décédé avant le mariage de sa fille (1838).</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Marie Françoise LE DÛ (v. 1789 – ?)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "I0039",
+                      "given": "Marie Françoise",
+                      "surname": "LE DÛ",
+                      "name": "Marie\nLE DÛ",
+                      "gender": "F",
+                      "born": "v. 1789",
+                      "died": null,
+                      "date_naissance": "vers 1789",
+                      "date_deces": "",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "Cultivatrice",
+                      "photo": null,
+                      "bio": "<p>29 ans à la naissance de sa fille (1818).</p><p>Cultivatrice à Peumerit Quintin, présente et consentante au mariage de sa fille (1838).</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Thomas LEPROVOST (v. 1788 – av. 1838)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
                 }
               ]
             }
@@ -290,7 +499,58 @@
                       "notes": "<p>témoins :</p><p>- Charles Le Cheviller, 29 ans, meunier, cousin de l'épouse, de Kerpert,</p><p>- François Blouin, 34 ans, cultivateur, de Kerpert, témoin,</p><p>- Yves Thoraval, 29 ans, cultivateur, de Kerpert, cousin de l'épouse,</p><p>- Guillaume Raoult, 31 ans, cultivateur, de Kerpert, témoin.</p><p>Tous signent sauf la jeune épouse.</p><p>L'officier d'état-civil souligne discrètement la différence d'âge entre les conjoints.</p>"
                     }
                   ],
-                  "children": []
+                  "children": [
+                    {
+                      "id": "I0040",
+                      "given": "Guillaume",
+                      "surname": "LE COZLER",
+                      "name": "Guillaume\nLE COZLER",
+                      "gender": "M",
+                      "born": null,
+                      "died": "av. 1851",
+                      "date_naissance": "",
+                      "date_deces": "avant 13 mars 1851",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "",
+                      "photo": null,
+                      "bio": "<p>Père de Guillaume LE COZLER né en 1781 à Kerlabourat (Kerpert).</p><p>Décédé avant le décès de son fils (1851).</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Anne BERNARD (? – av. 1851)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "I0041",
+                      "given": "Anne",
+                      "surname": "BERNARD",
+                      "name": "Anne\nBERNARD",
+                      "gender": "F",
+                      "born": null,
+                      "died": "av. 1851",
+                      "date_naissance": "",
+                      "date_deces": "avant 13 mars 1851",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "",
+                      "photo": null,
+                      "bio": "<p>Mère de Guillaume LE COZLER né en 1781 à Kerlabourat.</p><p>Décédée avant le décès de son fils (1851).</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Guillaume LE COZLER (? – av. 1851)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "I0017",
@@ -315,7 +575,58 @@
                       "notes": "<p>témoins :</p><p>- Charles Le Cheviller, 29 ans, meunier, cousin de l'épouse, de Kerpert,</p><p>- François Blouin, 34 ans, cultivateur, de Kerpert, témoin,</p><p>- Yves Thoraval, 29 ans, cultivateur, de Kerpert, cousin de l'épouse,</p><p>- Guillaume Raoult, 31 ans, cultivateur, de Kerpert, témoin.</p><p>Tous signent sauf la jeune épouse.</p><p>L'officier d'état-civil souligne discrètement la différence d'âge entre les conjoints.</p>"
                     }
                   ],
-                  "children": []
+                  "children": [
+                    {
+                      "id": "I0042",
+                      "given": "Yves",
+                      "surname": "GUILLAUME",
+                      "name": "Yves\nGUILLAUME",
+                      "gender": "M",
+                      "born": null,
+                      "died": "av. 1825",
+                      "date_naissance": "",
+                      "date_deces": "avant 19 janvier 1825",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "Cultivateur",
+                      "photo": null,
+                      "bio": "<p>Cultivateur au lieu-dit Bot Halec (Kerpert) à la naissance de sa fille (an XIII) ; ne signe pas.</p><p>Décédé avant le mariage de sa fille (1825).</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Marie Anne THORAVAL",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "I0043",
+                      "given": "Marie Anne",
+                      "surname": "THORAVAL",
+                      "name": "Marie\nTHORAVAL",
+                      "gender": "F",
+                      "born": null,
+                      "died": null,
+                      "date_naissance": "",
+                      "date_deces": "",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "Cultivatrice",
+                      "photo": null,
+                      "bio": "<p>Cultivatrice au lieu-dit Bot Halec (Kerpert).</p><p>À distinguer a priori de Marie Anne THORAVAL épouse d'Yves LE PAPE (I0045) ; lien éventuel avec les autres THORAVAL de Kerpert à étudier.</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Yves GUILLAUME (? – av. 1825)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -366,7 +677,58 @@
                       "notes": "<p>témoins :</p><p>- Jean Marie Le Fur, 59 ans, de St Gilles, débitant de tabac, ami de l'époux</p><p>- Yves Lozach, cabaretier, 42 ans, de St Gilles, ami de l'époux,</p><p>- Guillaume Le Provost, 42 ans, de Kerpert, ami de l'épouse,</p><p>- Alain Derrien, laboureur, 60 ans de Canihuel, ami de l'épouse</p><p>Jean Le Pape, Jean Lozach, Le Fur, Le Provost signent</p>"
                     }
                   ],
-                  "children": []
+                  "children": [
+                    {
+                      "id": "I0044",
+                      "given": "Yves",
+                      "surname": "LE PAPE",
+                      "name": "Yves\nLE PAPE",
+                      "gender": "M",
+                      "born": "v. 1782",
+                      "died": "av. 1843",
+                      "date_naissance": "vers 1782",
+                      "date_deces": "avant 28 juin 1843",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "Ménager",
+                      "photo": null,
+                      "bio": "<p>38 ans, ménager, à La Garenne Chevance (St Gilles Pligeaux) à la naissance de son fils (1820) ; ne signe pas.</p><p>Décédé avant le mariage de son fils (1843).</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Marie Anne THORAVAL (v. 1787 – av. 1897)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "I0045",
+                      "given": "Marie Anne",
+                      "surname": "THORAVAL",
+                      "name": "Marie\nTHORAVAL",
+                      "gender": "F",
+                      "born": "v. 1787",
+                      "died": "av. 1897",
+                      "date_naissance": "vers 1787",
+                      "date_deces": "avant 18 mai 1897",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "Ménagère",
+                      "photo": null,
+                      "bio": "<p>33 ans, ménagère, à la naissance de son fils Jean (1820).</p><p>Présente et consentante au mariage de son fils (1843) ; décédée avant le décès de celui-ci (1897).</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Yves LE PAPE (v. 1782 – av. 1843)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "I0015",
@@ -391,7 +753,58 @@
                       "notes": "<p>témoins :</p><p>- Jean Marie Le Fur, 59 ans, de St Gilles, débitant de tabac, ami de l'époux</p><p>- Yves Lozach, cabaretier, 42 ans, de St Gilles, ami de l'époux,</p><p>- Guillaume Le Provost, 42 ans, de Kerpert, ami de l'épouse,</p><p>- Alain Derrien, laboureur, 60 ans de Canihuel, ami de l'épouse</p><p>Jean Le Pape, Jean Lozach, Le Fur, Le Provost signent</p>"
                     }
                   ],
-                  "children": []
+                  "children": [
+                    {
+                      "id": "I0046",
+                      "given": "Jean",
+                      "surname": "LOZACH",
+                      "name": "Jean\nLOZACH",
+                      "gender": "M",
+                      "born": "v. 1795",
+                      "died": "av. 1899",
+                      "date_naissance": "vers 1795",
+                      "date_deces": "avant 24 août 1899",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "Ménager",
+                      "photo": null,
+                      "bio": "<p>27 ans, ménager, à la naissance de sa fille (1822) ; il signe.</p><p>Présent au mariage de sa fille à St Gilles Pligeaux (1843).</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Marie Jeanne BERNARD (v. 1802 – av. 1899)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "I0047",
+                      "given": "Marie Jeanne",
+                      "surname": "BERNARD",
+                      "name": "Marie\nBERNARD",
+                      "gender": "F",
+                      "born": "v. 1802",
+                      "died": "av. 1899",
+                      "date_naissance": "vers 1802",
+                      "date_deces": "avant 24 août 1899",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "Ménagère",
+                      "photo": null,
+                      "bio": "<p>20 ans, ménagère, à la naissance de sa fille (1822).</p><p>Présente au mariage de sa fille (1843).</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Jean LOZACH (v. 1795 – av. 1899)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
                 }
               ]
             }
@@ -494,7 +907,58 @@
                       "notes": "<p>témoins :</p><p>- Jacques HENRY, 30 ans, cultivateur, demeurant à Bothoa, cousin de l'époux,</p><p>- Gilles HENRY, 23 ans, cultivateur, demeurant à Plezidy, cousin de l'époux,</p><p>- Pierre LOZACH, 60 ans, cultivateur, demeurant à Canihuel, oncle germain de l'épouse,</p><p>- Guillaume LE GOFF, 52 ans, ménager, demeurant à Magouro (?), oncle germaine de l'épouse.</p><p>Personnne ne sait signer.</p>"
                     }
                   ],
-                  "children": []
+                  "children": [
+                    {
+                      "id": "I0048",
+                      "given": "Jacques",
+                      "surname": "HENRY",
+                      "name": "Jacques\nHENRY",
+                      "gender": "M",
+                      "born": null,
+                      "died": "av. 1850",
+                      "date_naissance": "",
+                      "date_deces": "avant 16 juin 1850",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "",
+                      "photo": null,
+                      "bio": "<p>Présent et consentant au mariage de son fils Sylvestre (1811).</p><p>Probablement le « Jacques HENRY, 68 ans, laboureur à Bothoa », témoin à la naissance de son petit-fils Jacques (1825) : il serait alors né vers 1757.</p><p>Décédé avant le décès de son fils (1850).</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Marie GUILLOUX (? – av. 1850)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "I0049",
+                      "given": "Marie",
+                      "surname": "GUILLOUX",
+                      "name": "Marie\nGUILLOUX",
+                      "gender": "F",
+                      "born": null,
+                      "died": "av. 1850",
+                      "date_naissance": "",
+                      "date_deces": "avant 16 juin 1850",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "",
+                      "photo": null,
+                      "bio": "<p>Graphies : GUILLOUX, GUILLOU.</p><p>Présente et consentante au mariage de son fils Sylvestre (1811).</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Jacques HENRY (? – av. 1850)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "I0031",
@@ -519,7 +983,58 @@
                       "notes": "<p>témoins :</p><p>- Jacques HENRY, 30 ans, cultivateur, demeurant à Bothoa, cousin de l'époux,</p><p>- Gilles HENRY, 23 ans, cultivateur, demeurant à Plezidy, cousin de l'époux,</p><p>- Pierre LOZACH, 60 ans, cultivateur, demeurant à Canihuel, oncle germain de l'épouse,</p><p>- Guillaume LE GOFF, 52 ans, ménager, demeurant à Magouro (?), oncle germaine de l'épouse.</p><p>Personnne ne sait signer.</p>"
                     }
                   ],
-                  "children": []
+                  "children": [
+                    {
+                      "id": "I0050",
+                      "given": "Claude",
+                      "surname": "JOUAN",
+                      "name": "Claude\nJOUAN",
+                      "gender": "M",
+                      "born": null,
+                      "died": "av. 1811",
+                      "date_naissance": "",
+                      "date_deces": "avant 12 février 1811",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "Cultivateur",
+                      "photo": null,
+                      "bio": "<p>Appelé « Jean Claude » dans l'acte de décès de sa fille.</p><p>Cultivateur au village du Petit Quellen (St Gilles Pligeaux) ; déclare la naissance de sa fille en l'an III ; ne sait signer.</p><p>Décédé avant le mariage de sa fille (1811).</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Jeanne LE GOFF (? – av. 1872)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "I0051",
+                      "given": "Jeanne",
+                      "surname": "LE GOFF",
+                      "name": "Jeanne\nLE GOFF",
+                      "gender": "F",
+                      "born": null,
+                      "died": "av. 1872",
+                      "date_naissance": "",
+                      "date_deces": "avant 19 mai 1872",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "",
+                      "photo": null,
+                      "bio": "<p>Présente et consentante au mariage de sa fille (1811).</p><p>Un Guillaume LE GOFF, 52 ans, « oncle germain » de l'épouse, est témoin en 1811.</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Claude JOUAN (? – av. 1811)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -570,7 +1085,58 @@
                       "notes": "<p>Date corrigée de 1839 en 1829 : Anne THORAVAL est décédée en 1835 et leur fille Anne est née en 1833 ; l'acte numérisé s'intitule AM_Lautout-Thoraval_1829. Jour et mois à vérifier sur l'acte.</p><p>témoins :</p><p>- Jean THORAVAL, 43 ans, propriétaire, cultivateur, arpenteur, au bourg de Kerpert, père de l'épouse,</p><p>- Jean LAUTOUT, 52 ans, propriétaire cultivateur, demeurant Kerdrain en Kerpert, père de l'époux,</p><p>- Guillaume COURRIOU, 52 ans, laboureur, de Kerpert, témoin,</p><p>- Guillaume SERRANDOUR, 56 ans, laboureur domestique, appelé témoin.</p><p>Seuls le mariè et le père de la mariée signent.</p>"
                     }
                   ],
-                  "children": []
+                  "children": [
+                    {
+                      "id": "I0052",
+                      "given": "Jean",
+                      "surname": "LAUTOUT",
+                      "name": "Jean\nLAUTOUT",
+                      "gender": "M",
+                      "born": "v. 1775",
+                      "died": null,
+                      "date_naissance": "vers 1775",
+                      "date_deces": "",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "Propriétaire cultivateur",
+                      "photo": null,
+                      "bio": "<p>33 ans en 1807, 52 ans en 1829 (âges discordants).</p><p>Propriétaire cultivateur à Kerdrain (Kerpert) ; ne signe pas en 1807.</p><p>Vivant au mariage de son fils (1829).</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Marguerite GUILLAUME (? – av. 1829)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "I0053",
+                      "given": "Marguerite",
+                      "surname": "GUILLAUME",
+                      "name": "Marguerite\nGUILLAUME",
+                      "gender": "F",
+                      "born": null,
+                      "died": "av. 1829",
+                      "date_naissance": "",
+                      "date_deces": "avant 12 janvier 1829",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "Ménagère",
+                      "photo": null,
+                      "bio": "<p>Ménagère à Kerdrain.</p><p>Décédée avant le premier mariage de son fils (1829).</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Jean LAUTOUT (v. 1775 – ?)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "I0029",
@@ -595,7 +1161,63 @@
                       "notes": "<p>Date corrigée de 1839 en 1829 : Anne THORAVAL est décédée en 1835 et leur fille Anne est née en 1833 ; l'acte numérisé s'intitule AM_Lautout-Thoraval_1829. Jour et mois à vérifier sur l'acte.</p><p>témoins :</p><p>- Jean THORAVAL, 43 ans, propriétaire, cultivateur, arpenteur, au bourg de Kerpert, père de l'épouse,</p><p>- Jean LAUTOUT, 52 ans, propriétaire cultivateur, demeurant Kerdrain en Kerpert, père de l'époux,</p><p>- Guillaume COURRIOU, 52 ans, laboureur, de Kerpert, témoin,</p><p>- Guillaume SERRANDOUR, 56 ans, laboureur domestique, appelé témoin.</p><p>Seuls le mariè et le père de la mariée signent.</p>"
                     }
                   ],
-                  "children": []
+                  "fratrie": [
+                    "Yves THORAVAL (1810 – 1882)"
+                  ],
+                  "children": [
+                    {
+                      "id": "I0036",
+                      "given": "Jean",
+                      "surname": "THORAVAL",
+                      "name": "Jean\nTHORAVAL",
+                      "gender": "M",
+                      "born": "v. 1785",
+                      "died": null,
+                      "date_naissance": "vers 1785",
+                      "date_deces": "",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "Propriétaire cultivateur, arpenteur",
+                      "photo": null,
+                      "bio": "<p>Âge : 23 ans en 1808 (naissance d'Anne), 24 ans en 1810 (naissance d'Yves), 43 ans en 1829 (mariage d'Anne).</p><p>Propriétaire cultivateur et arpenteur au bourg de Kerpert ; déclare le décès de sa fille Anne en 1835 (50 ans).</p><p>IMPLEXE : père d'Yves THORAVAL (1810) et d'Anne THORAVAL (1808). Jean Gustave Marie TANGUY descend de ce couple par son père (via Marie Louise THORAVAL) et par sa mère (via Anne LAUTOUT).</p><p>À vérifier : au mariage d'Yves (1838), un « Jean THORAVAL, 53 ans, frère du contractant » est cité ; 53 ans correspond à l'âge du père. Erreur de l'acte ou de lecture ?</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Marie Anne THÉPOT (v. 1785 – av. 1829)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "implexe": 2,
+                      "children": []
+                    },
+                    {
+                      "id": "I0037",
+                      "given": "Marie Anne",
+                      "surname": "THÉPOT",
+                      "name": "Marie\nTHÉPOT",
+                      "gender": "F",
+                      "born": "v. 1785",
+                      "died": "av. 1829",
+                      "date_naissance": "vers 1785",
+                      "date_deces": "avant 12 janvier 1829",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "",
+                      "photo": null,
+                      "bio": "<p>Graphies : THÉPOT, THÉPAULT.</p><p>Âge : 25 ans en 1808, 23 ans en 1810.</p><p>Décédée avant le mariage de sa fille Anne (1829) : « défunte Marie Anne ».</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Jean THORAVAL (v. 1785 – ?)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "implexe": 2,
+                      "children": []
+                    }
+                  ]
                 }
               ]
             }
@@ -672,7 +1294,58 @@
                       "notes": "<p>témoins :</p><p>- Dominique POUL, 52 ans, laboureur, de Lanrivain, père du contractant,</p><p>- Yves MINGUY, 36 ans laboureur, de Lanrivin, frère de la contractante,</p><p>- Thomas GUILLON, 48 ans, laboureur, de Lanrivain, ami du contractant,</p><p>- René THOMAS, 25 ans, tailleur, de Lanrivain, ami de la contractante?</p>"
                     }
                   ],
-                  "children": []
+                  "children": [
+                    {
+                      "id": "I0054",
+                      "given": "Dominique",
+                      "surname": "POUL",
+                      "name": "Dominique\nPOUL",
+                      "gender": "M",
+                      "born": "v. 1774",
+                      "died": "av. 1871",
+                      "date_naissance": "vers 1774",
+                      "date_deces": "avant 7 septembre 1871",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "Laboureur",
+                      "photo": null,
+                      "bio": "<p>34 ans, laboureur, à Guerrocart (Lanrivain) en 1806 ; 52 ans au mariage de son fils (1828) ; ne sait signer.</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Anne CHEVANCÉ (v. 1776 – av. 1828)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "I0055",
+                      "given": "Anne",
+                      "surname": "CHEVANCÉ",
+                      "name": "Anne\nCHEVANCÉ",
+                      "gender": "F",
+                      "born": "v. 1776",
+                      "died": "av. 1828",
+                      "date_naissance": "vers 1776",
+                      "date_deces": "avant 23 novembre 1828",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "",
+                      "photo": null,
+                      "bio": "<p>30 ans à la naissance de son fils (1806).</p><p>Décédée avant le mariage de son fils (1828).</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Dominique POUL (v. 1774 – av. 1871)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "I0027",
@@ -697,7 +1370,58 @@
                       "notes": "<p>témoins :</p><p>- Dominique POUL, 52 ans, laboureur, de Lanrivain, père du contractant,</p><p>- Yves MINGUY, 36 ans laboureur, de Lanrivin, frère de la contractante,</p><p>- Thomas GUILLON, 48 ans, laboureur, de Lanrivain, ami du contractant,</p><p>- René THOMAS, 25 ans, tailleur, de Lanrivain, ami de la contractante?</p>"
                     }
                   ],
-                  "children": []
+                  "children": [
+                    {
+                      "id": "I0056",
+                      "given": "Allain",
+                      "surname": "MENGUY",
+                      "name": "Allain\nMENGUY",
+                      "gender": "M",
+                      "born": null,
+                      "died": "av. 1828",
+                      "date_naissance": "",
+                      "date_deces": "avant 23 novembre 1828",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "Cultivateur",
+                      "photo": null,
+                      "bio": "<p>Graphies : MENGUY, MENGUI, MINGUY.</p><p>Déclare la naissance de sa fille en l'an II, à Kerhellou (Lanrivain).</p><p>Décédé avant le mariage de sa fille (1828).</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Jeanne LE MOING (? – av. 1828)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "I0057",
+                      "given": "Jeanne",
+                      "surname": "LE MOING",
+                      "name": "Jeanne\nLE MOING",
+                      "gender": "F",
+                      "born": null,
+                      "died": "av. 1828",
+                      "date_naissance": "",
+                      "date_deces": "avant 23 novembre 1828",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "",
+                      "photo": null,
+                      "bio": "<p>Graphies : LE MOING, LEMOIGN.</p><p>Domiciliée à Kerhellou (Lanrivain).</p><p>Décédée avant le mariage de sa fille (1828).</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Allain MENGUY (? – av. 1828)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -748,7 +1472,58 @@
                       "notes": "<p>témoins :</p><p>- Yves PIN, 74 ans, cultivateur, père de l'épouse,</p><p>- François LE POMELLEC, 35 ans, tisserand en toile grosse, de Kerpert, appelé pour témoin,</p><p>- Yves LE BOUCHER, 30 ans, débitant de beurre, de Kerpert, appelé pour témoin,</p><p>- Guillaume TOUBOULIC, 50 ans, débitant de cidre, présent dans la maison commune</p><p>Le père et Touboulic ont déclaré ne savoir signer.</p>"
                     }
                   ],
-                  "children": []
+                  "children": [
+                    {
+                      "id": "I0058",
+                      "given": "Yves",
+                      "surname": "STEUNOU",
+                      "name": "Yves\nSTEUNOU",
+                      "gender": "M",
+                      "born": null,
+                      "died": "av. 1816",
+                      "date_naissance": "",
+                      "date_deces": "avant 21 novembre 1816",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "",
+                      "photo": null,
+                      "bio": "<p>Graphie STENNOU au baptême de son fils (1790, Plésidy) ; ne sait signer.</p><p>Décédé avant le mariage de son fils (1816).</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Catherine CADOUDAL (? – av. 1816)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "I0059",
+                      "given": "Catherine",
+                      "surname": "CADOUDAL",
+                      "name": "Catherine\nCADOUDAL",
+                      "gender": "F",
+                      "born": null,
+                      "died": "av. 1816",
+                      "date_naissance": "",
+                      "date_deces": "avant 21 novembre 1816",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "",
+                      "photo": null,
+                      "bio": "<p>Nom à confirmer : CADOUDAL au baptême de son fils (1790), mais « Marie Catherine GAULTIER » dans l'acte de décès de celui-ci (1873).</p><p>Une Thérèse CADOUDAL est marraine en 1790.</p><p>Décédée avant le mariage de son fils (1816).</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Yves STEUNOU (? – av. 1816)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "id": "I0025",
@@ -773,7 +1548,58 @@
                       "notes": "<p>témoins :</p><p>- Yves PIN, 74 ans, cultivateur, père de l'épouse,</p><p>- François LE POMELLEC, 35 ans, tisserand en toile grosse, de Kerpert, appelé pour témoin,</p><p>- Yves LE BOUCHER, 30 ans, débitant de beurre, de Kerpert, appelé pour témoin,</p><p>- Guillaume TOUBOULIC, 50 ans, débitant de cidre, présent dans la maison commune</p><p>Le père et Touboulic ont déclaré ne savoir signer.</p>"
                     }
                   ],
-                  "children": []
+                  "children": [
+                    {
+                      "id": "I0060",
+                      "given": "Yves",
+                      "surname": "PIN",
+                      "name": "Yves\nPIN",
+                      "gender": "M",
+                      "born": "v. 1742",
+                      "died": "av. 1854",
+                      "date_naissance": "vers 1742",
+                      "date_deces": "avant 17 janvier 1854",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "Cultivateur",
+                      "photo": null,
+                      "bio": "<p>74 ans, cultivateur, présent et témoin au mariage de sa fille (1816) ; ne sait signer.</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Marie Anne LE COZLER (? – av. 1854)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "id": "I0061",
+                      "given": "Marie Anne",
+                      "surname": "LE COZLER",
+                      "name": "Marie\nLE COZLER",
+                      "gender": "F",
+                      "born": null,
+                      "died": "av. 1854",
+                      "date_naissance": "",
+                      "date_deces": "avant 17 janvier 1854",
+                      "lieu_naissance": "",
+                      "lieu_deces": "",
+                      "profession": "",
+                      "photo": null,
+                      "bio": "<p>Présente et consentante au mariage de sa fille (1816).</p><p>Lien possible avec les LE COZLER de Kerlabourat (branche d'Angélique LE COZLER) : à étudier.</p><p>Génération 6 ajoutée d'après les notes des actes de l'enfant (naissance, mariage, décès) ; à confirmer par les actes propres de la personne.</p>",
+                      "unions": [
+                        {
+                          "conjoint": "Yves PIN (v. 1742 – av. 1854)",
+                          "date": "",
+                          "lieu": "",
+                          "notes": ""
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
                 }
               ]
             }

@@ -446,7 +446,7 @@ function buildTree() {
   const W = window.innerWidth, H = window.innerHeight - 60;
   const xs = root.descendants().map(d => d.x);
   const span = Math.max(...xs) - Math.min(...xs) + NODE_W + 60;
-  const k = Math.max(0.1, Math.min(0.72, W / span, (H - 40) / ((maxDepth + 1) * GEN_H)));
+  const k = Math.max(0.45, Math.min(0.72, W / span, (H - 40) / ((maxDepth + 1) * GEN_H)));
   const cx = (Math.max(...xs) + Math.min(...xs)) / 2;
   svg.call(zoom.transform, d3.zoomIdentity.translate(W/2 - cx*k, 40).scale(k));
 }
